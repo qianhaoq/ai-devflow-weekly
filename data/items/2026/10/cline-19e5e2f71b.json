@@ -7,7 +7,7 @@
   "title": "SDK v0.0.93",
   "summary_zh": "Cline 发布 SDK v0.0.93。插件改为通过每进程单一注册表在进程内加载，编译后的 CLI 及其 hub 不再需要 PATH 上的运行时，同时保留 `CLINE_PLUGIN_MODE=sandbox` 子进程沙箱；注册表为导入、setup、hooks、工具和命令加上超时与错误捕获，并跟踪插件状态，插件失败不再静默丢弃其工具。关闭推理现适用于所有 provider，Gemini 与 Vertex 仅向声明预算的模型发送精确 `thinkingBudget`；`cline` 与 `openrouter` provider 默认模型改为 `anthropic/claude-sonnet-5.5`。此外，token 估算不再按文本费率计算 base64 图片负载，每张图片固定计 1600 tokens；自动压缩改用解析后模型的上下文窗口；计划任务在 `bun:sqlite` 下正确认领队列、以失败记录 provider 错误并取消被新 occurrence 取代的排队 cron；符号链接规则文件现从配置目录加载，`resolveSkillsConfigSearchPaths` 扫描 `.claude/skills`。",
   "source_url": "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.93",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T05:13:24+00:00"
 }

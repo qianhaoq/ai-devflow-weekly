@@ -1,13 +1,13 @@
 {
   "id": "openai-codex-cfb0c989fe",
-  "date": "2026-10-16",
+  "date": "2026-10-14",
   "vendor": "OpenAI Codex",
   "category": "agent-platform",
   "source_id": "openai-codex-changelog",
-  "title": "OpenAI Codex 页面更新（2026-10-16）",
-  "summary_zh": "OpenAI Codex 于 2026-10-16 更新 changelog 页面。此前 2026-10-14 起，GPT-5.5 在 Codex 中面向使用 ChatGPT 登录的用户退役，OpenAI API 及使用 API key 认证的 Codex 会话不受影响，官方建议改用 GPT-6.1 Sol（gpt-6.1-sol）。",
+  "title": "GPT-5.5 在 Codex 中退役",
+  "summary_zh": "自 2026 年 10 月 14 日中午（PDT，即北京时间 10 月 15 日 03:00）起，使用 ChatGPT 登录的 Codex 用户不能再使用 GPT-5.5；OpenAI API 及使用 API key 认证的 Codex 会话不受影响。官方建议在套餐和客户端支持时改用 GPT-6.1 Sol（`gpt-6.1-sol`），并更新仍选择 `gpt-5.5` 的工作区默认值、已保存的模型设置、托管配置、自定义 agent、计划任务和脚本。",
   "source_url": "https://developers.openai.com/codex/changelog#2026-10-16",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-15T16:49:13+00:00"
 }

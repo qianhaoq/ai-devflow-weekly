@@ -7,7 +7,7 @@
   "title": "1.52.0",
   "summary_zh": "Moonshot Kimi 发布 kimi-cli 1.52.0，新增 CLI 入口短路至 Kimi Code 安装程序的功能。该变更由 @sailist 通过 PR #2666 提交，完整改动见 1.51.0 至 1.52.0 的对比记录。",
   "source_url": "https://github.com/MoonshotAI/kimi-cli/releases/tag/1.52.0",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T05:13:27+00:00"
 }

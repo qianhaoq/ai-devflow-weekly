@@ -7,7 +7,7 @@
   "title": "HydraFusion updates and new Max option",
   "summary_zh": "GitHub 更新 HydraFusion，新增 HydraFusion Max 选项，两者均处于研究预览阶段，可在 VS Code、GitHub Copilot 应用和 GitHub Copilot CLI 中使用。HydraFusion 更新了模型池（含 Claude Opus 5.5、GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna），按阶段调整推理强度，并优化了 Cascade 与 Critique 工作流；HydraFusion Max 沿用相同架构，面向更高要求任务提供前沿能力。两者在启用实验或预览功能后，支持 Copilot Pro、Pro+、Business 和 Enterprise 计划。",
   "source_url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-15T05:13:14+00:00"
 }

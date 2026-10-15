@@ -7,7 +7,7 @@
   "title": "Desktop v0.0.46",
   "summary_zh": "Cline 发布 Desktop v0.0.46，在对话左侧新增提示词大纲，悬停可预览、点击可跳转，并让加载失败的插件在聊天中显示状态行而非静默丢失工具。本次还修复了定时例程排队运行、模型调用失败标记、停机后仅执行最近一次遗漏任务等问题，并刷新模型目录，新增 AI/ML API、LowRouter、Prime Inference 等提供商。",
   "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.46",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T05:17:14+00:00"
 }

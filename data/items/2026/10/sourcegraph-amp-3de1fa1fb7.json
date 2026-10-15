@@ -7,7 +7,7 @@
   "title": "First Things First, Faster",
   "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 12 日更新 Changes 面板，可自动按智能顺序排列文件：读取 diff、识别对改动关键的文件并置顶。若 diff 变化，Amp 会在不打扰审阅的前提下重新计算顺序，并在智能排序按钮上显示蓝点，点击即可应用新顺序。新排序计算速度大幅提升，用户也可点击排序按钮切回按字母顺序排列。",
   "source_url": "https://ampcode.com/news/first-things-first-faster",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-15T05:13:23+00:00"
 }

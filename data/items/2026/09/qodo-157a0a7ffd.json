@@ -7,7 +7,7 @@
   "title": "v0.46.0",
   "summary_zh": "Qodo 发布 v0.46.0，新增 PR 自动命令启动时即确认、GitLab 内联线程基于内容的自动解决、可配置的工单描述匹配、Grok 4.3 推理强度注册、从同命名空间兄弟仓库加载上下文文件、类型化提示输出模型、monorepo 按目录配置 .pr_agent.toml、失败分块回退模型恢复、Jira 项目键白名单与工单上下文支持、原生 Prometheus 抓取端点、小型 PR 路由至更便宜主模型、Claude Fable 5.1 与 OpenAI GPT-6 Astra 支持等功能。修复涵盖 Pinecone upsert 响应检查、CLI 与 Action 命令引号保留、GitHub 标签接口、相似问题检索的 lancedb/qdrant/pinecone 后端一致性、PR head SHA 解析、GPT-5 推理强度钳制及 AWS 密钥日志脱敏等。",
   "source_url": "https://github.com/The-PR-Agent/pr-agent/releases/tag/v0.46.0",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T05:13:26+00:00"
 }

@@ -7,7 +7,7 @@
   "title": "Take Puck with You",
   "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 13 日发布更新，用户现可通过 MCP 从 ChatGPT、Claude 等 agent 与 Puck 对话。Puck MCP 提供 puck 和 orbs 两个工具，前者用于与 Amp 中的 Puck 交互，后者可展示运行中 orb 的交互视图及门户链接。用户可在设置中的 Puck 页面点击 Add to Claude，或将 https://ampcode.com/mcp 复制到 ChatGPT 等 MCP 客户端并用 Amp 账号登录。",
   "source_url": "https://ampcode.com/news/take-puck-with-you",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-15T05:13:23+00:00"
 }

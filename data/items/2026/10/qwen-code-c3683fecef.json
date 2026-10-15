@@ -7,7 +7,7 @@
   "title": "Release v0.25.2",
   "summary_zh": "阿里 Qwen Code 发布 v0.25.2，官方说明中无已知破坏性变更。该版本新增多项功能，包括托管代理的邮箱、事件传输与成员消息机制，可选启用的无头 Mods 支持 TypeScript 编写与工具调用拦截，以及 Web Shell 的任务提醒、Excel 只读预览和测试失败浏览器等。",
   "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T16:49:21+00:00"
 }
