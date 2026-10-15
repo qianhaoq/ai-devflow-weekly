@@ -33,8 +33,11 @@ on:
   workflow_run:
     workflows: ["CI", "Codex Review Gate", "QA Gate"]
     types: [completed]
-  pull_request_review:
-    types: [submitted]
+  # No `pull_request_review` trigger: for fork/Dependabot PRs that event
+  # gets a read-only GITHUB_TOKEN and could never merge. A submitted review
+  # still re-evaluates via workflow_run: "Codex Review Gate" listens to
+  # pull_request_review, and its completion fires workflow_run here, which
+  # always runs from the default branch with a write-capable token.
   workflow_dispatch:
     inputs:
       pr_number:
@@ -49,7 +52,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: ${{ (github.event_name == 'workflow_dispatch' && format('auto-merge-pr-{0}', github.event.inputs.pr_number)) || (github.event_name == 'pull_request_review' && format('auto-merge-pr-{0}', github.event.pull_request.number)) || (github.event_name == 'workflow_run' && github.event.workflow_run.event == 'pull_request' && format('auto-merge-pr-{0}', github.event.workflow_run.head_sha)) || 'auto-merge-sweep' }}
+  group: ${{ (github.event_name == 'workflow_dispatch' && format('auto-merge-pr-{0}', github.event.inputs.pr_number)) || (github.event_name == 'workflow_run' && github.event.workflow_run.event == 'pull_request' && format('auto-merge-pr-{0}', github.event.workflow_run.head_sha)) || 'auto-merge-sweep' }}
   cancel-in-progress: false
 
 jobs:
@@ -78,8 +81,7 @@ jobs:
     needs: auto-merge
     if: >-
       always() && needs.auto-merge.result == 'success' &&
-      github.ref == 'refs/heads/main' &&
-      github.event_name != 'pull_request_review'
+      github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
