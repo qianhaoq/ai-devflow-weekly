@@ -105,7 +105,7 @@ def build_messages(item: dict, excerpt: str) -> list[dict]:
 
 # DeepSeek 按量付费（OpenAI 兼容）；空字符串（如未配置的 Actions vars）也回落到默认值
 DEFAULT_BASE_URL = "https://api.deepseek.com"
-DEFAULT_MODEL = "deepseek-flash"
+DEFAULT_MODEL = "deepseek-flash"  # 2026-10-15 GET /models 实测：deepseek-flash、deepseek-v4-pro；flash 最便宜
 
 
 def strip_code_fence(text: str) -> str:

@@ -186,6 +186,8 @@ def test_github_only_official_repo_paths_in_validate():
     assert v.url_is_official("https://github.com/anthropics/other-repo/releases", srcs) is False
     assert v.url_is_official("https://github.com/anthropics/claude-code-evil", srcs) is False
     assert v.url_is_official("https://github.com/any/repo/releases", srcs) is False
+    assert v.url_is_official("https://www.github.com/anthropics/unlisted-repo/releases", srcs) is False
+    assert v.url_is_official("https://www.github.com/anthropics/claude-code/releases", srcs) is False
     assert v.url_is_official("https://github.com/any/repo/releases", []) is False
     assert v.url_is_official("https://example.com/page", []) is False
 

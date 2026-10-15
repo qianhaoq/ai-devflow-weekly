@@ -57,7 +57,10 @@ def github_repo_paths(sources: list[dict]) -> set[str]:
 def url_is_official(url: str, sources: list[dict]) -> bool:
     """source_url 是否官方。github.com 只接受 sources.yml 列出的 /org/repo 路径
     （避免 github.com/anthropics/<任意仓库> 或任意 github 仓库被当作官方）。"""
-    if common.url_host(url) == "github.com":
+    host = (common.url_host(url) or "").lower().rstrip(".")
+    if host == "github.com" or host.endswith(".github.com"):
+        if host != "github.com":
+            return False  # www.github.com 等非规范 host 一律拒绝
         path = urlparse(url).path.lower()
         return any(path == p or path.startswith(p + "/") for p in github_repo_paths(sources))
     return common.is_official_url(url, sources)
