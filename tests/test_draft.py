@@ -131,3 +131,29 @@ def test_github_release_uses_api_body():
 def test_html_prefers_main_content():
     page = "<nav>Sign in Menu</nav><main><h1>v2</h1><p>New feature</p></main>"
     assert d.source_excerpt(ITEM, fetch=lambda u: Resp(text=page)) == "v2 New feature"
+
+
+def test_github_release_tag_with_slash():
+    it = dict(ITEM, source_url="https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.93")
+    seen = []
+    d.source_excerpt(it, fetch=lambda u: (seen.append(u), Resp(body={"body": "b"}))[1])
+    assert seen == ["https://api.github.com/repos/cline/cline/releases/tags/sdk%2Fsdk%2Fv0.0.93"]
+
+
+def _price(date, price, plan="Pro", ccy="USD"):
+    return {"vendor": "Cursor", "date": date, "price_snapshot": {"plan": plan, "price": price, "currency": ccy}}
+
+
+def test_previous_snapshot_requires_comparable_earlier():
+    old, other_plan, cur = _price("2026-09-01", 20), _price("2026-09-15", 40, plan="Biz"), _price("2026-10-01", 25)
+    assert d.previous_snapshot(cur, [old, other_plan, cur]) == old["price_snapshot"]
+    assert d.previous_snapshot(cur, [_price("2026-09-01", 20, ccy="EUR"), cur]) is None
+    assert d.previous_snapshot(old, [old, cur]) is None
+
+
+def test_prompt_price_claims_only_with_pair():
+    cur = dict(ITEM, price_snapshot={"plan": "Pro", "price": 25, "currency": "USD"})
+    single = d.build_messages(cur, "e")[1]["content"]
+    assert "无可比的上一次快照（不得写任何价格变化）" in single
+    pair = d.build_messages(dict(cur, _previous_price_snapshot={"plan": "Pro", "price": 20}), "e")[1]["content"]
+    assert "可比，可据此描述价格变化" in pair

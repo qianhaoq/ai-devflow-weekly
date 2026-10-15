@@ -111,3 +111,15 @@ def test_render_week_pricing_group():
 
 def test_current_week_label_format():
     assert weekly.WEEK_RE.fullmatch(weekly.current_week_label())
+
+
+def test_weekly_all_rebuilds_verified_weeks(monkeypatch, tmp_path):
+    import common
+    import weekly as w
+    items = [{"date": "2026-10-14", "verified": True}, {"date": "2026-09-01", "verified": False}]
+    calls = []
+    monkeypatch.setattr(common, "load_items", lambda: items)
+    real = w.main
+    monkeypatch.setattr(w, "main", lambda argv=None: calls.append(argv) or 0)
+    assert real(["--all"]) == 0
+    assert calls == [["--week", "2026-W42"]]

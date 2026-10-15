@@ -17,6 +17,7 @@ import re
 import sys
 import time
 from pathlib import Path
+from urllib.parse import quote
 
 import requests
 
@@ -50,7 +51,7 @@ def editorial_rules() -> str:
 
 PROMPT_RULES = """硬性规则：
 - 只使用下方「官方原文」中的信息，不得补充原文以外的任何事实、数字或推测。
-- 条目没有 price_snapshot（价格前后快照）时，绝不能声称涨价、降价或任何价格变化。
+- 只有同时给出「当前 price_snapshot」和可比的「上一次 price_snapshot」（同 vendor、同 plan、同币种）时，才可依据两者的差异描述价格变化；缺任何一个都绝不能声称涨价、降价或任何价格变化。
 - 月付/年付切换只能描述为“计费周期变化”，不得说成涨价或降价。"""
 
 
@@ -63,11 +64,11 @@ def html_to_text(raw: str) -> str:
 def source_excerpt(item: dict, fetch=None) -> str:
     """官方 release note 原文摘录：优先用条目自带文本，否则抓 source_url。失败返回空串。"""
     text = (item.get("source_excerpt") or "").strip()
-    m = re.match(r"https://github\.com/([^/]+)/([^/]+)/releases/tag/([^/?#]+)$", item.get("source_url") or "")
+    m = re.match(r"https://github\.com/([^/]+)/([^/]+)/releases/tag/([^?#]+?)/?$", item.get("source_url") or "")
     if not text and m:
         # GitHub release：取 API 的 release 正文，而不是带导航/登录控件的整页 HTML
         try:
-            api = f"https://api.github.com/repos/{m[1]}/{m[2]}/releases/tags/{m[3]}"
+            api = f"https://api.github.com/repos/{m[1]}/{m[2]}/releases/tags/{quote(m[3], safe='')}"  # tag 可含 /（如 sdk/v1）
             resp = (fetch or (lambda u: requests.get(u, timeout=REQUEST_TIMEOUT, headers={"User-Agent": common.USER_AGENT, "Accept": "application/vnd.github+json"})))(api)
             resp.raise_for_status()
             text = (resp.json().get("body") or "").strip()
@@ -88,9 +89,36 @@ def source_excerpt(item: dict, fetch=None) -> str:
     return text[:MAX_EXCERPT_CHARS]
 
 
+def previous_snapshot(item: dict, items: list[dict]) -> dict | None:
+    """同 vendor+plan+币种、日期更早的最近一条定价快照；没有则 None。"""
+    cur = item.get("price_snapshot")
+    if not isinstance(cur, dict):
+        return None
+    key = (item.get("vendor"), cur.get("plan"), str(cur.get("currency") or "").lower())
+    best = None
+    for other in items:
+        snap = other.get("price_snapshot") if isinstance(other, dict) else None
+        if other is item or not isinstance(snap, dict):
+            continue
+        if (other.get("vendor"), snap.get("plan"), str(snap.get("currency") or "").lower()) != key:
+            continue
+        if str(other.get("date") or "") >= str(item.get("date") or ""):
+            continue
+        if best is None or str(other.get("date")) > str(best.get("date")):
+            best = other
+    return best["price_snapshot"] if best else None
+
+
 def build_messages(item: dict, excerpt: str) -> list[dict]:
     system = "你是《AI 研发工作流周刊》的中文编辑，只依据给定的官方原文写简洁、准确的事实性摘要。"
     snapshot = item.get("price_snapshot")
+    prev = item.get("_previous_price_snapshot")
+    if snapshot and prev:
+        price_info = f"当前 {snapshot}；上一次 {prev}（可比，可据此描述价格变化）"
+    elif snapshot:
+        price_info = f"当前 {snapshot}；无可比的上一次快照（不得写任何价格变化）"
+    else:
+        price_info = "无（不得写任何价格变化）"
     user = f"""请为下面这条动态写一段 2-3 句的中文摘要。直接输出正文，不要标题、列表或任何前后缀。
 
 {PROMPT_RULES}
@@ -105,7 +133,7 @@ def build_messages(item: dict, excerpt: str) -> list[dict]:
 - signal_type: {item.get('signal_type', '')}
 - date: {item.get('date', '')}
 - source_url: {item.get('source_url', '')}
-- price_snapshot: {snapshot if snapshot else '无（不得写任何价格变化）'}
+- price_snapshot: {price_info}
 
 官方原文（摘录，唯一信息来源）：
 <<<
@@ -208,7 +236,8 @@ def main(argv=None) -> int:
             skipped += 1
             continue
         try:
-            summary = summarize(item, base_url, api_key, model, excerpt)
+            ctx = dict(item, _previous_price_snapshot=previous_snapshot(item, items))
+            summary = summarize(ctx, base_url, api_key, model, excerpt)
         except Exception as exc:
             logging.warning("摘要失败 %s：%s", item.get("id"), exc)
             failed += 1
