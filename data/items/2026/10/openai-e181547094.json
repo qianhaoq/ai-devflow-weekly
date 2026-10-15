@@ -1,0 +1,13 @@
+{
+  "id": "openai-e181547094",
+  "date": "2026-10-14",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+  "summary_zh": "OpenAI 介绍了 Third Moment Research 如何借助 Codex、GPT‑6 Astra、GPT‑6 Sol、GPT‑6.1 Sol 与 Daybreak，同时运行 10,000 个 agent，开展持续 36–48 小时的自主研究。该团队用 Codex 定位并修复研究环境中的瓶颈，例如将一年美股订单级数据的回测从约 3 小时缩短到约 3 至 5 分钟，从而减少 token 消耗与上下文污染。其联合创始人表示，GPT‑6.1 Sol 能在数天的计算中保持连贯的研究思路。",
+  "source_url": "https://openai.com/index/third-moment-research",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:11+00:00"
+}

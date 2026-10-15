@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-5ecc6bc031",
+  "date": "2026-10-11",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.1，官方说明无已知破坏性变更。本次更新包含多项功能改进，如 Android Activity 重建后恢复所选纯文本连接与会话/工作区路由、移动端个人资料页无障碍优化、新增实验性 Kubernetes CSI 运行时，以及为 Managed Agent 运行时加入后台 Shell 与 Monitor 能力等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:17:18+00:00"
+}

@@ -5,9 +5,9 @@
   "category": "code",
   "source_id": "copilot-changelog",
   "title": "Enterprise managed settings enforcement updates",
-  "summary_zh": "",
+  "summary_zh": "GitHub 为 Copilot 企业托管设置新增强制刷新机制：管理员可通过服务端、MDM 或文件方式设置 forceRemoteSettingsRefresh 为 true，要求 Copilot CLI、VS Code 和 GitHub Copilot 应用在启动时获取最新服务端策略，而非依赖缓存；若无法确认当前策略，客户端将采取失败关闭而非使用过期策略。同时，GitHub 开始为治理类托管设置键逐步加入最低客户端版本要求，首个为 sandbox 键，用户若固定使用旧版本客户端将被强制更新后才能继续使用 Copilot。",
   "source_url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-15T05:13:14+00:00"
 }

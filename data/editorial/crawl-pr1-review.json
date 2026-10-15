@@ -1,0 +1,104 @@
+{
+  "pr": 1,
+  "reviewer": "qianhaoq",
+  "reviewed_at": "2026-10-16",
+  "rules": "docs/editorial.md",
+  "items": {
+    "coderabbit-ccc309056f": {
+      "verified": true,
+      "edited": {
+        "date": "2026-10-16",
+        "title": "CodeRabbit 页面更新（2026-10-16）",
+        "summary_zh": "CodeRabbit 于 2026 年 10 月 14 日将两项功能更名：Autofix 改为 Fix comments，Autopilot 改为 Autofix，旧命令（含 review 命令）在有限时间内仍可作为别名使用，旧版 CLI 仍使用 autopilot 命令，将在下个 CLI 版本中替换。"
+      }
+    },
+    "openai-24cc989c02": {
+      "verified": false,
+      "reason": "与主题无关：Daybreak 安全客户案例，非研发工作流工具更新（openai-news 源需按 Codex 过滤）",
+      "source_url": "https://openai.com/index/sentinelone"
+    },
+    "openai-2f3282e483": {
+      "verified": false,
+      "reason": "与主题无关：OpenAI 经济研究报告（欧盟 agentic AI 采用率），非研发工具更新",
+      "source_url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic"
+    },
+    "openai-7d10f0ddfe": {
+      "verified": false,
+      "reason": "与主题无关：Block 安全团队客户案例，非研发工作流工具更新",
+      "source_url": "https://openai.com/index/block-ai-powered-security"
+    },
+    "openai-codex-1efa7a8a99": {
+      "verified": false,
+      "reason": "原文无发布说明（仅 \"Release 0.163.0-alpha.8\"），无可报道内容；alpha 预发布",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.8"
+    },
+    "openai-codex-3a5d51c635": {
+      "verified": false,
+      "reason": "原文无发布说明，无可报道内容；alpha 预发布",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.9"
+    },
+    "openai-codex-6f248c1035": {
+      "verified": false,
+      "reason": "原文无发布说明，无可报道内容；alpha 预发布",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11"
+    },
+    "openai-codex-a0745b539e": {
+      "verified": false,
+      "reason": "原文无发布说明，无可报道内容；alpha 预发布",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10.1"
+    },
+    "openai-codex-cfb0c989fe": {
+      "verified": true,
+      "edited": {
+        "date": "2026-10-16",
+        "title": "OpenAI Codex 页面更新（2026-10-16）",
+        "summary_zh": "OpenAI Codex 于 2026-10-16 更新 changelog 页面。此前 2026-10-14 起，GPT-5.5 在 Codex 中面向使用 ChatGPT 登录的用户退役，OpenAI API 及使用 API key 认证的 Codex 会话不受影响，官方建议改用 GPT-6.1 Sol（gpt-6.1-sol）。"
+      }
+    },
+    "openai-codex-e9dc883e98": {
+      "verified": false,
+      "reason": "原文无发布说明，无可报道内容；alpha 预发布",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.10"
+    },
+    "openai-fa14b8f7db": {
+      "verified": false,
+      "reason": "与主题无关：教育内容（AI for Educators 课程、Study Mode）",
+      "source_url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions"
+    },
+    "qwen-code-0fb0d6baa9": {
+      "verified": false,
+      "reason": "重复：nightly 预发布，内容已包含在正式版 v0.25.2 中",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1-nightly.20261012.18f80f5666"
+    },
+    "qwen-code-67667d8199": {
+      "verified": false,
+      "reason": "重复：nightly 预发布，内容已包含在正式版 v0.25.2 中",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1-nightly.20261013.6212189f1f"
+    },
+    "qwen-code-7b10dc6716": {
+      "verified": false,
+      "reason": "重复：v0.25.2 的 preview 预发布，内容已包含在正式版 v0.25.2 中",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-preview.1"
+    },
+    "qwen-code-88dca9de83": {
+      "verified": false,
+      "reason": "重复：Desktop v0.25.2 发布说明与 CLI v0.25.2 改动列表相同",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.25.2"
+    },
+    "qwen-code-a72fe6de88": {
+      "verified": false,
+      "reason": "重复：nightly 预发布，内容已包含在正式版 v0.25.2 中",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1-nightly.20261015.415925cbda"
+    },
+    "qwen-code-b9fcc2d060": {
+      "verified": false,
+      "reason": "重复：v0.25.2 的 preview 预发布，内容已包含在正式版 v0.25.2 中",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-preview.0"
+    },
+    "qwen-code-f73a784465": {
+      "verified": false,
+      "reason": "无实质内容：仅说明 SDK 捆绑 CLI 0.25.2，与 v0.25.2 重复",
+      "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.20"
+    }
+  }
+}

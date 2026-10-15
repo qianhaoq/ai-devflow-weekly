@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-7b10dc6716",
+  "date": "2026-10-15",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.2-preview.1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.2-preview.1 预览版本，主要围绕 managed-agent 进行多项修复与功能新增，包括连接器与 broker 健壮性修复、通过 Session 消息实现 lead 邮箱、合并后结算 worktree 子运行、引入 EventTransport 接缝、以 request_shutdown 停止 Hosted 团队成员等。此外还新增扩展的测试失败报告浏览器、mods 的 TypeScript 编写与配置及中间件调度与恢复，并修复了 CLI 读取 MCP 配置时的 UTF-8 BOM 处理、核心监控启动失败上报等问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-preview.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T16:49:21+00:00"
+}

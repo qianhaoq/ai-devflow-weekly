@@ -5,7 +5,7 @@
   "category": "code",
   "source_id": "qwen-code-releases",
   "title": "Release v0.25.1-nightly.20261015.415925cbda",
-  "summary_zh": "",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.1-nightly.20261015.415925cbda。本次更新包含 managed-agent 的连接器与 broker 健壮性修复、通过 Session 消息实现 lead 邮箱、worktree 子运行合并后结算等改动，并为 extensions 新增测试失败报告浏览器、为 mods 加入 TypeScript 编写与配置（PR2a）及中间件分发与恢复（PR2b）；同时修复了 CLI 读取 MCP 配置时的 UTF-8 BOM 处理、core 监控启动失败上报等问题。",
   "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1-nightly.20261015.415925cbda",
   "verified": false,
   "signal_type": "release",

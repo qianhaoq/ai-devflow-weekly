@@ -5,9 +5,9 @@
   "category": "review",
   "source_id": "qodo-pr-agent-releases",
   "title": "v0.47.0",
-  "summary_zh": "",
+  "summary_zh": "Qodo 发布 v0.47.0，包含多项重要变更：Gitea webhook 现在必须配置 secret，否则会以 HTTP 403 拒绝所有 webhook；GitHub Action 在工具出错时会失败，可通过设置 `github_action_config.fail_on_tool_errors = false` 保留原有行为；GitLab、Bitbucket 和 Bitbucket Server 上的评论命令需以斜杠开头才会触发工具。此外，`extra_config_url` 改为仅限主机配置，`commitable_code_suggestions` 更名为 `committable_code_suggestions`（旧拼写保留至 1.0 并给出弃用警告），Bitbucket Server webhook 镜像改用 gunicorn 运行。该版本还新增 Bedrock Kimi K3 模型支持，但存在已知问题：该模型默认仍会收到 temperature 参数，而 Bedrock 据报会拒绝，需将模型 id 加入 `config.no_temperature_models`。",
   "source_url": "https://github.com/The-PR-Agent/pr-agent/releases/tag/v0.47.0",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T05:13:26+00:00"
 }

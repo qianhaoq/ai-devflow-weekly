@@ -5,9 +5,9 @@
   "category": "code",
   "source_id": "cline-releases",
   "title": "v4.1.24",
-  "summary_zh": "",
+  "summary_zh": "Cline 发布 v4.1.24，未选择模型时 Cline 与 OpenRouter 提供方默认使用 Claude Sonnet 5.5，并刷新模型目录，新增 Claude Haiku 5.5 及 AI/ML API、LowRouter、Prime Inference 等提供方，多个提供方的默认模型也随之调整。该版本还修复了关闭推理在部分模型上报 400 错误、MCP 服务器或 hook 提前退出导致扩展宿主崩溃、失效模型 id 的 404 被误显示为登录问题，以及截图等图片虚增 token 估算等问题。",
   "source_url": "https://github.com/cline/cline/releases/tag/v4.1.24",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-15T05:13:24+00:00"
 }

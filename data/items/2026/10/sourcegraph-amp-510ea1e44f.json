@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-510ea1e44f",
+  "date": "2026-10-06",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Many, Many Pucks",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 6 日发布更新，Puck 现支持多个独立对话，每个对话拥有各自的 Puck。用户可按 + 新建对话，点击顶部对话名称进行切换；三天未操作的对话会移入 Inactive 以保持列表简洁。",
+  "source_url": "https://ampcode.com/news/many-many-pucks",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:13+00:00"
+}

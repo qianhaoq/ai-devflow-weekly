@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-03bdc98229",
+  "date": "2026-10-10",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.296",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.296，为 Claude apps 网关的 `managed.policies[]` 新增 `code` 键，并新增 `autoCompactWindow`、`CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL`、`CLAUDE_CODE_OVERLOADED_RETRY_MAX_DELAY_MS` 等配置项，同时为 Read 工具加入 `allow_large` 选项。该版本还修复了托管设置钩子、无头会话 MCP 服务器、网关登录、子代理恢复及工作流脚本截断等多项问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:17:09+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-ccc309056f",
+  "date": "2026-10-14",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "Autofix 更名为 Fix comments，Autopilot 更名为 Autofix",
+  "summary_zh": "CodeRabbit 将两项功能更名：原 Autofix 改为 Fix comments，用于一次性修复所选的评审意见（`@coderabbitai fix comments`）；原 Autopilot 改为 Autofix，用于持续修复评审反馈、CodeRabbit 发现的问题和失败的 CI，直到 Coding Agent 的 PR 可以合并。旧命令（含 review 命令）在有限时间内仍可作为别名使用；旧版 CLI 仍使用 autopilot 命令，将在下个 CLI 版本中替换。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-10-16",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T16:49:14+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cline-f6d4930f12",
+  "date": "2026-10-08",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "SDK v0.0.92",
+  "summary_zh": "Cline 发布 SDK v0.0.92，AI SDK 统一升级至 `ai` 7.0.120，所有 `@ai-sdk/*` 包统一使用 `@ai-sdk/provider-utils` 5.0.50。此版本修复了关闭推理时向不支持该选项的 OpenAI 与 Claude 模型发送相关参数的问题，并改进了 Stdio MCP 客户端对 EPIPE 的处理及 SAP AI Core provider 的异常处理。模型目录同步刷新，新增 Claude Haiku 5.5，并调整了 Google Vertex AI、GitHub Copilot 等多个 provider 的默认模型。",
+  "source_url": "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.92",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:17:14+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-fa14b8f7db",
+  "date": "2026-10-15",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Teaching students to think and learn through questions",
+  "summary_zh": "OpenAI 于 2026 年 10 月 15 日发布面向教育者的内容，宣布在 OpenAI Academy 上线巴西葡萄牙语版 AI for Educators 课程，面向中小学及高等教育工作者，介绍如何用 AI 备课、设计活动与评估及准备沟通材料。文中同时介绍 ChatGPT 的 Study Mode，该功能由教师、科学家与教育学专家合作开发，通过提问、提示、解释与理解检查引导逐步学习，可在 ChatGPT 工具菜单中选择 Study 开启。",
+  "source_url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T16:49:14+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-c1d34165b4",
+  "date": "2026-10-13",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Client telemetry user attribution and configurable capture",
+  "summary_zh": "GitHub Copilot 新增客户端遥测用户归属与可配置采集功能，企业管理员可通过托管设置中的 telemetry.capture.identity 将 Copilot 活动归属到具体用户，而无需收集其提示、响应或工具内容。该设置会向 OpenTelemetry 数据添加 user.name、process.user.name 和 host.name 三个属性，身份采集默认关闭，并与现有的匿名用户标识相互独立。管理员还可分别控制 prompts、responses、toolArguments、toolOutput 和 policyDetail 五个采集类别，所有类别默认关闭，显式托管值优先于本地设置、SDK 配置和环境变量。",
+  "source_url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:08+00:00"
+}
