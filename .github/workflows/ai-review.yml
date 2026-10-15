@@ -1,7 +1,11 @@
 name: AI Code Review
 
+# pull_request_target: fork/Dependabot PRs get a read-only token on
+# `pull_request`, so requestReviewers would silently fail. This workflow is
+# API-only — it never checks out or runs PR code and uses no provider
+# secrets — so the trusted base-branch event is safe here.
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review]
 
 permissions:
