@@ -10,7 +10,7 @@
 
 ## Check names after devflow-gates migration
 
-本仓库的 CI / Codex / QA / Auto Merge 改为调用 `qianhaoq/devflow-gates` 的 reusable workflow（固定到 commit `f69810a`，即 f69810a2d3ad81b1b69700ff060fb6e119f83d88）。Check 名变为 `<caller job> / <called job>`，branch protection 与 `auto-merge.yml` 的 `required_checks` 必须使用以下名字：
+本仓库的 CI / Codex / QA / Auto Merge 改为调用 `qianhaoq/devflow-gates` 的 reusable workflow（固定到 commit `7307111`，即 f69810a2d3ad81b1b69700ff060fb6e119f83d88）。Check 名变为 `<caller job> / <called job>`，branch protection 与 `auto-merge.yml` 的 `required_checks` 必须使用以下名字：
 
 - `ci / Build & Test`
 - `ci / Secret Scan`
@@ -28,7 +28,7 @@ Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一�
 
 ## editorial-approved 只认白名单用户
 
-`editorial / QA Gate` 调用 devflow-gates QA Gate 的 `allowed_labelers`：通过 issue events/timeline API 读取 `editorial-approved` 的 `labeled` 事件，只有 actor 在白名单内的那次打标才计入（默认 `qianhaoq`，可用仓库变量 `EDITORIAL_LABELERS` 逗号分隔覆盖）。其他人（包括 PR 作者本人，除非其在白名单内）打的标签不算签字，gate 保持红色；每次 push 标签仍会被摘除。
+`editorial / QA Gate` 调用 devflow-gates QA Gate 的 `allowed_labelers`：通过 issue events/timeline API 读取 `editorial-approved` 的 `labeled` 事件，只有 actor 在白名单内的那次打标才计入（默认 `qianhaoq`，可用仓库变量 `EDITORIAL_LABELERS` 逗号分隔覆盖）。只看该标签**最后一次** `labeled` 事件的 actor；之后若有 `unlabeled` 则视为未签字。变量设置了但解析不出任何用户（如 `" "`、`","`）时 gate 直接失败。其他人（包括 PR 作者本人，除非其在白名单内）打的标签不算签字，gate 保持红色；每次 push 标签仍会被摘除。
 
 ## Branch protection（#2 合入后启用）
 
