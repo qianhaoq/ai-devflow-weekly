@@ -17,6 +17,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # carry-over 需要 merge-base
+
+      # 若已有未合并的 crawl PR，把它相对 merge-base 的改动（新条目、编辑手工
+      # 提交的 verified=true / 摘要修改、page_diff 状态）重放到最新 main 上，再
+      # 抓取新条目。只重放 diff：main 上更新的修正不会被旧树覆盖，分支里删除的
+      # 文件也会被删除。重放冲突则失败，交人工处理。否则 create-pull-request
+      # 从 main 重建 crawl/auto 并 force-push，会丢掉人工审核结果。
+      - name: Carry over open crawl PR edits
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "$(gh pr list --head crawl/auto --state open --json number -q '.[0].number')" ]; then
+            git fetch --no-tags origin main crawl/auto
+            base=$(git merge-base origin/main origin/crawl/auto)
+            git diff --binary "$base" origin/crawl/auto -- data/items data/state > /tmp/crawl-pr.diff
+            if [ -s /tmp/crawl-pr.diff ]; then
+              git apply --3way --index /tmp/crawl-pr.diff
+              git reset -q   # 只保留工作区改动，交给 create-pull-request 提交
+            fi
+            echo "已重放 crawl/auto 相对 $base 的条目与状态改动"
+          fi
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -36,8 +58,9 @@ jobs:
         run: python scripts/draft.py
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://api.deepseek.com' }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}  # 默认值只在 scripts/draft.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # release API 认证，避免 60 次/小时限流
 
       - name: Validate items
         run: python scripts/validate.py

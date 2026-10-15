@@ -117,7 +117,32 @@ def main(argv=None) -> int:
         default=None,
         help="周标签，如 2026-W42（默认当前 ISO 周，Asia/Shanghai）",
     )
+    ap.add_argument(
+        "--all",
+        action="store_true",
+        help="重建所有含已核实条目的周（部署时使用，使编辑审核后置 verified 的条目进入当周周刊）",
+    )
     args = ap.parse_args(argv)
+
+    if args.all:
+        items = common.load_items()
+        weeks = set()
+        for item in items:
+            if not item.get("verified"):
+                continue
+            try:
+                y, w, _ = date_cls.fromisoformat(str(item.get("date") or "")).isocalendar()
+            except ValueError:
+                continue
+            weeks.add(f"{y}-W{w:02d}")
+        for label in sorted(weeks):
+            main(["--week", label])
+        # 已有周刊但其中已无 verified 条目（编辑把最后一条改回 false）：删除，避免发布过期内容
+        for path in sorted(common.WEEKLY_DIR.glob("*-W*.md")) if common.WEEKLY_DIR.exists() else []:
+            if WEEK_RE.match(path.stem) and path.stem not in weeks:
+                path.unlink()
+                print(f"已删除 {path.name}：该周已无已核实条目")
+        return 0
 
     label = args.week or current_week_label()
     iso_year, iso_week = parse_week(label)

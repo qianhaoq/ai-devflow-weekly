@@ -151,6 +151,7 @@ sources:
     url: https://github.com/qodo-ai/pr-agent/releases.atom
     official_domain: github.com/qodo-ai
     pricing_url: https://www.qodo.ai/pricing/
+    official_github_repos: [The-PR-Agent/pr-agent]  # qodo-ai/pr-agent 已迁移，feed 链接指向新仓库
     notes: "PR-Agent（评审/测试）"
     verified: true
   - id: kimi-cli-releases

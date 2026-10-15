@@ -10,7 +10,7 @@
 ## 数据红线
 
 - `source_url` 仅允许官方域名：命中 `sources.yml` 的 `official_domain`
-  （host 或其子域；`github.com/<org>` 形式还要求路径前缀匹配）；GitHub releases 链接视为官方。
+  （host 或其子域；`github.com/<org>` 形式还要求路径前缀匹配）；`github.com` 只认 sources.yml 中官方源的 `/org/repo` 路径（含 `official_github_repos`），其他仓库与 www.github.com 等非规范 host 一律非官方。
 - `category=pricing` 必须带 `price_snapshot`；涨/降价必须有同 vendor+plan 前后快照对比；
   仅月付/年付等计费周期变化只算「计费周期变化」，不算涨价或降价。
 - `verified=false` 的条目不得进入周刊；beta / preview / 预览 必须标注。

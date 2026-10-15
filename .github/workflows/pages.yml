@@ -31,6 +31,9 @@ jobs:
       - name: Generate site data
         run: |
           pip install -r requirements.txt
+          # 重建周刊：编辑在 crawl PR 中把条目置 verified=true 后，合入即进入当周周刊
+          # （只在部署产物里重建，不提交回仓库，不需要写权限）
+          python scripts/weekly.py --all
           python scripts/build_site_data.py
 
       - name: Configure Pages
