@@ -2,7 +2,7 @@
 """为 summary_zh 为空的条目生成中文摘要（OpenAI 兼容 /chat/completions）。
 
 - 环境变量：LLM_API_KEY（必需，缺省则提示并退出 0，条目保持原样）、
-  LLM_BASE_URL（默认 https://api.openai.com/v1）、LLM_MODEL（默认 gpt-4o-mini）。
+  LLM_BASE_URL（默认 https://api.deepseek.com，DeepSeek 按量付费）、LLM_MODEL（默认 deepseek-flash）。
 - 摘要成功且 source_url 命中官方域名时才置 verified=true。
 - 永远不打印 API Key。
 """
@@ -57,6 +57,10 @@ def build_messages(item: dict) -> list[dict]:
         {"role": "user", "content": user},
     ]
 
+# DeepSeek 按量付费（OpenAI 兼容）；空字符串（如未配置的 Actions vars）也回落到默认值
+DEFAULT_BASE_URL = "https://api.deepseek.com"
+DEFAULT_MODEL = "deepseek-flash"
+
 
 def strip_code_fence(text: str) -> str:
     text = text.strip()
@@ -103,8 +107,8 @@ def main(argv=None) -> int:
         )
         return 0
 
-    base_url = os.environ.get("LLM_BASE_URL", "https://api.openai.com/v1").rstrip("/")
-    model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+    base_url = (os.environ.get("LLM_BASE_URL") or DEFAULT_BASE_URL).rstrip("/")
+    model = os.environ.get("LLM_MODEL") or DEFAULT_MODEL
     sources = common.load_sources()
 
     summarized = verified = failed = 0
