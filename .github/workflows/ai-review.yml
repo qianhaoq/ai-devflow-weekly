@@ -34,7 +34,7 @@ jobs:
                 owner,
                 repo,
                 pull_number,
-                reviewers: ['copilot-pull-request-reviewer']
+                reviewers: ['copilot-pull-request-reviewer[bot]']
               });
               core.info('✅ Copilot code review requested successfully');
               core.exportVariable('COPILOT_REQUESTED', 'true');
