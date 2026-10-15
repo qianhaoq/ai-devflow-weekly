@@ -16,6 +16,7 @@ import os
 import re
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
 
@@ -92,27 +93,39 @@ def source_excerpt(item: dict, fetch=None) -> str:
     return text[:MAX_EXCERPT_CHARS]
 
 
-def _captured(snap: dict) -> str:
-    return str((snap or {}).get("captured_at") or "")
+def _captured(snap: dict) -> datetime | None:
+    """captured_at 解析为 UTC 时间（支持 Z 与任意 RFC 3339 偏移）；无效则 None。"""
+    raw = str((snap or {}).get("captured_at") or "").strip()
+    if not raw:
+        return None
+    try:
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00").replace("z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)  # 无时区按 UTC 处理
+    return dt.astimezone(timezone.utc)
 
 
 def previous_snapshot(item: dict, items: list[dict]) -> dict | None:
     """同 vendor+plan+币种、captured_at 严格早于当前快照的最近一次观测；没有则 None。
     按 price_snapshot.captured_at（采集时间）排序，而不是条目发布日期。"""
     cur = item.get("price_snapshot")
-    if not isinstance(cur, dict) or not _captured(cur):
+    cur_at = _captured(cur) if isinstance(cur, dict) else None
+    if cur_at is None:
         return None
     key = (item.get("vendor"), cur.get("plan"), str(cur.get("currency") or "").lower())
     best = None
     for other in items:
         snap = other.get("price_snapshot") if isinstance(other, dict) else None
-        if other is item or not isinstance(snap, dict) or not _captured(snap):
+        at = _captured(snap) if isinstance(snap, dict) else None
+        if other is item or at is None:
             continue
         if (other.get("vendor"), snap.get("plan"), str(snap.get("currency") or "").lower()) != key:
             continue
-        if _captured(snap) >= _captured(cur):
+        if at >= cur_at:
             continue
-        if best is None or _captured(snap) > _captured(best):
+        if best is None or at > _captured(best):
             best = snap
     return best
 

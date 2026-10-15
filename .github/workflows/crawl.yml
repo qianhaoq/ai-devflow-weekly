@@ -27,7 +27,9 @@ jobs:
           if [ -n "$(gh pr list --head crawl/auto --state open --json number -q '.[0].number')" ]; then
             git fetch --no-tags origin crawl/auto
             git checkout FETCH_HEAD -- data/items
-            echo "已叠加 crawl/auto 上的条目修改"
+            # page_diff 的页面哈希状态也要沿用，否则同一次页面变化会每天再生成一条重复条目
+            if git cat-file -e FETCH_HEAD:data/state 2>/dev/null; then git checkout FETCH_HEAD -- data/state; fi
+            echo "已叠加 crawl/auto 上的条目与抓取状态"
           fi
 
       - name: Set up Python 3.11

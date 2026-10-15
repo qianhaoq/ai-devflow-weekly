@@ -166,3 +166,10 @@ def test_previous_snapshot_orders_by_captured_at_not_date():
     early_capture = _price("2026-09-20", 20, captured="2026-09-20T00:00:00Z")
     cur = _price("2026-10-01", 25, captured="2026-10-05T00:00:00Z")
     assert d.previous_snapshot(cur, [late_capture, early_capture, cur]) == early_capture["price_snapshot"]
+
+
+def test_previous_snapshot_compares_captured_at_in_utc():
+    cur = _price("2026-10-05", 25, captured="2026-10-05T10:00:00+08:00")      # 02:00Z
+    later = _price("2026-10-04", 30, captured="2026-10-05T03:00:00Z")         # 实际更晚
+    earlier = _price("2026-10-03", 20, captured="2026-10-05T09:00:00+08:00")  # 01:00Z
+    assert d.previous_snapshot(cur, [later, earlier, cur]) == earlier["price_snapshot"]
