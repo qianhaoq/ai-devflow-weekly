@@ -69,7 +69,10 @@ def source_excerpt(item: dict, fetch=None) -> str:
         # GitHub release：取 API 的 release 正文，而不是带导航/登录控件的整页 HTML
         try:
             api = f"https://api.github.com/repos/{m[1]}/{m[2]}/releases/tags/{quote(m[3], safe='')}"  # tag 可含 /（如 sdk/v1）
-            resp = (fetch or (lambda u: requests.get(u, timeout=REQUEST_TIMEOUT, headers={"User-Agent": common.USER_AGENT, "Accept": "application/vnd.github+json"})))(api)
+            gh_headers = {"User-Agent": common.USER_AGENT, "Accept": "application/vnd.github+json"}
+            if os.environ.get("GITHUB_TOKEN"):
+                gh_headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+            resp = (fetch or (lambda u: requests.get(u, timeout=REQUEST_TIMEOUT, headers=gh_headers)))(api)
             resp.raise_for_status()
             text = (resp.json().get("body") or "").strip()
         except Exception as exc:
@@ -89,24 +92,29 @@ def source_excerpt(item: dict, fetch=None) -> str:
     return text[:MAX_EXCERPT_CHARS]
 
 
+def _captured(snap: dict) -> str:
+    return str((snap or {}).get("captured_at") or "")
+
+
 def previous_snapshot(item: dict, items: list[dict]) -> dict | None:
-    """同 vendor+plan+币种、日期更早的最近一条定价快照；没有则 None。"""
+    """同 vendor+plan+币种、captured_at 严格早于当前快照的最近一次观测；没有则 None。
+    按 price_snapshot.captured_at（采集时间）排序，而不是条目发布日期。"""
     cur = item.get("price_snapshot")
-    if not isinstance(cur, dict):
+    if not isinstance(cur, dict) or not _captured(cur):
         return None
     key = (item.get("vendor"), cur.get("plan"), str(cur.get("currency") or "").lower())
     best = None
     for other in items:
         snap = other.get("price_snapshot") if isinstance(other, dict) else None
-        if other is item or not isinstance(snap, dict):
+        if other is item or not isinstance(snap, dict) or not _captured(snap):
             continue
         if (other.get("vendor"), snap.get("plan"), str(snap.get("currency") or "").lower()) != key:
             continue
-        if str(other.get("date") or "") >= str(item.get("date") or ""):
+        if _captured(snap) >= _captured(cur):
             continue
-        if best is None or str(other.get("date")) > str(best.get("date")):
-            best = other
-    return best["price_snapshot"] if best else None
+        if best is None or _captured(snap) > _captured(best):
+            best = snap
+    return best
 
 
 def build_messages(item: dict, excerpt: str) -> list[dict]:

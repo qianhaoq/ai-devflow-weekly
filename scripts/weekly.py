@@ -137,6 +137,11 @@ def main(argv=None) -> int:
             weeks.add(f"{y}-W{w:02d}")
         for label in sorted(weeks):
             main(["--week", label])
+        # 已有周刊但其中已无 verified 条目（编辑把最后一条改回 false）：删除，避免发布过期内容
+        for path in sorted(common.WEEKLY_DIR.glob("*-W*.md")) if common.WEEKLY_DIR.exists() else []:
+            if WEEK_RE.match(path.stem) and path.stem not in weeks:
+                path.unlink()
+                print(f"已删除 {path.name}：该周已无已核实条目")
         return 0
 
     label = args.week or current_week_label()

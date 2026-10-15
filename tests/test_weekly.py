@@ -123,3 +123,13 @@ def test_weekly_all_rebuilds_verified_weeks(monkeypatch, tmp_path):
     monkeypatch.setattr(w, "main", lambda argv=None: calls.append(argv) or 0)
     assert real(["--all"]) == 0
     assert calls == [["--week", "2026-W42"]]
+
+
+def test_weekly_all_deletes_week_without_verified(monkeypatch, tmp_path):
+    import common
+    import weekly as w
+    (tmp_path / "2026-W36.md").write_text("old", encoding="utf-8")
+    monkeypatch.setattr(common, "WEEKLY_DIR", tmp_path)
+    monkeypatch.setattr(common, "load_items", lambda: [{"date": "2026-09-01", "verified": False}])
+    assert w.main(["--all"]) == 0
+    assert not (tmp_path / "2026-W36.md").exists()

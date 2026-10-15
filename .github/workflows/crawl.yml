@@ -17,6 +17,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 若已有未合并的 crawl PR，先把它分支上的条目（含编辑手工提交的
+      # verified=true / 摘要修改）叠加到工作区，再抓取新条目。否则
+      # create-pull-request 从 main 重建 crawl/auto 并 force-push，会覆盖人工审核结果。
+      - name: Carry over open crawl PR edits
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "$(gh pr list --head crawl/auto --state open --json number -q '.[0].number')" ]; then
+            git fetch --no-tags origin crawl/auto
+            git checkout FETCH_HEAD -- data/items
+            echo "已叠加 crawl/auto 上的条目修改"
+          fi
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -37,6 +50,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://api.deepseek.com' }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}  # 默认值只在 scripts/draft.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # release API 认证，避免 60 次/小时限流
 
       - name: Validate items
         run: python scripts/validate.py

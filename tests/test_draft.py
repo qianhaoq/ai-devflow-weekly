@@ -140,8 +140,9 @@ def test_github_release_tag_with_slash():
     assert seen == ["https://api.github.com/repos/cline/cline/releases/tags/sdk%2Fsdk%2Fv0.0.93"]
 
 
-def _price(date, price, plan="Pro", ccy="USD"):
-    return {"vendor": "Cursor", "date": date, "price_snapshot": {"plan": plan, "price": price, "currency": ccy}}
+def _price(date, price, plan="Pro", ccy="USD", captured=None):
+    return {"vendor": "Cursor", "date": date, "price_snapshot": {"plan": plan, "price": price, "currency": ccy,
+                                                                 "captured_at": captured or date + "T00:00:00Z"}}
 
 
 def test_previous_snapshot_requires_comparable_earlier():
@@ -157,3 +158,11 @@ def test_prompt_price_claims_only_with_pair():
     assert "无可比的上一次快照（不得写任何价格变化）" in single
     pair = d.build_messages(dict(cur, _previous_price_snapshot={"plan": "Pro", "price": 20}), "e")[1]["content"]
     assert "可比，可据此描述价格变化" in pair
+
+
+def test_previous_snapshot_orders_by_captured_at_not_date():
+    # 公告日期较早但价格是今天才采集的条目，不能被当成"上一次"
+    late_capture = _price("2026-09-01", 30, captured="2026-10-10T00:00:00Z")
+    early_capture = _price("2026-09-20", 20, captured="2026-09-20T00:00:00Z")
+    cur = _price("2026-10-01", 25, captured="2026-10-05T00:00:00Z")
+    assert d.previous_snapshot(cur, [late_capture, early_capture, cur]) == early_capture["price_snapshot"]
