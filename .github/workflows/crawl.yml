@@ -17,20 +17,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # carry-over 需要 merge-base
 
-      # 若已有未合并的 crawl PR，先把它分支上的条目（含编辑手工提交的
-      # verified=true / 摘要修改）叠加到工作区，再抓取新条目。否则
-      # create-pull-request 从 main 重建 crawl/auto 并 force-push，会覆盖人工审核结果。
+      # 若已有未合并的 crawl PR，把它相对 merge-base 的改动（新条目、编辑手工
+      # 提交的 verified=true / 摘要修改、page_diff 状态）重放到最新 main 上，再
+      # 抓取新条目。只重放 diff：main 上更新的修正不会被旧树覆盖，分支里删除的
+      # 文件也会被删除。重放冲突则失败，交人工处理。否则 create-pull-request
+      # 从 main 重建 crawl/auto 并 force-push，会丢掉人工审核结果。
       - name: Carry over open crawl PR edits
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -n "$(gh pr list --head crawl/auto --state open --json number -q '.[0].number')" ]; then
-            git fetch --no-tags origin crawl/auto
-            git checkout FETCH_HEAD -- data/items
-            # page_diff 的页面哈希状态也要沿用，否则同一次页面变化会每天再生成一条重复条目
-            if git cat-file -e FETCH_HEAD:data/state 2>/dev/null; then git checkout FETCH_HEAD -- data/state; fi
-            echo "已叠加 crawl/auto 上的条目与抓取状态"
+            git fetch --no-tags origin main crawl/auto
+            base=$(git merge-base origin/main origin/crawl/auto)
+            git diff --binary "$base" origin/crawl/auto -- data/items data/state > /tmp/crawl-pr.diff
+            if [ -s /tmp/crawl-pr.diff ]; then
+              git apply --3way --index /tmp/crawl-pr.diff
+              git reset -q   # 只保留工作区改动，交给 create-pull-request 提交
+            fi
+            echo "已重放 crawl/auto 相对 $base 的条目与状态改动"
           fi
 
       - name: Set up Python 3.11
