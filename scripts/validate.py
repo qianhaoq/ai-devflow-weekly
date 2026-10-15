@@ -2,7 +2,7 @@
 """校验 data/items 下全部条目。
 
 检查项：JSON Schema、id/source_url 唯一、source_url 为官方域名（任一源的
-official_domain，host+可选路径前缀；GitHub releases 链接一律视为官方）、
+official_domain，host+可选路径前缀；github.com 仅限 sources.yml 中官方 org/repo 路径）、
 文件路径与 date/id 一致、pricing 条目必须带 price_snapshot。
 
 定价规则：signal_type=pricing_change 且带 price_snapshot 的条目与同 vendor+plan
@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 from jsonschema import Draft202012Validator
 
@@ -35,11 +36,31 @@ def validate_item(item, schema: dict | None = None) -> list[str]:
     return errors
 
 
+def github_repo_paths(sources: list[dict]) -> set[str]:
+    """sources.yml 中 github.com 源的官方 /org/repo 路径（小写）：取自源 url，
+    外加显式列出的 official_github_repos（如仓库迁移后的新 org/repo）。"""
+    paths: set[str] = set()
+    for source in sources or []:
+        for repo in source.get("official_github_repos") or []:
+            parts = [p for p in str(repo).split("/") if p]
+            if len(parts) == 2:
+                paths.add(("/" + "/".join(parts)).lower())
+        url = source.get("url") or ""
+        if common.url_host(url) != "github.com":
+            continue
+        parts = [p for p in urlparse(url).path.split("/") if p][:2]
+        if len(parts) == 2:
+            paths.add(("/" + "/".join(parts)).lower())
+    return paths
+
+
 def url_is_official(url: str, sources: list[dict]) -> bool:
-    """source_url 是否官方：命中任一源 official_domain，或 host 为 github.com（releases）。"""
-    if common.is_official_url(url, sources):
-        return True
-    return common.url_host(url) == "github.com"
+    """source_url 是否官方。github.com 只接受 sources.yml 列出的 /org/repo 路径
+    （避免 github.com/anthropics/<任意仓库> 或任意 github 仓库被当作官方）。"""
+    if common.url_host(url) == "github.com":
+        path = urlparse(url).path.lower()
+        return any(path == p or path.startswith(p + "/") for p in github_repo_paths(sources))
+    return common.is_official_url(url, sources)
 
 
 def _price_equal(a, b) -> bool:

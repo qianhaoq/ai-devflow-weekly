@@ -19,7 +19,7 @@ Jekyll 周刊站点。
 ├── scripts/
 │   ├── common.py            # 共享工具（sources / 条目读写 / id / 官方域名校验）
 │   ├── fetch.py             # 抓取：rss / github_releases / page_diff（--limit 5 --since-days 30）
-│   ├── draft.py             # LLM 中文摘要；域名官方且摘要成功才置 verified=true
+│   ├── draft.py             # LLM 中文摘要（仅依据官方原文）；AI 起草条目 verified 保持 false，待编辑审核
 │   ├── validate.py          # schema + 唯一性 + 官方域名 + 路径 + 定价规则校验
 │   ├── weekly.py            # 生成 _weekly/YYYY-Www.md（仅 verified 条目）
 │   └── build_site_data.py   # 生成 _data/items.json 供 Jekyll 使用
@@ -93,4 +93,4 @@ pytest -q
 
 ## MERGE_GATES（合并门禁）
 
-内容 PR 由 bot 合并（不是用户手动合并），前提：CI `Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+内容 PR 由 bot 合并（不是用户手动合并），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。

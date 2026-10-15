@@ -179,9 +179,14 @@ def test_official_domain_path_prefix():
     assert common.is_official_url("https://github.com/other/repo", SOURCES) is False
 
 
-def test_github_releases_treated_official_in_validate():
-    # validate 层面：github.com 的 releases 链接一律视为官方
-    assert v.url_is_official("https://github.com/any/repo/releases", []) is True
+def test_github_only_official_repo_paths_in_validate():
+    srcs = SOURCES + [{"id": "x", "url": "https://github.com/anthropics/claude-code/releases.atom",
+                       "official_domain": "github.com/anthropics"}]
+    assert v.url_is_official("https://github.com/anthropics/claude-code/releases/tag/v1", srcs) is True
+    assert v.url_is_official("https://github.com/anthropics/other-repo/releases", srcs) is False
+    assert v.url_is_official("https://github.com/anthropics/claude-code-evil", srcs) is False
+    assert v.url_is_official("https://github.com/any/repo/releases", srcs) is False
+    assert v.url_is_official("https://github.com/any/repo/releases", []) is False
     assert v.url_is_official("https://example.com/page", []) is False
 
 
