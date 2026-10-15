@@ -47,8 +47,12 @@ git revert --no-edit "$BAD_SHA"            # squash merge = 单父提交；若�
 git push -u origin HEAD
 gh pr create --repo qianhaoq/ai-devflow-weekly --base main --fill --title "revert: PR #$PR"
 # revert PR 合入后（bot 合并不触发 push）重新部署并确认：
+SINCE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 gh workflow run pages.yml --repo qianhaoq/ai-devflow-weekly --ref main
-gh run watch --repo qianhaoq/ai-devflow-weekly "$(gh run list --repo qianhaoq/ai-devflow-weekly --workflow pages.yml -L1 --json databaseId -q '.[0].databaseId')"
+# 等到本次 dispatch 的 run 出现（只取 SINCE 之后创建的 workflow_dispatch run），再 watch 它
+until RUN=$(gh run list --repo qianhaoq/ai-devflow-weekly --workflow pages.yml --event workflow_dispatch -L5 \
+    --json databaseId,createdAt -q "[.[]|select(.createdAt >= \"$SINCE\")][0].databaseId // empty") && [ -n "$RUN" ]; do sleep 5; done
+gh run watch --repo qianhaoq/ai-devflow-weekly "$RUN" --exit-status
 ```
 
 ## 签署 / Sign-off
