@@ -1,0 +1,44 @@
+---
+layout: default
+title: 最新动态
+---
+
+<section>
+  <h2>周刊</h2>
+  {% assign weeks = site.weekly | sort: 'name' | reverse %}
+  {% if weeks.size > 0 %}
+  <ul>
+    {% for week in weeks %}
+    <li><a href="{{ week.url | relative_url }}">{{ week.title | default: week.name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>暂无周刊。</p>
+  {% endif %}
+</section>
+
+<section>
+  <h2>最新条目</h2>
+  {% if site.data.items %}
+  {% for item in site.data.items %}
+  <article class="item">
+    <div class="meta">
+      <span>{{ item.date }}</span>
+      <span>{{ item.vendor }}</span>
+      <span>{{ item.category }}</span>
+      {% if item.verified %}
+      <span class="badge verified">已核实</span>
+      {% else %}
+      <span class="badge unverified">未核实</span>
+      {% endif %}
+    </div>
+    <a class="title" href="{{ item.source_url }}">{{ item.title | default: item.source_url }}</a>
+    {% if item.summary_zh and item.summary_zh != "" %}
+    <p class="summary">{{ item.summary_zh }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+  {% else %}
+  <p>暂无数据（先运行 <code>python scripts/build_site_data.py</code>）。</p>
+  {% endif %}
+</section>

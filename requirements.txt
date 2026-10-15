@@ -1,0 +1,5 @@
+pyyaml
+requests
+feedparser
+jsonschema
+pytest

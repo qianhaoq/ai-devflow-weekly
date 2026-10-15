@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 1rem 1.25rem 3rem;
+        font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        line-height: 1.7;
+      }
+      header h1 a { text-decoration: none; }
+      .meta { color: #888; font-size: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+      .badge {
+        display: inline-block;
+        padding: 0 0.4em;
+        border: 1px solid currentColor;
+        border-radius: 0.4em;
+        font-size: 0.75rem;
+      }
+      .badge.verified { color: #1a7f37; }
+      .badge.unverified { color: #9a6700; }
+      .item { margin: 1rem 0; }
+      .item .title { font-weight: 600; }
+      .item .summary { margin: 0.25rem 0 0; }
+      footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p>数据仅来自官方源 · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+    </footer>
+  </body>
+</html>

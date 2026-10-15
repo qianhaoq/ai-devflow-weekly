@@ -1,0 +1,13 @@
+{
+  "id": "github-a3b7e4eded",
+  "date": "2026-10-14",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "GitHub Actions workflow lockfiles in public preview",
+  "summary_zh": "",
+  "source_url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:13:14+00:00"
+}

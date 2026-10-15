@@ -1,0 +1,13 @@
+{
+  "id": "openai-24cc989c02",
+  "date": "2026-10-14",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "SentinelOne cuts malware analysis from weeks to hours",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/sentinelone",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:13:19+00:00"
+}

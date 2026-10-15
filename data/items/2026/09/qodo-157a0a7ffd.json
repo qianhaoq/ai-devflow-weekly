@@ -1,0 +1,13 @@
+{
+  "id": "qodo-157a0a7ffd",
+  "date": "2026-09-22",
+  "vendor": "Qodo",
+  "category": "review",
+  "source_id": "qodo-pr-agent-releases",
+  "title": "v0.46.0",
+  "summary_zh": "",
+  "source_url": "https://github.com/The-PR-Agent/pr-agent/releases/tag/v0.46.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:13:26+00:00"
+}

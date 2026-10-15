@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qianhaoq.github.io/ai-devflow-weekly/schema/item.schema.json",
+  "title": "AI DevFlow Weekly item",
+  "description": "单条新闻条目，存放于 data/items/YYYY/MM/<id>.json，其中 id = vendor-slug + '-' + sha1(source_url) 前 10 位十六进制",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "date",
+    "vendor",
+    "category",
+    "title",
+    "summary_zh",
+    "source_url",
+    "verified",
+    "signal_type",
+    "fetched_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-[0-9a-f]{10}$",
+      "description": "vendor-slug + '-' + sha1(source_url) 的前 10 位十六进制"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "format": "date",
+      "description": "发布日期（Asia/Shanghai 时区），YYYY-MM-DD"
+    },
+    "vendor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "enum": ["code", "review", "test", "ci", "agent-platform", "pricing"]
+    },
+    "source_id": {
+      "type": "string",
+      "description": "sources.yml 中对应源的名称；可选"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary_zh": {
+      "type": "string",
+      "description": "中文摘要，可为空字符串"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "true 表示摘要已生成且 source_url 命中官方域名"
+    },
+    "signal_type": {
+      "type": "string",
+      "examples": ["release", "changelog", "blog", "pricing_change"]
+    },
+    "fetched_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "抓取时间（UTC）"
+    },
+    "price_snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["plan", "price", "currency", "billing_period", "captured_at"],
+      "properties": {
+        "plan": {
+          "type": "string",
+          "minLength": 1
+        },
+        "price": {
+          "type": ["number", "string"]
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "billing_period": {
+          "enum": ["monthly", "annual", "usage", "other"]
+        },
+        "captured_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "category": {
+        "const": "pricing"
+      }
+    },
+    "required": ["category"]
+  },
+  "then": {
+    "required": ["price_snapshot"]
+  }
+}

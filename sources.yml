@@ -1,0 +1,219 @@
+# AI 研发工作流 抓取源清单（2026-10-15 curl 实测，全部 HTTP 200；RSS/Atom 已确认含条目）
+sources:
+  - id: cursor-changelog
+    vendor: "Cursor"
+    category: coding
+    type: page_diff
+    url: https://cursor.com/changelog
+    official_domain: cursor.com
+    pricing_url: https://cursor.com/pricing
+    notes: "官方 changelog；docs.cursor.com/changelog 亦可达，以 cursor.com 为准"
+    verified: true
+  - id: copilot-changelog
+    vendor: "GitHub Copilot"
+    category: coding
+    type: rss
+    url: https://github.blog/changelog/label/copilot/feed/
+    official_domain: github.blog
+    pricing_url: https://github.com/features/copilot/plans
+    notes: "Copilot 标签 RSS，含 code review / coding agent 更新"
+    verified: true
+  - id: github-actions-changelog
+    vendor: "GitHub"
+    category: ci
+    type: rss
+    url: https://github.blog/changelog/feed/
+    official_domain: github.blog
+    pricing_url: null
+    notes: "全量 changelog RSS，需按 Actions 关键词过滤"
+    verified: true
+  - id: claude-code-releases
+    vendor: "Anthropic Claude Code"
+    category: coding
+    type: github_releases
+    url: https://github.com/anthropics/claude-code/releases.atom
+    official_domain: github.com/anthropics
+    pricing_url: https://claude.com/pricing
+    notes: "Atom 有效"
+    verified: true
+  - id: claude-code-release-notes
+    vendor: "Anthropic Claude Code"
+    category: coding
+    type: page_diff
+    url: https://docs.anthropic.com/en/release-notes/claude-code
+    official_domain: docs.anthropic.com
+    pricing_url: https://claude.com/pricing
+    notes: "官方发布说明页"
+    verified: true
+  - id: openai-codex-releases
+    vendor: "OpenAI Codex"
+    category: coding
+    type: github_releases
+    url: https://github.com/openai/codex/releases.atom
+    official_domain: github.com/openai
+    pricing_url: null
+    notes: "Codex CLI；ChatGPT 定价页 chatgpt.com/pricing 实测 403，未收录"
+    verified: true
+  - id: openai-codex-changelog
+    vendor: "OpenAI Codex"
+    category: agent-platform
+    type: page_diff
+    url: https://developers.openai.com/codex/changelog
+    official_domain: developers.openai.com
+    pricing_url: null
+    notes: "Codex 云端/IDE changelog"
+    verified: true
+  - id: openai-news
+    vendor: "OpenAI"
+    category: agent-platform
+    type: rss
+    url: https://openai.com/news/rss.xml
+    official_domain: openai.com
+    pricing_url: null
+    notes: "官方新闻 RSS，量大需按 Codex 过滤"
+    verified: true
+  - id: windsurf-changelog
+    vendor: "Windsurf"
+    category: coding
+    type: page_diff
+    url: https://windsurf.com/changelog
+    official_domain: windsurf.com
+    pricing_url: https://windsurf.com/pricing
+    notes: ""
+    verified: true
+  - id: devin-release-notes
+    vendor: "Cognition Devin"
+    category: agent-platform
+    type: page_diff
+    url: https://docs.devin.ai/release-notes/overview
+    official_domain: docs.devin.ai
+    pricing_url: https://devin.ai/pricing
+    notes: ""
+    verified: true
+  - id: coderabbit-changelog
+    vendor: "CodeRabbit"
+    category: review
+    type: page_diff
+    url: https://docs.coderabbit.ai/changelog
+    official_domain: docs.coderabbit.ai
+    pricing_url: https://www.coderabbit.ai/pricing
+    notes: "博客 RSS /blog/rss.xml 404，未收录"
+    verified: true
+  - id: graphite-blog
+    vendor: "Graphite"
+    category: review
+    type: page_diff
+    url: https://graphite.dev/blog
+    official_domain: graphite.dev
+    pricing_url: https://graphite.dev/pricing
+    notes: "无可用 changelog（graphite.dev/changelog、docs/changelog 均 404），以博客代替"
+    verified: true
+  - id: amp-news
+    vendor: "Sourcegraph Amp"
+    category: agent-platform
+    type: rss
+    url: https://ampcode.com/news.rss
+    official_domain: ampcode.com
+    pricing_url: null
+    notes: "RSS 有效；HTML 版 https://ampcode.com/news"
+    verified: true
+  - id: cline-releases
+    vendor: "Cline"
+    category: coding
+    type: github_releases
+    url: https://github.com/cline/cline/releases.atom
+    official_domain: github.com/cline
+    pricing_url: https://cline.bot/pricing
+    notes: ""
+    verified: true
+  - id: aider-releases
+    vendor: "Aider"
+    category: coding
+    type: github_releases
+    url: https://github.com/Aider-AI/aider/releases.atom
+    official_domain: github.com/Aider-AI
+    pricing_url: null
+    notes: "开源免费；HISTORY 页 https://aider.chat/HISTORY.html 可作补充"
+    verified: true
+  - id: aider-history
+    vendor: "Aider"
+    category: coding
+    type: page_diff
+    url: https://aider.chat/HISTORY.html
+    official_domain: aider.chat
+    pricing_url: null
+    notes: "含每版 Aider 自写代码比例"
+    verified: true
+  - id: qodo-pr-agent-releases
+    vendor: "Qodo"
+    category: review
+    type: github_releases
+    url: https://github.com/qodo-ai/pr-agent/releases.atom
+    official_domain: github.com/qodo-ai
+    pricing_url: https://www.qodo.ai/pricing/
+    notes: "PR-Agent（评审/测试）"
+    verified: true
+  - id: kimi-cli-releases
+    vendor: "Moonshot Kimi"
+    category: coding
+    type: github_releases
+    url: https://github.com/MoonshotAI/kimi-cli/releases.atom
+    official_domain: github.com/MoonshotAI
+    pricing_url: https://platform.moonshot.cn/docs/pricing/chat
+    notes: "Kimi CLI"
+    verified: true
+  - id: zhipu-release-notes
+    vendor: "智谱 GLM"
+    category: coding
+    type: page_diff
+    url: https://docs.bigmodel.cn/cn/update/new-releases
+    official_domain: docs.bigmodel.cn
+    pricing_url: https://bigmodel.cn/pricing
+    notes: "含 GLM Coding Plan；GLM-4.5 repo releases.atom 为空已剔除"
+    verified: true
+  - id: tongyi-lingma-release-notes
+    vendor: "阿里云 通义灵码"
+    category: coding
+    type: page_diff
+    url: https://help.aliyun.com/zh/lingma/product-overview/release-notes
+    official_domain: help.aliyun.com
+    pricing_url: https://lingma.aliyun.com/lingma/pricing
+    notes: ""
+    verified: true
+  - id: qwen-code-releases
+    vendor: "阿里 Qwen Code"
+    category: coding
+    type: github_releases
+    url: https://github.com/QwenLM/qwen-code/releases.atom
+    official_domain: github.com/QwenLM
+    pricing_url: null
+    notes: ""
+    verified: true
+  - id: marscode-changelog
+    vendor: "字节 豆包MarsCode"
+    category: coding
+    type: page_diff
+    url: https://www.marscode.cn/changelog
+    official_domain: marscode.cn
+    pricing_url: null
+    notes: ""
+    verified: true
+  - id: trae-changelog
+    vendor: "字节 Trae"
+    category: coding
+    type: page_diff
+    url: https://www.trae.ai/changelog
+    official_domain: trae.ai
+    pricing_url: null
+    notes: "国际站；trae.cn/changelog 与 trae.cn/pricing 实测 403"
+    verified: true
+
+excluded:
+  - {url: https://graphite.dev/changelog, reason: 404}
+  - {url: https://graphite.dev/docs/changelog, reason: 404}
+  - {url: https://github.com/withgraphite/graphite-cli/releases.atom, reason: 404}
+  - {url: https://github.com/zai-org/GLM-4.5/releases.atom, reason: feed 无条目}
+  - {url: https://www.trae.cn/changelog, reason: 403}
+  - {url: https://www.coderabbit.ai/blog/rss.xml, reason: 404}
+  - {url: https://github.com/qodo-ai/qodo-cli/releases.atom, reason: 404}
+  - {url: https://chatgpt.com/pricing, reason: 403（定价页）}

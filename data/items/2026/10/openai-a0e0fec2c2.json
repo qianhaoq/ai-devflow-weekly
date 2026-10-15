@@ -1,0 +1,13 @@
+{
+  "id": "openai-a0e0fec2c2",
+  "date": "2026-10-14",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Amp puts AI agents to work beyond code with OpenAI models",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/amp-beyond-coding",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:13:19+00:00"
+}

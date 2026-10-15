@@ -1,0 +1,27 @@
+title: AI DevFlow Weekly
+description: 中文 AI 研发工作流动态周刊（Cursor / GitHub Copilot / Claude Code / Codex 等官方更新聚合）
+lang: zh-CN
+url: "https://qianhaoq.github.io"
+baseurl: "/ai-devflow-weekly"
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+collections:
+  weekly:
+    output: true
+    permalink: /weekly/:name/
+
+exclude:
+  - scripts
+  - tests
+  - data
+  - schema
+  - docs
+  - .github
+  - sources.yml
+  - requirements.txt
+  - AGENTS.md

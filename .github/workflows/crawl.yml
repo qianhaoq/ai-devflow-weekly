@@ -1,0 +1,60 @@
+name: Crawl
+
+on:
+  schedule:
+    - cron: "17 23 * * *" # 07:17 北京时间
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  crawl:
+    name: Fetch, draft & open PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch sources
+        run: python scripts/fetch.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Draft summaries
+        run: python scripts/draft.py
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+
+      - name: Validate items
+        run: python scripts/validate.py
+
+      - name: Build weekly
+        run: python scripts/weekly.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: crawl/auto
+          title: "chore(crawl): 每日抓取"
+          commit-message: "chore(crawl): 每日抓取（fetch + draft + weekly）"
+          body: |
+            自动抓取生成的条目数据与周刊更新。
+
+            - 运行 `python scripts/validate.py` 已通过
+            - 人工复核后再合并；`no-auto-merge` 标签表示禁止自动合并
+          labels: |
+            no-auto-merge
+          delete-branch: true
