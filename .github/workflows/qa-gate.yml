@@ -66,7 +66,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@78cd3bdb29b70389fddf6dd061272ee9c7b7fd55  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
     with:
       qa_label: 'qa-passed'
 
@@ -79,7 +79,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@78cd3bdb29b70389fddf6dd061272ee9c7b7fd55  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
 
   # Editorial sign-off (docs/MERGE_GATES.md §4): the same reusable label
   # gate, keyed on `editorial-approved`. Produces the required check
@@ -92,6 +92,6 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@78cd3bdb29b70389fddf6dd061272ee9c7b7fd55  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
     with:
       qa_label: 'editorial-approved'
