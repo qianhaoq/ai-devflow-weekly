@@ -1,0 +1,13 @@
+{
+  "id": "openai-2f3282e483",
+  "date": "2026-10-14",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "The EU’s next chapter in AI is agentic",
+  "summary_zh": "OpenAI 于 2026 年 10 月 14 日发布经济研究，指出欧盟企业正通过 agentic 工具扩展 AI 使用，在 ChatGPT Enterprise 客户中 Codex 和 ChatGPT Work 已占欧盟样本输出 token 的一半以上。自 2026 年 5 月以来，欧盟中小企业中这两款产品的周活跃用户增长超过八倍，但各成员国采用程度差异明显，输出 token 占比从斯洛文尼亚的 22% 到立陶宛的 85% 不等。报告还称欧盟前沿企业 AI 使用强度远超普通欧盟企业，但仍落后于全球前沿企业。",
+  "source_url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:11+00:00"
+}

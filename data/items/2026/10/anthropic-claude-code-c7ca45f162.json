@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-c7ca45f162",
+  "date": "2026-10-08",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.294",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.294，修复了以指令形式编写的 `prompt` 和 `agent` 钩子会放行本应拦截内容的问题。同时改进了 Stop 和 SubagentStop 上以指令形式编写的 `prompt` 钩子的判定方式，使 Claude 更不容易提前停止。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:17:09+00:00"
+}

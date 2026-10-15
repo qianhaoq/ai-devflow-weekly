@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-8d11c90e69",
+  "date": "2026-10-10",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Use Your Claude Plan in Amp",
+  "summary_zh": "Sourcegraph Amp 现在支持在 Amp 中使用 Claude Pro/Max 订阅，该功能免费并向所有人开放。新建线程时选择 Mode > Claude Code，若尚未关联 Claude 订阅会收到提示。该模式底层使用 Claude Agent SDK 而非 Amp 自有 agent，同时兼容 orbs、runners、线程分享、portals、多人协作及线程间消息与编排等功能。",
+  "source_url": "https://ampcode.com/news/use-your-claude-plan",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:13+00:00"
+}

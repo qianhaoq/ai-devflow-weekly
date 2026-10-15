@@ -1,0 +1,13 @@
+{
+  "id": "cline-3425a2a9a3",
+  "date": "2026-10-13",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "CLI v3.0.71",
+  "summary_zh": "Cline 发布 CLI v3.0.71，插件改为在 hub 内加载，不再需要 PATH 中的 JavaScript 运行时，插件加载失败会打印警告并在 `cline config tools --json` 和新增的 `cline hub plugins` 中显示状态与错误，可用 `CLINE_PLUGIN_MODE=sandbox` 保留旧的子进程行为。此版本还让 `--thinking` 在 ACP 模式下生效、`cline hook` 接受 `agent_error` 事件、环境变量中的 provider API key 在启动时即视为已配置，并修复了截图影响 token 估算、自动压缩、计划任务及符号链接规则文件等问题。模型目录同步刷新，新增 AI/ML API、LowRouter、Prime Inference 等 provider，并调整了多个 provider 的默认模型。",
+  "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.71",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:17:14+00:00"
+}

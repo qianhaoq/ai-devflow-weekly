@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Amp puts AI agents to work beyond code with OpenAI models",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 10 月 14 日发布初创公司 Amp 的案例，介绍其如何用 OpenAI 模型把 AI 智能体用于写代码之外的工作。Amp 表示 OpenAI 模型占其 token 使用量的大多数，并已推出 Sign in with ChatGPT 集成，让用户获得更多 token 和包括 GPT‑6 Astra 在内的 OpenAI 模型。Amp 团队还借助 GPT‑6 Astra 产出文档与设计页面，并发布了对话式助手 Puck，用于启动和管理其他智能体。",
   "source_url": "https://openai.com/index/amp-beyond-coding",
   "verified": false,
   "signal_type": "changelog",

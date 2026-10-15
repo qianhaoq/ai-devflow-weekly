@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-88dca9de83",
+  "date": "2026-10-16",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.25.2",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.25.2（2026-10-16）。本次更新以修复为主，涉及 managed-agent 的连接器与 broker 健壮性、worktree 子任务合并后结算、Hosted 流关闭与任务取消、CLI 读取 MCP 配置时去除 UTF-8 BOM 等；同时新增扩展的测试失败报告浏览器、mods 的 TypeScript 编写与配置（PR2a）及中间件分发与恢复（PR2b）等功能。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.25.2",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T16:49:21+00:00"
+}

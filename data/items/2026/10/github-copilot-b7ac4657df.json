@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-b7ac4657df",
+  "date": "2026-10-15",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Agentic autofix for code scanning alerts general availability",
+  "summary_zh": "GitHub Copilot 的代码扫描警报 Agentic autofix 已正式可用，它会像开发者一样探索相关文件、生成修复方案，并重新运行 CodeQL 验证修复能关闭警报后再提交草稿拉取请求供审查。该功能面向 GitHub Enterprise Cloud（含数据驻留）上的 GitHub Code Security 和 GitHub Advanced Security 客户，需企业管理员通过 Advanced Security 策略启用，并消耗 Code Security 预算中的 AI Credits 及 GitHub Actions 分钟数。",
+  "source_url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T16:49:07+00:00"
+}

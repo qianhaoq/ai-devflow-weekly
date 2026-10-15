@@ -5,7 +5,7 @@
   "category": "code",
   "source_id": "claude-code-releases",
   "title": "v2.1.299",
-  "summary_zh": "",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.299，新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS` 环境变量，使 Claude 仅获取 `@` 文件提及的路径而非文件内容；终端新增空闲压缩，闲置约 54 分钟的 200K+ token 会话会在提示缓存过期前被压缩。该版本还新增 `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` 与 `settings.json` 中的 `\"idleCompaction\": false` 开关（均需 v2.1.290 或更高版本），并修复了多项问题。",
   "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
   "verified": false,
   "signal_type": "release",

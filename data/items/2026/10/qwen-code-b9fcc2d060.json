@@ -5,7 +5,7 @@
   "category": "code",
   "source_id": "qwen-code-releases",
   "title": "Release v0.25.2-preview.0",
-  "summary_zh": "",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.2-preview.0 预览版本，更新涵盖 managed-agent 的连接器与 broker 稳健性修复、邮箱会话消息、worktree 子任务合并后结算、Hosted 流关闭与任务取消、Hook 会话恢复、公开前台 Shell 审批准入、EventTransport 接缝引入及请求关闭团队成员等改动。此外还新增扩展的测试失败报告浏览器、mods 的 TypeScript 编写与配置及中间件分发与恢复功能，并修复 CLI 读取 MCP 配置时的 UTF-8 BOM 处理、核心监控启动失败上报与响应式压缩按服务端上下文上限调整等问题。",
   "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-preview.0",
   "verified": false,
   "signal_type": "release",

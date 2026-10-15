@@ -5,7 +5,7 @@
   "category": "code",
   "source_id": "openai-codex-releases",
   "title": "0.163.0-alpha.11",
-  "summary_zh": "",
+  "summary_zh": "OpenAI Codex 发布 0.163.0-alpha.11。该版本为 alpha 预览版本，官方发布说明未提供更多细节。",
   "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.11",
   "verified": false,
   "signal_type": "release",

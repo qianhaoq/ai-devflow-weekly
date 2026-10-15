@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-99aff9c7a1",
+  "date": "2026-10-09",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.295",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.295，为命令与 HTTP hooks 新增 `onFailure: \"block\"`，并加入 Program Status Protocol（OSC 7501）支持，让终端可显示 Claude Code 的工作、等待或完成状态。该版本还修复了网关、Bedrock、Vertex 或 Foundry 拒绝 context-1m beta 时 `[1m]` 模型请求全部失败、`claude -p` 文本输出丢失早前响应，以及远程 MCP 服务器断连后无法重连等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-15T05:17:09+00:00"
+}

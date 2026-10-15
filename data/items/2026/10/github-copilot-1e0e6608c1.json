@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-1e0e6608c1",
+  "date": "2026-10-11",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "New controls and chat improvements in Copilot for JetBrains",
+  "summary_zh": "GitHub Copilot 为 JetBrains 插件发布更新，企业管理员可通过托管设置将任意可用的 Copilot 代理模型设为新会话默认模型，诊断菜单新增 Fix 操作可直接打开内联聊天请求修复，并新增 MCP 设置以禁用 Copilot 和 Claude 的服务器自动启动。本次更新还改进了账户控制、聊天发现与登录、对话导航、消息操作和代理引导等体验，并提升了语言服务器启动、模型与提供商切换、MCP 配置等场景的可靠性。此外，GitHub Copilot 已终止对 JetBrains IDE 2025.1 的支持，现需 2025.2 或更高版本。",
+  "source_url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:08+00:00"
+}

@@ -5,7 +5,7 @@
   "category": "code",
   "source_id": "copilot-changelog",
   "title": "Gemini 4 Argon in GitHub Copilot",
-  "summary_zh": "",
+  "summary_zh": "Google 最新前沿模型 Gemini 4 Argon 已在 GitHub Copilot 中正式可用，面向 Copilot Pro+、Max、Business 和 Enterprise 用户，可在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot coding agent、JetBrains IDE、Xcode、Eclipse 等处的模型选择器中选用，并逐步推送。该模型面向复杂编码、智能体与推理任务，早期测试中在各项编码基准上解决的任务均多于此前 Gemini 模型，在 Copilot CLI 中提升最大，并会在完成前检查边界情况。该模型按用量计费、采用提供商标价。",
   "source_url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
   "verified": false,
   "signal_type": "changelog",

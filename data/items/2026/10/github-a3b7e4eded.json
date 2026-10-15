@@ -5,7 +5,7 @@
   "category": "ci",
   "source_id": "github-actions-changelog",
   "title": "GitHub Actions workflow lockfiles in public preview",
-  "summary_zh": "",
+  "summary_zh": "GitHub Actions 工作流依赖锁文件（workflow lockfiles）现已进入公开预览，适用于 GitHub Enterprise Cloud、带数据驻留的 GitHub Enterprise Cloud、Team 和 Free 计划。锁文件可让工作流在保留标签或分支引用的同时，运行你所锁定的确切提交，从而防止因标签或分支移动而引入意外或恶意代码；需注意锁定并不判断依赖本身是否安全。可通过 GitHub CLI 的 gh actions-lock 扩展创建和维护锁文件，并支持用 Dependabot 保持锁定的依赖更新。",
   "source_url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
   "verified": false,
   "signal_type": "changelog",

@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-ebe93cfd81",
+  "date": "2026-10-12",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "You've Got Comments",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 12 日发布更新，Amp 现在会跟进其开启的 GitHub pull request，评论、审查和 CI 结果都会出现在同一线程中。当 Amp 开启 PR 时，agent 可订阅该 PR 的评论、审查以及最新提交的 CI，失败检查或审查者提问会出现在同一线程中，Amp 已具备处理所需的上下文。该功能依托其新推出的 GitHub Webhooks 一等支持实现，与现有更通用的 webhook 支持不同，新的 GitHub Webhook 集成在 Amp 侧集中处理所有请求，再由用户和 agent 决定是否转发到单个 orb 或每次新建 orb。",
+  "source_url": "https://ampcode.com/news/github-listeners",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-15T05:17:13+00:00"
+}
