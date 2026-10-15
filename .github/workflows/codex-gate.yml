@@ -41,7 +41,12 @@ name: Codex Review Gate
 
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft, labeled, unlabeled]
+    # `edited` covers a base retarget (GitHub sends `edited`, not
+    # `synchronize`). Deliberately NOT filtered with a job-level `if`: a
+    # skipped required check counts as passing in branch protection, so a
+    # title/body edit would turn a red check green. Every edit re-runs the
+    # full evaluation instead (cheap, fail-safe).
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft, labeled, unlabeled, edited]
   issue_comment:
     types: [created, edited]
   pull_request_review:
