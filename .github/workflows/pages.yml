@@ -29,7 +29,9 @@ jobs:
           cache: pip
 
       - name: Generate site data
-        run: python scripts/build_site_data.py
+        run: |
+          pip install -r requirements.txt
+          python scripts/build_site_data.py
 
       - name: Configure Pages
         id: pages
