@@ -39,7 +39,16 @@ PR: #___
 > feature flag, data repair).
 
 ```bash
-<ROLLBACK_COMMAND>
+# GitHub Pages 回滚：revert 出问题的合并提交，经门禁合入 main，再手动重跑 pages.yml
+PR=<出问题的PR号>
+BAD_SHA=$(gh pr view "$PR" --repo qianhaoq/ai-devflow-weekly --json mergeCommit -q .mergeCommit.oid)
+git fetch origin main && git switch -c "revert/pr-$PR" origin/main
+git revert --no-edit "$BAD_SHA"            # squash merge = 单父提交；若为 merge commit 加 -m 1
+git push -u origin HEAD
+gh pr create --repo qianhaoq/ai-devflow-weekly --base main --fill --title "revert: PR #$PR"
+# revert PR 合入后（bot 合并不触发 push）重新部署并确认：
+gh workflow run pages.yml --repo qianhaoq/ai-devflow-weekly --ref main
+gh run watch --repo qianhaoq/ai-devflow-weekly "$(gh run list --repo qianhaoq/ai-devflow-weekly --workflow pages.yml -L1 --json databaseId -q '.[0].databaseId')"
 ```
 
 ## 签署 / Sign-off

@@ -36,4 +36,4 @@
 
 ## MERGE_GATES（合并门禁）
 
-内容 PR 由 bot 合并（不是用户手动合并），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+普通内容 PR 由 bot 合并；每日 crawl PR 只在 `editorial / QA Gate` 绿色后人工合并（`editorial-approved` 仅白名单用户打标有效），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。

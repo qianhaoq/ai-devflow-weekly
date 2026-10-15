@@ -54,7 +54,7 @@ concurrency:
 
 jobs:
   auto-merge:
-    uses: qianhaoq/devflow-gates/.github/workflows/auto-merge.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/auto-merge.yml@f69810a2d3ad81b1b69700ff060fb6e119f83d88  # devflow-gates main @ f69810a (pinned; bump deliberately)
     with:
       # Exact check-run names = "<caller job name> / <called job name>"
       # from YOUR ci.yml / codex-gate.yml / qa-gate.yml callers. "ci / Secret Scan"
@@ -69,26 +69,36 @@ jobs:
       require_copilot: true   # soft-path: official check may be missing; head Copilot review required, CHANGES_REQUESTED vetoes
 
   # A merge made with GITHUB_TOKEN does not fire `push`, so pages.yml would
-  # never deploy a bot merge. After every Auto Merge evaluation, dispatch
-  # Pages (workflow_dispatch IS allowed from GITHUB_TOKEN) when main's head
-  # has no Pages run yet. No merge -> main unchanged -> no dispatch.
+  # never deploy a bot merge. After an Auto Merge evaluation, dispatch Pages
+  # ONLY for a merged PR on main: the workflow must run on refs/heads/main
+  # (workflow_run / dispatch run from the default branch), main's head must
+  # be the merge commit of a PR with merged_at set and base main, and the
+  # dispatch always targets ref main — PR head code is never deployed.
   deploy-after-merge:
     needs: auto-merge
-    if: always() && needs.auto-merge.result == 'success'
+    if: >-
+      always() && needs.auto-merge.result == 'success' &&
+      github.ref == 'refs/heads/main' &&
+      github.event_name != 'pull_request_review'
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: read
       actions: write
     steps:
       - uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo;
+            if (context.ref !== 'refs/heads/main') { core.info(`ref ${context.ref} is not main — no deploy`); return; }
             const { data: br } = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
             const sha = br.commit.sha;
+            const { data: prs } = await github.rest.repos.listPullRequestsAssociatedWithCommit({ owner, repo, commit_sha: sha });
+            const merged = prs.find((p) => p.merged_at && p.base.ref === 'main' && p.merge_commit_sha === sha);
+            if (!merged) { core.info(`main @ ${sha.slice(0, 7)} is not a merged-PR commit — no deploy`); return; }
             const { data: runs } = await github.rest.actions.listWorkflowRuns({
               owner, repo, workflow_id: 'pages.yml', head_sha: sha, per_page: 1,
             });
             if (runs.total_count > 0) { core.info(`Pages already ran for ${sha.slice(0, 7)}`); return; }
             await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
-            core.info(`Dispatched Pages for main @ ${sha.slice(0, 7)}`);
+            core.info(`Dispatched Pages for main @ ${sha.slice(0, 7)} (merged PR #${merged.number})`);

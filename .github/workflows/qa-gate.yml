@@ -66,7 +66,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@f69810a2d3ad81b1b69700ff060fb6e119f83d88  # devflow-gates main @ f69810a (pinned; bump deliberately)
     with:
       qa_label: 'qa-passed'
 
@@ -79,7 +79,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@f69810a2d3ad81b1b69700ff060fb6e119f83d88  # devflow-gates main @ f69810a (pinned; bump deliberately)
 
   # Editorial sign-off (docs/MERGE_GATES.md §4): the same reusable label
   # gate, keyed on `editorial-approved`. Produces the required check
@@ -92,6 +92,11 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@2f2d3ebc3bd300d0da389574954effb94eb244c5  # devflow-gates main @ 78cd3bd (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@f69810a2d3ad81b1b69700ff060fb6e119f83d88  # devflow-gates main @ f69810a (pinned; bump deliberately)
     with:
       qa_label: 'editorial-approved'
+      # Only these users' `labeled` event counts (timeline/events API actor
+      # check in devflow-gates). Override with repo variable
+      # EDITORIAL_LABELERS (comma-separated). A PR author who is not listed
+      # cannot self-approve.
+      allowed_labelers: ${{ vars.EDITORIAL_LABELERS || 'qianhaoq' }}
