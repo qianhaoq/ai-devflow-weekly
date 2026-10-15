@@ -54,7 +54,7 @@
     },
     "verified": {
       "type": "boolean",
-      "description": "true 表示摘要已生成且 source_url 命中官方域名"
+      "description": "true 只能由编辑人工审核后设置；AI 起草（draft.py）的条目一律为 false"
     },
     "signal_type": {
       "type": "string",

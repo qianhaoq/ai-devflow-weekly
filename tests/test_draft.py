@@ -114,3 +114,20 @@ def test_main_accepts_migrated_github_repo(monkeypatch):
     monkeypatch.setattr(d, "source_excerpt", lambda it: "text")
     monkeypatch.setattr(d, "summarize", lambda *a, **k: "摘要")
     assert d.main() == 0 and written and written[0]["verified"] is False
+
+
+def test_github_release_uses_api_body():
+    it = dict(ITEM, source_url="https://github.com/openai/codex/releases/tag/v1.2")
+    seen = []
+
+    def fetch(u):
+        seen.append(u)
+        return Resp(body={"body": "Release notes body"})
+
+    assert d.source_excerpt(it, fetch=fetch) == "Release notes body"
+    assert seen == ["https://api.github.com/repos/openai/codex/releases/tags/v1.2"]
+
+
+def test_html_prefers_main_content():
+    page = "<nav>Sign in Menu</nav><main><h1>v2</h1><p>New feature</p></main>"
+    assert d.source_excerpt(ITEM, fetch=lambda u: Resp(text=page)) == "v2 New feature"

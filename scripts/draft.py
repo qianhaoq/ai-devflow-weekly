@@ -63,12 +63,25 @@ def html_to_text(raw: str) -> str:
 def source_excerpt(item: dict, fetch=None) -> str:
     """官方 release note 原文摘录：优先用条目自带文本，否则抓 source_url。失败返回空串。"""
     text = (item.get("source_excerpt") or "").strip()
-    if not text and item.get("source_url"):
+    m = re.match(r"https://github\.com/([^/]+)/([^/]+)/releases/tag/([^/?#]+)$", item.get("source_url") or "")
+    if not text and m:
+        # GitHub release：取 API 的 release 正文，而不是带导航/登录控件的整页 HTML
+        try:
+            api = f"https://api.github.com/repos/{m[1]}/{m[2]}/releases/tags/{m[3]}"
+            resp = (fetch or (lambda u: requests.get(u, timeout=REQUEST_TIMEOUT, headers={"User-Agent": common.USER_AGENT, "Accept": "application/vnd.github+json"})))(api)
+            resp.raise_for_status()
+            text = (resp.json().get("body") or "").strip()
+        except Exception as exc:
+            logging.warning("取 release 正文失败 %s：%s", item.get("id"), exc)
+            return ""
+    if not text and item.get("source_url") and not m:
         try:
             getter = fetch or (lambda u: requests.get(u, timeout=REQUEST_TIMEOUT, headers={"User-Agent": common.USER_AGENT}))
             resp = getter(item["source_url"])
             resp.raise_for_status()
-            text = html_to_text(resp.text)
+            raw = resp.text
+            body = re.search(r"(?is)<(main|article)[^>]*>(.*?)</\1>", raw)  # 优先正文区，去掉导航
+            text = html_to_text(body.group(2) if body else raw)
         except Exception as exc:  # 网络错误：跳过该条，不让模型凭空写
             logging.warning("取原文失败 %s：%s", item.get("id"), exc)
             text = ""

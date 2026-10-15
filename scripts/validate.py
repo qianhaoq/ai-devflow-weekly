@@ -62,6 +62,10 @@ def url_is_official(url: str, sources: list[dict]) -> bool:
         if host != "github.com":
             return False  # www.github.com 等非规范 host 一律拒绝
         path = urlparse(url).path.lower()
+        # 拒绝点段（含 %2e 编码）与反斜杠，避免 /org/repo/../../evil 绕过白名单
+        segs = path.replace("%2e", ".").replace("%2f", "/").replace("%5c", "/").replace("\\", "/").split("/")
+        if any(seg in (".", "..") for seg in segs):
+            return False
         return any(path == p or path.startswith(p + "/") for p in github_repo_paths(sources))
     return common.is_official_url(url, sources)
 
