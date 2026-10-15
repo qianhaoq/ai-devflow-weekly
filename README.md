@@ -46,9 +46,9 @@ bundle exec jekyll serve             # 本地预览站点
 
 | 变量 | 用途 | 默认 |
 | --- | --- | --- |
-| `LLM_API_KEY` | OpenAI 兼容 API Key；未设置时 `draft.py` 打印提示并退出 0（条目保持 `summary_zh=""`、`verified=false`） | 无 |
-| `LLM_BASE_URL` | API Base URL | `https://api.openai.com/v1` |
-| `LLM_MODEL` | 模型名 | `gpt-4o-mini` |
+| `LLM_API_KEY` | DeepSeek API Key（OpenAI 兼容）；未设置时 `draft.py` 打印提示并退出 0（条目保持 `summary_zh=""`、`verified=false`） | 无 |
+| `LLM_BASE_URL` | API Base URL | `https://api.deepseek.com` |
+| `LLM_MODEL` | 模型名 | `deepseek-flash`（默认值只定义在 `scripts/draft.py`） |
 | `GITHUB_TOKEN` | `fetch.py` 调 GitHub releases API 提额（可选） | 无 |
 
 GitHub Actions：`LLM_API_KEY` 配在 **Secrets**，`LLM_BASE_URL` / `LLM_MODEL` 配在
@@ -69,7 +69,7 @@ GitHub Actions：`LLM_API_KEY` 配在 **Secrets**，`LLM_BASE_URL` / `LLM_MODEL`
 `python scripts/validate.py` 检查：Schema（含 pricing 必须带快照）、`id` 与
 `source_url` 唯一、`source_url` 命中 `sources.yml` 中某源的 `official_domain`
 （host 相同或为其子域；形如 `github.com/anthropics` 的声明要求路径前缀匹配；
-GitHub releases 链接一律视为官方）、文件路径与 `date`/`id` 一致。
+`github.com` 仅限 sources.yml 中官方 `/org/repo` 路径）、文件路径与 `date`/`id` 一致。
 
 ## CI / CD
 

@@ -22,6 +22,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common
+from validate import url_is_official
 
 REQUEST_TIMEOUT = 60
 MAX_SUMMARY_CHARS = 600
@@ -184,7 +185,7 @@ def main(argv=None) -> int:
 
     summarized = skipped = failed = 0
     for item in pending:
-        if not common.is_official_url(item.get("source_url") or "", official):
+        if not url_is_official(item.get("source_url") or "", official):
             logging.warning("source_url 不属于已启用的官方源，跳过：%s", item.get("source_url"))
             skipped += 1
             continue

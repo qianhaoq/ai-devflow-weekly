@@ -4,10 +4,10 @@
 
 - **官方域名**：条目 `source_url` 必须命中 `sources.yml` 中某源的
   `official_domain`（host 相同或为其子域；形如 `github.com/anthropics` 的声明
-  还要求路径以 `/anthropics` 开头）。GitHub releases 链接（`github.com`）一律
-  视为官方。媒体报道、社交帖子只能作线索，不能作依据。
-- **verified 语义**：`verified=true` 表示中文摘要已生成且 `source_url` 为官方
-  域名。来源失效（404 / 403 / feed 为空）时把该源 `verified` 置 false（跳过），
+  还要求路径以 `/anthropics` 开头）。`github.com` 链接只认 `sources.yml` 中官方源的
+  `/org/repo` 路径（含 `official_github_repos` 迁移别名），其他仓库一律非官方。媒体报道、社交帖子只能作线索，不能作依据。
+- **verified 语义**：`verified=true` 只能由编辑审核后人工设置；`draft.py` 起草的条目一律 `verified=false`，`source_url` 必须属于已启用的官方
+  源。来源失效（404 / 403 / feed 为空）时把该源 `verified` 置 false（跳过），
   复测通过后再恢复。`verified=false` 的条目一律不进周刊。
 - **定价快照**：`category=pricing` 必须带 `price_snapshot`（plan / price /
   currency / billing_period / captured_at）。涨/降价结论必须有同 vendor+plan

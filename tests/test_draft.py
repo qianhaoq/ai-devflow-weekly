@@ -100,3 +100,17 @@ def test_main_skips_non_enabled_source(monkeypatch):
     monkeypatch.setattr(common, "write_item", written.append)
     monkeypatch.setattr(d, "summarize", lambda *a, **k: "摘要")
     assert d.main() == 0 and written == []
+
+
+def test_main_accepts_migrated_github_repo(monkeypatch):
+    item = dict(ITEM, source_url="https://github.com/The-PR-Agent/pr-agent/releases/tag/v1")
+    written = []
+    monkeypatch.setenv("LLM_API_KEY", "k")
+    monkeypatch.setattr(common, "load_items", lambda: [item])
+    monkeypatch.setattr(common, "enabled_sources", lambda *a: [{
+        "url": "https://github.com/qodo-ai/pr-agent/releases.atom", "official_domain": "github.com/qodo-ai",
+        "official_github_repos": ["The-PR-Agent/pr-agent"]}])
+    monkeypatch.setattr(common, "write_item", written.append)
+    monkeypatch.setattr(d, "source_excerpt", lambda it: "text")
+    monkeypatch.setattr(d, "summarize", lambda *a, **k: "摘要")
+    assert d.main() == 0 and written and written[0]["verified"] is False
