@@ -69,7 +69,8 @@ jobs:
         qa / QA Gate
         editorial / QA Gate
       merge_method: squash
-      require_copilot: true   # soft-path: official check may be missing; head Copilot review required, CHANGES_REQUESTED vetoes
+      # Same switch as ai-review.yml: DISABLE_COPILOT_REVIEW=true turns off both the request and the merge requirement.
+      require_copilot: ${{ vars.DISABLE_COPILOT_REVIEW != 'true' }}   # head Copilot review required unless disabled; CHANGES_REQUESTED vetoes
 
   # A merge made with GITHUB_TOKEN does not fire `push`, so pages.yml would
   # never deploy a bot merge. After an Auto Merge evaluation, dispatch Pages
