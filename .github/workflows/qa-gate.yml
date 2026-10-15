@@ -1,0 +1,107 @@
+# Example caller for the reusable QA Gate — copy to
+# YOUR_REPO/.github/workflows/qa-gate.yml.
+#
+# Required-check name produced by this example (job id `qa`):
+#   - "qa / QA Gate"
+#
+# pull_request_target keeps the workflow YAML on the trusted base branch.
+#
+# IMPORTANT: the gate REMOVES the QA label on every new push
+# (synchronize), which needs write access — the caller must grant
+# pull-requests: write and issues: write (a reusable workflow can only
+# restrict permissions further, never elevate them).
+#
+# Schedule (*/15): a scheduled run's own conclusion does NOT attach to
+# any PR head check, so the schedule path never evaluates. The reusable
+# workflow's "QA Gate Refresh" job instead re-runs the most recent FAILED
+# pull_request_target-originated Gate run for every open non-draft PR
+# whose gate check is failing (actions.reRunWorkflowFailedJobs) — the
+# re-run keeps the original pull_request_target event, so the fresh
+# conclusion re-attaches to the PR head check. That API needs
+# `actions: write`, granted here on the schedule-path job ONLY
+# (`qa-refresh`); the evaluator job `qa` keeps the label-removal
+# permissions only. Expect failing PRs to be re-evaluated every 15
+# minutes until green or closed.
+#
+# Concurrency: one evaluation per PR; a stale in-flight run is cancelled
+# by the newer event. Schedule runs fall back to a unique run_id group
+# (nothing to cancel).
+
+# PERMISSIONS: GitHub validates the permissions of EVERY job in a called
+# workflow against the calling job's ceiling, even jobs skipped by `if`.
+# The reusable file contains both the evaluator (pull-requests/issues: write) and the
+# refresh job (actions: write), so both caller jobs grant the union. The
+# callee still narrows each job's own token.
+#
+name: QA Gate
+
+on:
+  pull_request_target:
+    # `edited` covers a base retarget (GitHub sends `edited`, not
+    # `synchronize`). Deliberately NOT filtered with a job-level `if`: a
+    # skipped required check counts as passing in branch protection, so a
+    # title/body edit would turn a red check green. Every edit re-runs the
+    # full evaluation instead (cheap, fail-safe).
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft, labeled, unlabeled, edited]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to evaluate (e.g. after re-applying the QA label)'
+        required: true
+        type: string
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+concurrency:
+  # pull_request_target runs (the ones that attach the PR-head check) get
+  # their own group so a workflow_dispatch re-evaluation cannot cancel them.
+  group: qa-gate-pr-${{ github.event.pull_request.number || github.event.inputs.pr_number || github.run_id }}-${{ github.event_name == 'pull_request_target' && 'target' || 'aux' }}
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    if: github.event_name != 'schedule'
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      actions: write
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@73071110c8f9a03daa909ab6349bd7d9be44037f  # devflow-gates main @ 7307111 (pinned; bump deliberately)
+    with:
+      qa_label: 'qa-passed'
+
+  # Schedule path only — see the header note. actions: write is scoped to
+  # this job; it re-runs failing pull_request_target gate runs.
+  qa-refresh:
+    if: github.event_name == 'schedule'
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      actions: write
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@73071110c8f9a03daa909ab6349bd7d9be44037f  # devflow-gates main @ 7307111 (pinned; bump deliberately)
+
+  # Editorial sign-off (docs/MERGE_GATES.md §4): the same reusable label
+  # gate, keyed on `editorial-approved`. Produces the required check
+  # "editorial / QA Gate"; the label is stripped on every new push, so the
+  # editorial agent must re-approve the exact head it reviewed.
+  editorial:
+    if: github.event_name != 'schedule'
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      actions: write
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@73071110c8f9a03daa909ab6349bd7d9be44037f  # devflow-gates main @ 7307111 (pinned; bump deliberately)
+    with:
+      qa_label: 'editorial-approved'
+      # Only these users' `labeled` event counts (timeline/events API actor
+      # check in devflow-gates). Override with repo variable
+      # EDITORIAL_LABELERS (comma-separated). A PR author who is not listed
+      # cannot self-approve.
+      allowed_labelers: ${{ vars.EDITORIAL_LABELERS || 'qianhaoq' }}

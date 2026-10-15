@@ -1,29 +1,39 @@
+# Example caller for the reusable CI — copy to YOUR_REPO/.github/workflows/ci.yml
+# and adjust the inputs. Trigger on `pull_request` (NOT pull_request_target):
+# "Build & Test" executes the PR's code and must not see secrets.
+#
+# Required-check names produced by this example (job id `ci`, no `name:`):
+#   - "ci / Build & Test"
+#   - "ci / Secret Scan"
+# If you rename the job id (or add a `name:`), the check names change to
+# "<your job name> / <called job name>" — update branch protection AND
+# auto-merge.yml's required_checks to match.
+
 name: CI
 
 on:
   pull_request:
+    # `edited` covers a base retarget (GitHub sends `edited`, not
+    # `synchronize`). Deliberately NOT filtered with a job-level `if`: a
+    # skipped required check counts as passing in branch protection, so a
+    # title/body edit would turn a red check green. Every edit re-runs the
+    # full evaluation instead (cheap, fail-safe).
+    types: [opened, synchronize, reopened, ready_for_review, edited]
   push:
     branches: [main]
+  # crawl.yml dispatches this on ref crawl/auto: its GITHUB_TOKEN-made
+  # PR pushes do not fire pull_request.
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  build-test:
-    name: Build & Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: pip
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Validate items
-        run: python scripts/validate.py
-
-      - name: Run tests
-        run: pytest -q
+  ci:
+    uses: qianhaoq/devflow-gates/.github/workflows/ci.yml@73071110c8f9a03daa909ab6349bd7d9be44037f  # devflow-gates main @ 7307111 (pinned; bump deliberately)
+    with:
+      node_version: ''          # '' skips setup-node
+      python_version: '3.11'          # '' skips setup-python
+      setup_command: 'pip install -r requirements.txt'     # '' skips the setup step
+      test_command: 'python scripts/validate.py && pytest -q'    # required
+      working_directory: '.'      # e.g. 'web' for a monorepo subdir

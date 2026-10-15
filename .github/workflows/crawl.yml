@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write   # dispatch CI / gates for the crawl PR head (see last step)
 
 jobs:
   crawl:
@@ -45,6 +46,7 @@ jobs:
         run: python scripts/weekly.py
 
       - name: Create pull request
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: crawl/auto
@@ -58,3 +60,33 @@ jobs:
           labels: |
             no-auto-merge
           delete-branch: true
+
+      # A push made with GITHUB_TOKEN does not start the QA / editorial gate's
+      # pull_request_target run, so the gate cannot strip sign-off labels from
+      # an updated crawl PR. Do it here: any update to crawl/auto invalidates
+      # qa-passed / editorial-approved (an editor must re-review the new head).
+      - name: Invalidate sign-off labels on updated crawl PR
+        if: steps.cpr.outputs.pull-request-operation == 'updated'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          for label in qa-passed editorial-approved; do
+            gh pr edit "$PR" --repo "$GITHUB_REPOSITORY" --remove-label "$label" 2>/dev/null \
+              && echo "removed $label from #$PR" || echo "$label not present on #$PR"
+          done
+
+      # GITHUB_TOKEN pushes/PRs do not start pull_request(_target) workflows,
+      # so the crawl PR head would never get its required checks. A
+      # workflow_dispatch IS allowed from GITHUB_TOKEN, and a dispatch run on
+      # ref crawl/auto attaches its check runs to that head commit. The
+      # workflow files on crawl/auto are main's (the bot only changes data).
+      - name: Run required checks on the crawl PR head
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto
+          gh workflow run codex-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
+          gh workflow run qa-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
