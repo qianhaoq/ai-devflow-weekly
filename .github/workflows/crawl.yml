@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write   # dispatch CI / gates for the crawl PR head (see last step)
 
 jobs:
   crawl:
@@ -74,3 +75,18 @@ jobs:
             gh pr edit "$PR" --repo "$GITHUB_REPOSITORY" --remove-label "$label" 2>/dev/null \
               && echo "removed $label from #$PR" || echo "$label not present on #$PR"
           done
+
+      # GITHUB_TOKEN pushes/PRs do not start pull_request(_target) workflows,
+      # so the crawl PR head would never get its required checks. A
+      # workflow_dispatch IS allowed from GITHUB_TOKEN, and a dispatch run on
+      # ref crawl/auto attaches its check runs to that head commit. The
+      # workflow files on crawl/auto are main's (the bot only changes data).
+      - name: Run required checks on the crawl PR head
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto
+          gh workflow run codex-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
+          gh workflow run qa-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
