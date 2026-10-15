@@ -42,3 +42,5 @@ Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一�
 crawl（每日 07:17 北京时间）→ 开 PR（`no-auto-merge`）→ CI `ci / Build & Test` → review（处理 P0/P1）→ editorial（白名单用户打 `editorial-approved`）→ `editorial / QA Gate` 绿色后人工合并 → `pages.yml` 部署站点与 feed.xml。
 
 初始脚手架是唯一的直接推送 main 的例外。
+
+Copilot review：auto-merge 默认要求当前 head 有 Copilot review。若仓库未启用 Copilot（请求返回 422）或不想用它，把仓库变量 `DISABLE_COPILOT_REVIEW` 设为 `true`，会同时关闭请求与合并要求。
