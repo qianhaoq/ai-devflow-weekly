@@ -133,3 +133,10 @@ def test_weekly_all_deletes_week_without_verified(monkeypatch, tmp_path):
     monkeypatch.setattr(common, "load_items", lambda: [{"date": "2026-09-01", "verified": False}])
     assert w.main(["--all"]) == 0
     assert not (tmp_path / "2026-W36.md").exists()
+
+
+def test_week_updated_is_content_driven():
+    import weekly as w
+    assert w.week_updated([{"date": "2026-10-12"}, {"date": "2026-10-14"}], "2026-W42") == "2026-10-14T00:00:00+08:00"
+    assert w.week_updated([], "2026-W42") == "2026-10-12T00:00:00+08:00"
+    assert "updated: 2026-10-14T00:00:00+08:00" in w.render_week([{"date": "2026-10-14", "verified": True, "title": "t", "source_url": "https://x", "vendor": "v", "category": "code"}], "2026-W42")

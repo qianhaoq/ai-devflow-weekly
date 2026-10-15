@@ -4,7 +4,7 @@
 - 仅收录 verified=true 的条目（docs/editorial.md 第 4 条）。
 - 按分类分组（中文标题），每条附原始链接与发布日期（Asia/Shanghai）。
 - 标题含 beta/preview/预览 的条目加「beta/预览」标注（editorial 第 5 条）。
-- Jekyll front matter：layout: default + title。
+- Jekyll front matter：layout: default + title + updated（供 feed.xml 使用的稳定时间）。
 
 用法：python scripts/weekly.py [--week 2026-W42]（默认当前 ISO 周，Asia/Shanghai）。
 """
@@ -63,6 +63,18 @@ def items_in_week(
     return out
 
 
+def week_updated(items: list[dict], week_label: str) -> str:
+    """周刊的稳定更新时间（Atom updated）：最新已核实条目的 date；无条目时取该 ISO 周周一。
+    只随内容变化，不随每次部署变化。"""
+    dates = sorted(str(it.get("date")) for it in items if it.get("date"))
+    if dates:
+        day = dates[-1]
+    else:
+        y, w = parse_week(week_label)
+        day = date_cls.fromisocalendar(y, w, 1).isoformat()
+    return f"{day}T00:00:00+08:00"
+
+
 def render_week(items: list[dict], week_label: str) -> str:
     """渲染周刊 Markdown（防御性：即使传入未核实条目也只输出 verified）。"""
     verified = [it for it in items if it.get("verified")]
@@ -70,6 +82,7 @@ def render_week(items: list[dict], week_label: str) -> str:
         "---",
         "layout: default",
         f'title: "AI 研发工作流周刊 {week_label}"',
+        f"updated: {week_updated(verified, week_label)}",
         "---",
         "",
         f"# AI 研发工作流周刊 {week_label}",
