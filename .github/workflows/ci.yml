@@ -18,7 +18,11 @@ on:
     # skipped required check counts as passing in branch protection, so a
     # title/body edit would turn a red check green. Every edit re-runs the
     # full evaluation instead (cheap, fail-safe).
-    types: [opened, synchronize, reopened, ready_for_review, edited]
+    # `labeled`: crawl PRs are pushed with GITHUB_TOKEN, so their opened/
+    # synchronize runs wait for manual approval (action_required) and
+    # workflow_dispatch runs don't count as PR checks. The editor's label is
+    # a human event, so it starts a normal run on the crawl PR head.
+    types: [opened, synchronize, reopened, ready_for_review, edited, labeled]
   push:
     branches: [main]
   # crawl.yml dispatches this on ref crawl/auto: its GITHUB_TOKEN-made
@@ -30,7 +34,7 @@ permissions:
 
 jobs:
   ci:
-    uses: qianhaoq/devflow-gates/.github/workflows/ci.yml@855d62df74bfbcc25ee902b0681c1b53968f2f56  # devflow-gates main @ 855d62d (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/ci.yml@564c9344b6fc79340b8e89e575f334e3b1e1df87  # devflow-gates main @ 564c934 (pinned; bump deliberately)
     with:
       node_version: ''          # '' skips setup-node
       python_version: '3.11'          # '' skips setup-python
