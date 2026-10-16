@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-2615bcfeb0",
+  "date": "2026-10-16",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-10-16）",
+  "summary_zh": "Cognition Devin 于 2026-10-16 更新发布说明页面，列出近期已发布的功能、改进与缺陷修复。本次更新涵盖聊天宽度偏好、中断 Devin 时保留部分回复、虚拟环境选择器默认使用已加星标的环境、会话链接以 chip 形式渲染、子会话在侧边栏的归档拆分显示、diff 与 patch 附件的文件名显示、浏览器预览分享至 Slack、新增组织级 Review manager 角色、按仓库与分支记忆合并方式、以 SARIF 2.1.0 导出代码扫描发现，以及 Microsoft Teams 消息自动化的保存校验与频道选择调整。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-10-16",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-16T01:20:06+00:00"
+}

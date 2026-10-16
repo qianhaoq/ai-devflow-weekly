@@ -1,0 +1,13 @@
+{
+  "id": "openai-dd00c04c9b",
+  "date": "2026-10-15",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+  "summary_zh": "OpenAI 与 Sullivan & Cromwell 合作开发了 Agreement Analyzer，用于识别草案协议中的问题。该工具由 Sullivan & Cromwell 合伙人 John Savva 以 Codex 构建的单用户概念验证起步，后与 OpenAI 协作提升输出质量、通过并行处理提高效率，并扩展为可供多名律师同时使用的工具。Agreement Analyzer 整合了律所工作流程、精选先例、谈判手册与 ChatGPT Enterprise，可执行多轮不同视角的审查、综合输出并生成备忘录和修订建议供律师审阅。",
+  "source_url": "https://openai.com/index/sullivan-cromwell",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-16T01:20:05+00:00"
+}

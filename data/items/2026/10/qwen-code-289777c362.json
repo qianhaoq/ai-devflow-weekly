@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-289777c362",
+  "date": "2026-10-16",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.2-nightly.20261015.c24e99e9cb",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.2-nightly.20261015.c24e99e9cb（2026-10-16）。本次更新包含 managed-agent 的多项修复（如 team_plan_approval 纳入 journal-only 中断轮次结算、父进程关闭时停止子进程运行中的 Turn、重启后保留 Runtime 排空义务等），并新增扩展的有限生成失败浏览器视图（PR4），以及 sdk-java、cli、core 相关修复与重构。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-nightly.20261015.c24e99e9cb",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-16T01:20:12+00:00"
+}
