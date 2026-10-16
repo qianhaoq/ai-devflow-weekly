@@ -18,7 +18,11 @@ on:
     # skipped required check counts as passing in branch protection, so a
     # title/body edit would turn a red check green. Every edit re-runs the
     # full evaluation instead (cheap, fail-safe).
-    types: [opened, synchronize, reopened, ready_for_review, edited]
+    # `labeled`: crawl PRs are pushed with GITHUB_TOKEN, so their opened/
+    # synchronize runs wait for manual approval (action_required) and
+    # workflow_dispatch runs don't count as PR checks. The editor's label is
+    # a human event, so it starts a normal run on the crawl PR head.
+    types: [opened, synchronize, reopened, ready_for_review, edited, labeled]
   push:
     branches: [main]
   # crawl.yml dispatches this on ref crawl/auto: its GITHUB_TOKEN-made
