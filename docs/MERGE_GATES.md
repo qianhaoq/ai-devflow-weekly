@@ -37,6 +37,10 @@ Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一�
 - Require status checks to pass，且 **Require branches to be up to date（strict）**
 - 必需检查：`ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`、`editorial / QA Gate`
 
+## Acceptance Gate（M1，仅观察）
+
+`.github/workflows/acceptance.yml` 调用 devflow-gates 的可复用验收门禁（固定到合并 SHA），配置在 `.github/acceptance.yml`。每个 PR 上会有一条置顶评论（原地更新）列出 7 项指标：测试与变更行覆盖率、改源码须改测试（`no-test-needed` 标签 + 正文写明理由可豁免）、ruff 新增问题、PR 规模（不计 `data/`、`_weekly/`）、新依赖漏洞/许可证、PR 正文的自测/验收小节、Codex 门禁结论；JSON 报告在 artifact `acceptance-report`。M1 只报告不拦截，`acceptance / Acceptance Gate` **不**加入 branch protection；它不加/不摘任何标签。crawl PR 由 `GITHUB_TOKEN` 创建，其 `pull_request` 运行同样需要人工批准，编辑打标签时会正常触发。
+
 ## 流程
 
 crawl（每日 07:17 北京时间）→ 开 PR（`no-auto-merge`）→ CI `ci / Build & Test` → review（处理 P0/P1）→ editorial（白名单用户打 `editorial-approved`）→ `editorial / QA Gate` 绿色后人工合并 → `pages.yml` 部署站点与 feed.xml。
