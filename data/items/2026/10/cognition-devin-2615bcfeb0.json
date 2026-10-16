@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-2615bcfeb0",
+  "date": "2026-10-14",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Devin 发布说明更新（2026-10-14）：Review manager 角色、SARIF 导出等",
+  "summary_zh": "Cognition 在 2026 年 10 月 14 日的 Devin 发布说明中列出多项更新：新增聊天宽度偏好；中断 Devin 时保留已显示的部分回复；新会话默认使用加星标的虚拟环境；会话链接以 chip 形式渲染；子会话可跨归档状态在侧边栏显示；diff 与 patch 附件显示文件名；Slack 发起的会话可分享浏览器预览链接；新增组织级 Review manager 角色；Devin Review 按仓库与目标分支记住合并方式；代码扫描结果可导出为 SARIF 2.1.0；Microsoft Teams 消息自动化在无法监听频道时保存会失败并说明原因。此外，新注册的 GitHub Enterprise Server 应用与 github.com 应用的权限对齐，新增 Splunk、Elastic、Dynatrace 等可观测性插件，repositories 与 blueprint API 升级到稳定的 v3，Terraform provider 新增仓库索引与 blueprint 相关资源。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-10-16",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-16T01:20:06+00:00"
+}

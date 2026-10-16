@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-371a0b09d7",
+  "date": "2026-10-16",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.301",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.301，新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS` 环境变量，使无人值守重试模式在用量限制重置时间过远时直接结束请求而非继续等待；同时为 `claude-api` skill 增加 OpenTelemetry 追踪指引，并为 vim 模式加入 `%` 跳转匹配括号动作。该版本还修复了退出时未经询问即删除 `WorktreeCreate` hook 创建的工作树、Grep 与 Glob 在搜索程序异常时误报无匹配、以及 Read 工具将二进制文件按文本读取等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.301",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-16T01:20:02+00:00"
+}

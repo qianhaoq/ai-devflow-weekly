@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-8c1dba5055",
+  "date": "2026-10-16",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.163.0",
+  "summary_zh": "OpenAI Codex 发布 0.163.0。新增 `/config` 偏好搜索、响应中追加指令、`/keymap` 配置 leader key、`/daemon` 重启后台服务等能力，并支持并行运行独立只读工具；Daybreak 对符合条件的账户默认启用。修复了恢复会话时的权限与网络审批、网络代理检查、Windows/WSL 粘贴等问题，并更新了 GPT-6 迁移相关文档。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-16T01:20:04+00:00"
+}
