@@ -1,0 +1,27 @@
+# Acceptance Gate config (devflow-gates templates/acceptance.yml lists every key).
+# M1: observe-only — every metric reports, the job always exits 0.
+mode: observe
+
+setup:
+  python_version: '3.11'
+  command: 'pip install -q -r requirements.txt pytest-cov ruff'
+
+metrics:
+  tests:
+    command: 'pytest -q --cov=scripts --cov-report=lcov:coverage.lcov'
+    coverage_file: coverage.lcov
+    threshold: 70
+  tests_changed:
+    exempt_label: no-test-needed
+  lint:
+    commands:
+      - run: 'ruff check --output-format concise scripts tests'
+        count_regex: '^\S+:\d+:\d+: '
+  size:
+    threshold: 600
+    # Daily crawl PRs rewrite data/; generated issues live in _weekly/.
+    exclude_regex: '^(data|_weekly)/|(^|/)(Gemfile\.lock|package-lock\.json)$'
+  evidence:
+    heading_regex: '自测|验收|Test plan|QA'
+  ai_review:
+    check_name: 'codex / Codex Review Gate'
