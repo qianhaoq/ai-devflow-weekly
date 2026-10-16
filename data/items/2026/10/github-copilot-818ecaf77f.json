@@ -7,7 +7,7 @@
   "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
   "summary_zh": "GitHub Copilot 将于 2026 年 11 月 16 日在所有 Copilot 体验（包括 Copilot Chat、内联编辑、ask 与 agent 模式及代码补全）中弃用 Claude Opus 4.8、Claude Opus 5 和 GPT-5.6 Terra 三款模型，官方建议的替代模型分别为 Claude Opus 5.5、Claude Opus 5.5 和 GPT-6.1 Sol 或 GPT-6 Luna。其中 Claude Opus 4.8 对年度计划的个人订阅用户仍保留可用，不适用此次弃用。在默认模型启用设置下，建议的替代模型会自动为 Copilot Enterprise 和 Copilot Business 客户启用，除非管理员关闭了全局默认或明确禁用了该模型。",
   "source_url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-16T01:20:02+00:00"
 }

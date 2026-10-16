@@ -1,0 +1,55 @@
+{
+  "pr": 9,
+  "head_reviewed": "57b3af3",
+  "reviewer": "qianhaoq",
+  "reviewed_at": "2026-10-16",
+  "items": {
+    "anthropic-claude-code-371a0b09d7": {
+      "verified": true
+    },
+    "openai-codex-8c1dba5055": {
+      "verified": true
+    },
+    "github-copilot-818ecaf77f": {
+      "verified": true
+    },
+    "cognition-devin-2615bcfeb0": {
+      "verified": true,
+      "edited": {
+        "verified": false,
+        "date": "2026-10-16",
+        "title": "Cognition Devin 页面更新（2026-10-16）",
+        "summary_zh": "Cognition Devin 于 2026-10-16 更新发布说明页面，列出近期已发布的功能、改进与缺陷修复。本次更新涵盖聊天宽度偏好、中断 Devin 时保留部分回复、虚拟环境选择器默认使用已加星标的环境、会话链接以 chip 形式渲染、子会话在侧边栏的归档拆分显示、diff 与 patch 附件的文件名显示、浏览器预览分享至 Slack、新增组织级 Review manager 角色、按仓库与分支记忆合并方式、以 SARIF 2.1.0 导出代码扫描发现，以及 Microsoft Teams 消息自动化的保存校验与频道选择调整。"
+      },
+      "why": "原文该批更新归在 October 14, 2026 下，原摘要漏列同日更新"
+    },
+    "github-116eea760b": {
+      "verified": true,
+      "edited": {
+        "category": "ci",
+        "title": "HydraFusion updates and new Max option"
+      },
+      "why": "P2：category 改为 code，标题标注研究预览"
+    },
+    "anthropic-claude-code-96ebc1fae6": {
+      "verified": false,
+      "reason": "内容错误且重复：链接跳转到 GitHub 上的 CHANGELOG.md，摘要描述的是 GitHub 页面信息（Issues/PR 数、文件大小），并非发布内容；同日实际内容已由 v2.1.301 条目覆盖"
+    },
+    "openai-codex-9018d4d3d3": {
+      "verified": false,
+      "reason": "alpha 预发布，原文无发布说明，无可报道内容"
+    },
+    "qwen-code-289777c362": {
+      "verified": false,
+      "reason": "nightly 预发布，不进周刊"
+    },
+    "openai-a72d1e4da6": {
+      "verified": false,
+      "reason": "与主题无关：GPT-Rosalind 生命科学学术计划，与 Codex 及研发工作流无关"
+    },
+    "openai-dd00c04c9b": {
+      "verified": false,
+      "reason": "与主题无关：律所协议审查工具案例，Codex 只用于做初期概念验证，主体是法律业务工具"
+    }
+  }
+}
