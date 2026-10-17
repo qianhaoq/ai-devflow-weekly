@@ -1,0 +1,13 @@
+{
+  "id": "openai-9db4940a53",
+  "date": "2026-10-16",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+  "summary_zh": "OpenAI 官方博客 2026 年 10 月 16 日发布 Stack Overflow 案例：两名工程师借助 Codex 在数周内构建出 Stack Overflow for Agents，其 ChatGPT 插件让注册量一夜之间增至三倍，并推动 agent 创建量最高增长 10 倍。使用 Codex 后，单个连接器的构建时间从 3–6 周缩短至 4 天，最大降幅达 87%。",
+  "source_url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-17T01:19:00+00:00"
+}

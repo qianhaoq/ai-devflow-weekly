@@ -1,0 +1,13 @@
+{
+  "id": "openai-65442e7082",
+  "date": "2026-10-17",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "How Itaú is building generative AI for its entire customer base",
+  "summary_zh": "OpenAI 发布案例，介绍巴西金融机构 Itaú 如何以 ia.i 对话式界面和 IARA 治理平台，将 AI First 战略应用于客户与员工。ia.i 首阶段覆盖约 30 万客户，目标是到 2026 年底覆盖 100% 客户群；其法律解决方案库拥有超 9000 万份文档，部门流程效率提升 20% 至 80%。",
+  "source_url": "https://openai.com/index/itau-generative-ai",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-17T01:19:00+00:00"
+}
