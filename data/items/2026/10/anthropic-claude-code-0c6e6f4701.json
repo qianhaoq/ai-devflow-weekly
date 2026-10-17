@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-0c6e6f4701",
+  "date": "2026-10-17",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.302",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.302，新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 环境变量以指定客户端自动模式分类器所用模型，并在 `/config` 中新增空闲压缩开关行。该版本还修复了多项问题，包括对话压缩时停止回合触发的“Prompt is too long”错误、会话中途切换 Vertex 或 Bedrock 后请求失败、Read 工具将任意大小图片或类图片管道/设备整体载入内存（现拒绝超过 128 MB 的图片来源），以及 `/autocompact` 和 `/effort` 在网关为 Opus 4 或 4.1 加前缀时保存到错误模型等。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-17T01:18:56+00:00"
+}
