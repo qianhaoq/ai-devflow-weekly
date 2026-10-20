@@ -50,3 +50,8 @@ crawl（每日 07:17 北京时间）→ 开 PR（`no-auto-merge`）→ CI `ci / 
 Copilot review：auto-merge 默认要求当前 head 有 Copilot review。若仓库未启用 Copilot（请求返回 422）或不想用它，把仓库变量 `DISABLE_COPILOT_REVIEW` 设为 `true`，会同时关闭请求与合并要求。
 
 crawl PR 的必需检查：crawl 用 `GITHUB_TOKEN` 创建/推送 PR，GitHub 不会为它正常运行 `pull_request` / `pull_request_target`（`pull_request` 运行停在 action_required 等待批准），`workflow_dispatch` 运行的检查也不计入 PR。因此 crawl PR 的检查由编辑的 `editorial-approved` 打标（人工事件）触发：`ci.yml` 监听 `labeled`，gate 监听 `pull_request_target` labeled。随后在 PR 上评论 `@codex review`（Codex 不会自动审 bot 开的 PR）；Codex 完成后，每 15 分钟的 Gate Refresh 会重跑失败的 `codex / Codex Review Gate`。`crawl.yml` 更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`。
+
+## 自动修上限（2026-10-20）
+
+- Gate 仍只挡 **P0/P1**；**不要求人类 approve**。
+- **同类 P1** 自动修复超过 **3 轮**仍未清零：停止自动循环；开跟进 issue/PR，或降级观察（observe）。禁止为凑绿弱化测试。
