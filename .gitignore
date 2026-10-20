@@ -13,3 +13,6 @@ venv/
 
 # Ruby
 vendor/
+# Codex CLI 凭证，勿提交
+.codex/
+auth.json

@@ -37,3 +37,23 @@
 ## MERGE_GATES（合并门禁）
 
 普通内容 PR 由 bot 合并；每日 crawl PR 只在 `editorial / QA Gate` 绿色后人工合并（`editorial-approved` 仅白名单用户打标有效），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+
+## Coding 工具顺序（2026-10-20 起）
+
+1. **默认用本机 Codex CLI**（ChatGPT 账号登录），模型 `gpt-6.1-sol`（`~/.codex/config.toml`）。
+2. **周额度用完后继续用 credits** 跑 Codex；**credits 也用完**再切：`coding glm`（一般代码）/ `coding kimi`（前端/交互/UI）。
+3. 查额度：`/home/box/.coding-plans/codex-quota.sh`（退出码 0=继续 Codex，1=切 glm/kimi，2=未知；`--json`、`--probe`），或 Codex TUI 内 `/status`。
+4. 凭证 `~/.codex/auth.json` 及任何 API key **绝不打印、外传或提交**；`.codex/`、`auth.json` 已在 `.gitignore`。
+
+## 测试与门禁（禁止弱化凑绿）
+
+- **禁止**为过 CI / Gate 而弱化、删改断言，或用 `skip` / `xit` / `.only`、改 fixture、放宽阈值等方式凑绿；也禁止让测试迁就错误实现。
+- 红灯时优先修产品代码，或按真实意图**加强**测试；若断言本身写错，须在 PR 写明「原断言为何错、新断言覆盖什么」再改测试。
+- AI 同时写代码与测试时，须用独立评审（Codex Gate / 人工）或既有回归交叉验证，勿代码与测试互相迁就。
+
+
+## PR 证据与自动修上限（2026-10-20）
+
+- **不要求人类 approve**；Gate 仍只挡 **P0/P1**（P2 不挡）。
+- **PR 必须贴证据**：正文写清「跑了什么测试 + 关键输出」（命令与摘要即可）；口头 done / 只勾 checkbox 不算。
+- **同类 P1 自动修超 3 轮仍未清**：停自动循环；改开跟进 issue/PR，或降级为观察（observe），不得继续盲推。
