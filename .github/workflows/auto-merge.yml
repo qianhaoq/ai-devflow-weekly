@@ -57,7 +57,7 @@ concurrency:
 
 jobs:
   auto-merge:
-    uses: qianhaoq/devflow-gates/.github/workflows/auto-merge.yml@564c9344b6fc79340b8e89e575f334e3b1e1df87  # devflow-gates main @ 564c934 (pinned; bump deliberately)
+    uses: qianhaoq/devflow-gates/.github/workflows/auto-merge.yml@7e029a2c7d549e86e80331267928281f53ba180b # devflow-gates main @ 7e029a2
     with:
       # Exact check-run names = "<caller job name> / <called job name>"
       # from YOUR ci.yml / codex-gate.yml / qa-gate.yml callers. "ci / Secret Scan"
