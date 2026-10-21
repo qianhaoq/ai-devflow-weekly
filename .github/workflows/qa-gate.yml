@@ -63,7 +63,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@7e029a2c7d549e86e80331267928281f53ba180b # devflow-gates main @ 7e029a2
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@fe7cf651ef515f165041738dc285b03ce3817bb9 # devflow-gates main @ fe7cf65
     with:
       # runs_on: self-hosted   # optional; default ubuntu-latest (also set on qa-refresh if enabled)
       qa_label: 'qa-passed'   # keep in sync with the `if:` above and qa-label-ack
@@ -73,19 +73,25 @@ jobs:
 
   # Anti-ghost ack (方案 B): irrelevant labels must NOT skip every job.
   qa-label-ack:
+    # Job name = required prefix: this job IS "qa / QA Gate"
+    # (conclusion = latest real verdict; no checks.create).
+    name: qa
     if: >-
       github.event_name == 'pull_request_target' &&
       (github.event.action == 'labeled' || github.event.action == 'unlabeled') &&
       github.event.label.name != 'qa-passed' && github.event.label.name != 'no-auto-merge'
     permissions:
       contents: read
-      checks: write
+      checks: read
       actions: write
       issues: write
-    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@7e029a2c7d549e86e80331267928281f53ba180b # devflow-gates main @ 7e029a2
+      pull-requests: read   # private repos: mirror label validation (issues.get/listEvents)
+    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@fe7cf651ef515f165041738dc285b03ce3817bb9 # devflow-gates main @ fe7cf65
     with:
       relevant_labels: 'qa-passed,no-auto-merge'
       check_name: 'qa / QA Gate'
+      job_name: 'QA Gate'
+      wait_minutes: 30   # > real gate max runtime + runner queue
       # runs_on: self-hosted   # keep in sync with qa job above
 
   # Repository scheduled refresh path.
@@ -96,7 +102,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@7e029a2c7d549e86e80331267928281f53ba180b # devflow-gates main @ 7e029a2
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@fe7cf651ef515f165041738dc285b03ce3817bb9 # devflow-gates main @ fe7cf65
 
   # Editorial sign-off (docs/MERGE_GATES.md §4): the same reusable label
   # gate, keyed on `editorial-approved`. Produces the required check
@@ -112,7 +118,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@7e029a2c7d549e86e80331267928281f53ba180b # devflow-gates main @ 7e029a2
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@fe7cf651ef515f165041738dc285b03ce3817bb9 # devflow-gates main @ fe7cf65
     with:
       qa_label: 'editorial-approved'
       # Only these users' `labeled` event counts (timeline/events API actor
@@ -123,15 +129,21 @@ jobs:
 
   # Anti-ghost ack (方案 B): irrelevant labels must NOT skip every job.
   editorial-label-ack:
+    # Job name = required prefix: this job IS "editorial / QA Gate"
+    # (conclusion = latest real verdict; no checks.create).
+    name: editorial
     if: >-
       github.event_name == 'pull_request_target' && (github.event.action == 'labeled' || github.event.action == 'unlabeled') && github.event.label.name != 'editorial-approved' && github.event.label.name != 'no-auto-merge'
     permissions:
       contents: read
-      checks: write
+      checks: read
       actions: write
       issues: write
-    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@7e029a2c7d549e86e80331267928281f53ba180b # devflow-gates main @ 7e029a2
+      pull-requests: read   # private repos: mirror label validation (issues.get/listEvents)
+    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@fe7cf651ef515f165041738dc285b03ce3817bb9 # devflow-gates main @ fe7cf65
     with:
       relevant_labels: 'editorial-approved,no-auto-merge'
       check_name: 'editorial / QA Gate'
+      job_name: 'QA Gate'
+      wait_minutes: 30   # > real gate max runtime + runner queue
       # runs_on: self-hosted   # keep in sync with editorial job above
