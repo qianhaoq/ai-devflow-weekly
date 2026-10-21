@@ -63,7 +63,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@1335569ba86645df8be423e42c136a2625aaeebb # devflow-gates main @ 1335569
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@1f36c8aa40e288a7154a8aa9f6077c45d826857f # devflow-gates main @ 1335569
     with:
       # runs_on: self-hosted   # optional; default ubuntu-latest (also set on qa-refresh if enabled)
       qa_label: 'qa-passed'   # keep in sync with the `if:` above and qa-label-ack
@@ -83,7 +83,7 @@ jobs:
       actions: write
       issues: write
       pull-requests: read   # private repos: mirror label validation (issues.get/listEvents)
-    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@1335569ba86645df8be423e42c136a2625aaeebb # devflow-gates main @ 1335569
+    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@1f36c8aa40e288a7154a8aa9f6077c45d826857f # devflow-gates main @ 1335569
     with:
       relevant_labels: 'qa-passed,no-auto-merge'
       check_name: 'qa / QA Gate'
@@ -97,7 +97,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@1335569ba86645df8be423e42c136a2625aaeebb # devflow-gates main @ 1335569
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@1f36c8aa40e288a7154a8aa9f6077c45d826857f # devflow-gates main @ 1335569
 
   # Editorial sign-off (docs/MERGE_GATES.md §4): the same reusable label
   # gate, keyed on `editorial-approved`. Produces the required check
@@ -113,7 +113,7 @@ jobs:
       pull-requests: write
       issues: write
       actions: write
-    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@1335569ba86645df8be423e42c136a2625aaeebb # devflow-gates main @ 1335569
+    uses: qianhaoq/devflow-gates/.github/workflows/qa-gate.yml@1f36c8aa40e288a7154a8aa9f6077c45d826857f # devflow-gates main @ 1335569
     with:
       qa_label: 'editorial-approved'
       # Only these users' `labeled` event counts (timeline/events API actor
@@ -132,7 +132,7 @@ jobs:
       actions: write
       issues: write
       pull-requests: read   # private repos: mirror label validation (issues.get/listEvents)
-    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@1335569ba86645df8be423e42c136a2625aaeebb # devflow-gates main @ 1335569
+    uses: qianhaoq/devflow-gates/.github/workflows/mirror-required-check.yml@1f36c8aa40e288a7154a8aa9f6077c45d826857f # devflow-gates main @ 1335569
     with:
       relevant_labels: 'editorial-approved,no-auto-merge'
       check_name: 'editorial / QA Gate'
