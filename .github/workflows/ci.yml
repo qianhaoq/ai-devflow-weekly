@@ -34,7 +34,7 @@ permissions:
 
 jobs:
   ci:
-    uses: qianhaoq/devflow-gates/.github/workflows/ci.yml@bdef292fb1bbd35fc6624ce784f7e052191f4aff # devflow-gates main @ bdef292
+    uses: qianhaoq/devflow-gates/.github/workflows/ci.yml@fe7cf651ef515f165041738dc285b03ce3817bb9 # devflow-gates main @ fe7cf65
     with:
       node_version: ''          # '' skips setup-node
       python_version: '3.11'          # '' skips setup-python
