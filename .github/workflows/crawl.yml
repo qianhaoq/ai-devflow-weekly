@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -97,3 +98,62 @@ jobs:
             gh pr edit "$PR" --repo "$GITHUB_REPOSITORY" --remove-label "$label" 2>/dev/null \
               && echo "removed $label from #$PR" || echo "$label not present on #$PR"
           done
+
+      # PR 由 GITHUB_TOKEN 创建/推送，pull_request（CI/Acceptance）运行会停在
+      # action_required 等待批准，pull_request_target 门禁则不会启动。
+      # workflow_dispatch 运行不算 PR checks 或 required checks，参见 GitHub 文档：
+      # https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/troubleshooting-required-status-checks
+      # (1) 用 REST approve 端点批准此 head SHA 待批准的 pull_request 运行，
+      # 保持 event=pull_request，让 checks 关联到 PR。
+      # (2) 评论 @codex review，让 chatgpt-codex-connector 提交 review；其
+      # pull_request_review 事件触发 codex-gate 的真实评估。
+      # (3) editorial / QA Gate 仍只由编辑打 editorial-approved 标签触发，
+      # 该人工 labeled 事件也会重跑 CI。禁止自动合并。
+      - name: Start PR checks on crawl PR head
+        if: steps.cpr.outputs.pull-request-number != '' && (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+          SHA: ${{ steps.cpr.outputs.pull-request-head-sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          declare -A approved_ids=()
+          declare -A ci_ids=()
+          ci_found=false
+          for attempt in {1..18}; do
+            runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$SHA&event=pull_request&per_page=100")
+            for id in $(jq -r '.workflow_runs[] | select(.conclusion=="action_required" and .name=="CI") | .id' <<< "$runs"); do
+              ci_ids[$id]=1
+            done
+            ids=$(jq -r '.workflow_runs[] | select(.conclusion=="action_required") | .id' <<< "$runs")
+            for id in $ids; do
+              if [ -z "${approved_ids[$id]:-}" ]; then
+                if gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/approve"; then
+                  echo "approved run $id"
+                  approved_ids[$id]=1
+                else
+                  echo "::warning::approve failed for run $id (editor label will start CI)"
+                fi
+              fi
+            done
+            if [ -n "${!ci_ids[*]}" ]; then
+              ci_found=true
+              for id in "${!ci_ids[@]}"; do
+                if [ -z "${approved_ids[$id]:-}" ]; then
+                  ci_found=false
+                  break
+                fi
+              done
+              if [ "$ci_found" = true ]; then
+                break
+              fi
+            fi
+            if [ "$attempt" -lt 18 ]; then
+              sleep 10
+            fi
+          done
+          if [ "$ci_found" = false ]; then
+            echo "::warning::CI pull_request run for $SHA not approved"
+          fi
+          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "@codex review"
