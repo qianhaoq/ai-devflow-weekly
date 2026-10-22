@@ -25,8 +25,8 @@ on:
     types: [opened, synchronize, reopened, ready_for_review, edited, labeled]
   push:
     branches: [main]
-  # crawl.yml dispatches this on ref crawl/auto: its GITHUB_TOKEN-made
-  # PR pushes do not fire pull_request.
+  # crawl.yml approves the action_required pull_request run instead;
+  # workflow_dispatch runs do not count as PR checks.
   workflow_dispatch:
 
 permissions:

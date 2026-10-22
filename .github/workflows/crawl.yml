@@ -99,17 +99,39 @@ jobs:
               && echo "removed $label from #$PR" || echo "$label not present on #$PR"
           done
 
-      # PR 由 GITHUB_TOKEN 创建或推送，因此 pull_request 运行会变为 action_required，
-      # pull_request_target 门禁不会启动；workflow_dispatch 是文档明确的例外。
-      # 在 crawl/auto ref 上 dispatch 会为 PR head SHA 创建各 workflow 的最新 suite，
-      # 分支保护会读取这些 suite。
-      - name: Dispatch CI and gates on crawl PR head
+      # PR 由 GITHUB_TOKEN 创建/推送，pull_request（CI/Acceptance）运行会停在
+      # action_required 等待批准，pull_request_target 门禁则不会启动。
+      # workflow_dispatch 运行不算 PR checks 或 required checks，参见 GitHub 文档：
+      # https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/troubleshooting-required-status-checks
+      # (1) 用 REST approve 端点批准此 head SHA 待批准的 pull_request 运行，
+      # 保持 event=pull_request，让 checks 关联到 PR。
+      # (2) 评论 @codex review，让 chatgpt-codex-connector 提交 review；其
+      # pull_request_review 事件触发 codex-gate 的真实评估。
+      # (3) editorial / QA Gate 仍只由编辑打 editorial-approved 标签触发，
+      # 该人工 labeled 事件也会重跑 CI。禁止自动合并。
+      - name: Start PR checks on crawl PR head
         if: steps.cpr.outputs.pull-request-number != '' && (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ steps.cpr.outputs.pull-request-number }}
+          SHA: ${{ steps.cpr.outputs.pull-request-head-sha }}
+        shell: bash
         run: |
           set -euo pipefail
-          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto
-          gh workflow run qa-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
-          gh workflow run codex-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
+          ids=""
+          for attempt in {1..18}; do
+            ids=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$SHA&event=pull_request&per_page=100" --jq '.workflow_runs[] | select(.conclusion=="action_required") | .id')
+            if [ -n "$ids" ]; then
+              break
+            fi
+            if [ "$attempt" -lt 18 ]; then
+              sleep 10
+            fi
+          done
+          if [ -z "$ids" ]; then
+            echo "::warning::no action_required pull_request runs for $SHA"
+          fi
+          for id in $ids; do
+            gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/approve" && echo "approved run $id" || echo "::warning::approve failed for run $id (editor label will start CI)"
+          done
+          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "@codex review"
