@@ -1,0 +1,13 @@
+{
+  "id": "cursor-562cbab673",
+  "date": "2026-10-17",
+  "vendor": "Cursor",
+  "category": "code",
+  "source_id": "cursor-changelog",
+  "title": "Cursor 页面更新（2026-10-17）",
+  "summary_zh": "Cursor 于 2026 年 10 月 17 日更新日志显示，Cloud Agent 现可构建交互式画布（Canvas），并支持通过链接分享给团队；Environments API 进入 beta，可用于以编程方式创建和管理云环境。云代理环境现支持最多 300 个仓库，大型环境加载速度提升 5 倍。",
+  "source_url": "https://cursor.com/changelog#2026-10-17",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-17T01:18:55+00:00"
+}

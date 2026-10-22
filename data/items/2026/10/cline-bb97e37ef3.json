@@ -1,0 +1,13 @@
+{
+  "id": "cline-bb97e37ef3",
+  "date": "2026-10-17",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "Desktop v0.0.48",
+  "summary_zh": "Cline 发布 Desktop v0.0.48，修复了 GPT-6 系列模型在 OpenAI 及 Azure OpenAI 兼容端点上因发送 max_tokens 而非 max_completion_tokens 导致请求被拒的问题。Cline 提供商的默认模型恢复为 Claude Sonnet 5.5，并重新回到推荐列表首位。此次更新还刷新了模型目录，新增 CommandCode 和 Reflection 提供商，并调整了 302.AI、Eden AI、Prime Inference、CoreWeave、NanoGPT、Pioneer 和 Scaleway 的默认模型。",
+  "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.48",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-18T01:01:39+00:00"
+}

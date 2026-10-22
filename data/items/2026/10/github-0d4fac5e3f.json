@@ -1,0 +1,13 @@
+{
+  "id": "github-0d4fac5e3f",
+  "date": "2026-10-21",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "GitHub package firewall in public preview",
+  "summary_zh": "GitHub 推出包防火墙（package firewall）公开预览版，位于端点或内部注册表与上游包仓库之间，检查元数据请求和包下载以识别恶意活动，作为安装时的策略关卡。管理员可设置可配置的冷却期、检查 GitHub Advisory Database 中的恶意软件或漏洞公告，以及证明降级等供应链检查。该功能面向所有 GitHub Enterprise Cloud 客户（含数据驻留版）开放，预览期间免费，正式可用后将按计量使用收费，目前仅支持 npm 包。",
+  "source_url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T01:30:49+00:00"
+}

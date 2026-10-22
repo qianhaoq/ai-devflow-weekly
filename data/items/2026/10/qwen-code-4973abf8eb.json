@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-4973abf8eb",
+  "date": "2026-10-17",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.3-preview.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.3-preview.0 预览版本，更新涵盖 managed-agent、web-shell、extensions、core、cli、sdk-java 及 acp 等模块的修复、测试与重构。其中 web-shell 新增实时轨迹执行展示、从聊天头部打开工作区文件、文件创建与确认删除、文件树确认删除等功能，managed-agent 引入只读快照子项并接入静态 Skills 与扩展配置。该版本为预览版，无价格快照信息。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3-preview.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-17T01:19:07+00:00"
+}

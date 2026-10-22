@@ -1,0 +1,13 @@
+{
+  "id": "openai-b3fcb2e42d",
+  "date": "2026-10-20",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+  "summary_zh": "OpenAI 于 2026 年 10 月 20 日发布案例，一位独立经营 Schlotzsky’s 和 Cinnabon 加盟店的经营者使用 ChatGPT Work 将每月现金对账时间缩短 94%，并将菜单重新定价的分析时间从 5 天降至 1 至 2 小时（降幅 95%）。该经营者还借助 ChatGPT Work 汇总分析定价、销售、预测、排班与人力数据，每次薪资流程节省 4 小时人工，并构建了有望释放 10 万美元现金流的工作流。",
+  "source_url": "https://openai.com/index/ted-taylor-restaurant",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-21T01:34:38+00:00"
+}

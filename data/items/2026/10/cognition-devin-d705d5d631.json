@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-d705d5d631",
+  "date": "2026-10-21",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-10-21）",
+  "summary_zh": "Cognition Devin 发布 2026-10-19 更新：工作日志当前步骤会直接显示 Devin 正在执行的操作摘要，不再显示“Deciding action”，状态行也不再叙述内部事务；Devin Oncall 正式面向所有组织开放，可监控 Slack、Microsoft Teams 频道与 PagerDuty 事件，进行告警分诊与调查并发布根因和后续建议。Devin Review 新增规则编辑器，将排除项与审查规则合并为可展开的规则卡片列表并支持内联选择目标；对早期提交已审查、后续提交未审查的拉取请求，提示改为“Latest changes haven't been reviewed”并提供“Review now”单次审查。Devin 现可检查提交、分支和标签的 CI 状态（覆盖 GitHub、GitLab、Azure DevOps 与 Bitbucket Cloud/Data Center），GitLab 与 Bitbucket Data Center 的 webhook 设置会显示最近一次自动安装结果并标记可能导致重复的手工 webhook；会话可对组织与账户级插件和技能提出修改建议，由有权限的管理员审批。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-10-21",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-21T01:34:39+00:00"
+}

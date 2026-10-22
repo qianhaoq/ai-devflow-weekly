@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-a067beca54",
+  "date": "2026-10-22",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-10-22）",
+  "summary_zh": "Cognition Devin 发布 2026-10-21 更新：Devin Review 新增对 Bitbucket Cloud 的支持，连接工作区后会自动安装评审 webhook，成员也可关联个人账号以本人身份发布评审；同时 Devin Review 分析中的“已解决”计数改为只统计在代码中修复的问题。会话中点击“Received feedback from …”行可打开对应的 PR 评论，并支持将 Devin Review 发现引用到聊天中。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-10-22",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T01:30:54+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-ab8d7d6538",
+  "date": "2026-10-21",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "cua-driver-rs v0.26.0",
+  "summary_zh": "阿里 Qwen Code 发布 cua-driver-rs v0.26.0，提供 Qwen CUA Driver 预编译二进制：macOS 为已签名并公证的通用二进制及 QwenCuaDriver.app，Linux 为未签名版本（x86_64 与 arm64，glibc 2.31 起），Windows 为未签名的 UIAccess worker 与原生 SDK 载荷（x86_64 与 arm64），部署时须在目标机器上签名并信任该 worker 后才能启用 UIAccess。同一工作流在干净安装后发布 @qwen-code/cua-sdk，并在 MCP 协议冒烟测试通过后发布同版本浏览器 SDK 与 @qwen-code/node-repl-mcp 包。该版本还支持通过 CUA_DRIVER_RS_COORDINATE_SPACE=1 启用相对坐标，以及通过 MCP_MODEL_PAYLOAD_FILTER=1 启用针对受影响模型 API 路由的文本 MCP 载荷过滤。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.26.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T01:31:01+00:00"
+}

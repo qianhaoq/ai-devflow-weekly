@@ -1,0 +1,13 @@
+{
+  "id": "glm-80b7836e3b",
+  "date": "2026-10-21",
+  "vendor": "智谱 GLM",
+  "category": "code",
+  "source_id": "zhipu-release-notes",
+  "title": "智谱 GLM 页面更新（2026-10-21）",
+  "summary_zh": "智谱 GLM 更新日志页面于 2026-10-21 更新，列出多条模型与产品发布记录，包括 2026-08-26 上线原生多模态模型 GLM-5.3-Flash，以及 2026-08-19 上线新一代旗舰模型 GLM-5.3。页面还收录了 GLM-5.2、GLM Coding Plan 团队版、GLM-5.1 等此前发布内容。",
+  "source_url": "https://docs.bigmodel.cn/cn/update/new-releases#2026-10-21",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-21T01:34:51+00:00"
+}

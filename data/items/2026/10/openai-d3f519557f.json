@@ -1,0 +1,13 @@
+{
+  "id": "openai-d3f519557f",
+  "date": "2026-10-21",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+  "summary_zh": "OpenAI 于 2026 年 10 月 21 日发布安全产品动态，介绍其通过 Patch the Planet 计划协调全球响应，处理 PHP 中的关键漏洞。文中称 Calif 利用 GPT‑5.6 Sol 发现一个关键缺陷，Wiz 也独立发现并报告了这两个漏洞，PHP 维护者主导修复与发布。OpenAI 还以 Codex skill 形式分享 PHP 版本检查工具，并承诺提供 10 亿美元补贴的 Daybreak 访问额度，用于支持资源有限的关键服务防护组织。",
+  "source_url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T01:30:53+00:00"
+}

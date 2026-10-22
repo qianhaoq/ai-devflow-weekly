@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-bf4adc54a6",
+  "date": "2026-10-21",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.3-nightly.20261020.82bd240ad0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.3-nightly.20261020.82bd240ad0，新增 daemon 支持按会话定向刷新 Skill 与 Extension，并为 Workspace 隔离的绑定会话提供会话创建预热。managed-agent 方面新增只读 --check 预检、参考发行版配置模板与单机拓扑 systemd 单元，附件输入上限提升至 8 MiB，同时修复写入者丢失后的唤醒恢复等问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3-nightly.20261020.82bd240ad0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-21T01:34:53+00:00"
+}

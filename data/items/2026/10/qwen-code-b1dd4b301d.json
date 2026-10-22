@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-b1dd4b301d",
+  "date": "2026-10-19",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.3",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.3，无已知破坏性变更。本次更新为 Test Failure Explorer 增加可选的模型生成布局（含校验与回退），Web Shell 移动端输入框移除历史上下按钮、轨迹面板新增可折叠的最近执行区，Files 面板新增新建文件/文件夹与删除操作（删除需二次确认），并支持托管会话接入首页与侧边栏、托管父代理启动快照隔离的子代理等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-20T01:49:46+00:00"
+}

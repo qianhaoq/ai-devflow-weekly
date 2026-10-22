@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-4e6c8a113b",
+  "date": "2026-10-18",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-10-18）",
+  "summary_zh": "Cognition Devin 发布 2026-10-18 更新，新增从单条消息发起多个侧边对话、命令面板搜索包含已归档会话，以及 Devin 空闲时排队消息仍可编辑、删除或重新排序等能力。聊天图片可在标签页中打开，数字格式跟随所选显示语言，打开休眠会话的浏览器预览会自动重启其服务器。此外，/devin 命令现支持 GitLab 合并请求，Devin Review 为 Bitbucket Cloud 拉取请求显示合并就绪状态，并支持在多个代码平台上列出和搜索拉取请求。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-10-18",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-18T01:01:38+00:00"
+}

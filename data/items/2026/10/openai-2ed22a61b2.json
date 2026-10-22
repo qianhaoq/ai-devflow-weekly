@@ -1,0 +1,13 @@
+{
+  "id": "openai-2ed22a61b2",
+  "date": "2026-10-22",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Broad access through consistent standards",
+  "summary_zh": "OpenAI 于 2026 年 10 月 21 日发布说明，介绍其通过统一标准实现广泛访问的做法：过去数月与客户和合作伙伴协作，统一提供其模型的服务间的安全政策，并更新使用政策使其更清晰易循。更新后的使用政策将于 2026 年 11 月 20 日生效，要求提供模型直接访问的服务（如模型路由或 AI 网关）在提供该访问前须获得 OpenAI 审核批准。OpenAI 还表示正与客户合作引入 SafetyIDs，以便在调查中区分单个最终用户而无需获知用户身份。",
+  "source_url": "https://openai.com/index/broad-access-through-consistent-standards",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T01:30:53+00:00"
+}

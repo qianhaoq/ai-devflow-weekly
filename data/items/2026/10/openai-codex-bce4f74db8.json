@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-bce4f74db8",
+  "date": "2026-10-21",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-10-21）",
+  "summary_zh": "OpenAI Codex 更新日志显示，2026-10-15 发布 Codex CLI 0.163.0。新功能包括在 /config 中跨类别搜索偏好并即时修改支持的设置、在 Codex 响应时发送后续消息以即时引导、在 /keymap 配置默认 Ctrl+X 的 leader key，以及从 /daemon 重启受管后台服务器。修复方面，恢复已保存线程时会还原其权限与网络审批，网络代理在 DNS 查询前检查权限，Windows 上 Ctrl+V 和 Shift+Insert 可粘贴文本与图片。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-10-21",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-21T01:34:38+00:00"
+}

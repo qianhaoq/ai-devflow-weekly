@@ -1,0 +1,13 @@
+{
+  "id": "cline-72a05d8dad",
+  "date": "2026-10-16",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "Desktop v0.0.47",
+  "summary_zh": "Cline 发布 Desktop v0.0.47，修复了 0.0.46 中因打包应用未包含 SDK 包导致 Marketplace 插件加载失败的问题，并移除了设置中的 Cloud sessions 开关，该功能在可用处默认开启。当提供商错误中断流式响应时，Cline 现会最多重试 3 次；同时刷新了模型目录，Cline 提供商默认模型改为 Gemini 4 Argon。",
+  "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.47",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-17T01:19:02+00:00"
+}

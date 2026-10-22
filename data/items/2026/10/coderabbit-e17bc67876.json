@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-e17bc67876",
+  "date": "2026-10-22",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "CodeRabbit 页面更新（2026-10-22）",
+  "summary_zh": "CodeRabbit 更新了 Claude Code 规则支持：现在会读取 .claude/rules/ 中的规则，带 paths frontmatter 的规则仅作用于匹配的文件，无 paths 的规则则按内容推断作用范围。同时，Autofix 更名为 Fix comments，Autopilot 更名为 Autofix，旧命令在一段时间内仍可作为别名使用。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-10-22",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T01:30:54+00:00"
+}

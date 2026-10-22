@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-4e8ec628dd",
+  "date": "2026-10-20",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-10-20）",
+  "summary_zh": "OpenAI Codex 页面于 2026-10-20 更新，官方 changelog 同期记录了多项变动：GPT-5.5 自 2026-10-14 起对以 ChatGPT 登录的用户从 Codex 退役，API 及 API key 认证的会话不受影响，建议改用 GPT-6.1 Sol。Codex 桌面应用新增 Composer predictions 测试版，可为下一条消息提供自动补全式建议。此外还包含 Codex 应用 26.1007、26.1002 的性能改进与缺陷修复，以及 GPT-6.1 Sol Ultrafast 模式等条目。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-10-20",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-20T01:49:26+00:00"
+}

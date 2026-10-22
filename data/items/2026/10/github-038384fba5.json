@@ -1,0 +1,13 @@
+{
+  "id": "github-038384fba5",
+  "date": "2026-10-16",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Xcode 27 runner image generally available",
+  "summary_zh": "GitHub Actions 现已正式提供 Xcode 27 runner 镜像，可用于构建和测试 Apple 应用。该镜像此前处于公开预览阶段，基于 macOS 27，包含 Xcode 27 工具链和 Apple SDK，仅支持 Apple Silicon（arm64）runner。使用时将工作流的 runs-on 设为 xcode-27 或 xcode-27-xlarge 即可，已使用这些标签的工作流无需改动。",
+  "source_url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-17T01:18:56+00:00"
+}

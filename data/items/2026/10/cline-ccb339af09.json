@@ -1,0 +1,13 @@
+{
+  "id": "cline-ccb339af09",
+  "date": "2026-10-16",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "CLI v3.0.72",
+  "summary_zh": "Cline 发布 CLI v3.0.72，插件改为在 worker 中运行，不再直接运行于 hub 内，且不再支持 `CLINE_PLUGIN_MODE=in_process`，需使用默认的 `worker` 或 `sandbox`。当 provider 错误中断流式响应时，Cline 最多重试 3 次；失败的模型请求会记录 provider 的 request id。`cline hub ensure` 和 `cline hub start` 新增 `--json`、`--allow-port-fallback`、`--no-connectors`、`--login-shell-path` 等选项，`cline hub` 支持 `--discovery-path`，且 `cline hub` 命令不再计入 CLI 激活统计。未选择模型时，Cline provider 默认使用 Gemini 4 Argon，模型目录也已刷新。",
+  "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.72",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-17T01:19:02+00:00"
+}

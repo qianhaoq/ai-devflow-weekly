@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-552fa2158c",
+  "date": "2026-10-18",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-release-notes",
+  "title": "Anthropic Claude Code 页面更新（2026-10-18）",
+  "summary_zh": "Anthropic Claude Code 的 CHANGELOG.md 页面显示该文件共 9193 行、约 1020 KB，仓库 Issues 数量为 5k+，Pull requests 为 698，且仅协作者可创建 PR。",
+  "source_url": "https://docs.anthropic.com/en/release-notes/claude-code#2026-10-18",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-18T01:01:36+00:00"
+}

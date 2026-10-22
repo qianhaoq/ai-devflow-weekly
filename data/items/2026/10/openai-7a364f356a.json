@@ -1,0 +1,13 @@
+{
+  "id": "openai-7a364f356a",
+  "date": "2026-10-19",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Advancing coding in low‑resource programming languages",
+  "summary_zh": "OpenAI 于 2026 年 10 月 19 日发布研究，介绍其最新模型在 COBOL、Fortran、Visual Basic 等低资源编程语言上的能力提升，并推出 MultiLangBench 与 COBOL 迁移两项评测。原文称 GPT‑6 Astra 在 MultiLangBench 的 20 种语言上平均测试通过率达 87.4%，高于 GPT‑5.6 Sol 的 26.8%；GPT‑6.1 Sol 在 COBOL 迁移评测低推理强度下准确率为 86.6%，GPT‑5.6 Sol 为 5.4%。",
+  "source_url": "https://openai.com/index/low-resource-programming-languages",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-20T01:49:26+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-047213be81",
+  "date": "2026-10-21",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "CodeRabbit 页面更新（2026-10-21）",
+  "summary_zh": "CodeRabbit 更新了变更日志页面，汇总其在 GitHub、GitLab、Azure 和 Bitbucket 上的最新发布，包括新功能、集成、Agent 能力与产品更新。近期条目涉及 GitLab 迁移支持 CSV 输入、CodeRabbit 读取 Claude Code 规则、Fix comments 与 Autofix 功能更名，以及 CLI v0.9.0 等。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-10-21",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-21T01:34:44+00:00"
+}

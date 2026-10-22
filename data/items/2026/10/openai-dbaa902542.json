@@ -1,0 +1,13 @@
+{
+  "id": "openai-dbaa902542",
+  "date": "2026-10-20",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "OpenAI acquires Orchestra Bio",
+  "summary_zh": "OpenAI 于 2026 年 10 月 20 日宣布收购 Orchestra Bio，后者是一个帮助生物制药团队协调复杂药物研发流程的平台。OpenAI 将把 Orchestra 的团队与技术同其生命科学 AI 模型与工具 Rosalind 结合，目标是构建协助团队衔接科学发现与后续研究、决策及推进工作的智能体。",
+  "source_url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-21T01:34:38+00:00"
+}

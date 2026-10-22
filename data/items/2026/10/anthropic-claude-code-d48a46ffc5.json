@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-d48a46ffc5",
+  "date": "2026-10-21",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.305",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.305，新增 `sandbox.allowNestedUserNamespaces` 配置，使 Linux 沙箱命令可创建用户命名空间，并新增 `CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS` 以让无人值守重试模式识别已解除的用量限制。该版本修复了 Vertex、Bedrock 等提供商在端点或网关拒绝工具搜索时所有请求失败的问题（2.1.304 回归），以及 `/effort`、`/autocompact` 设置在模型名大小写或 `[1m]` 标签不一致时不生效等问题。此外还改进了 `/usage` 警告展示、MCP 授权对话框和 Remote Control 提示信息。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-21T01:34:35+00:00"
+}

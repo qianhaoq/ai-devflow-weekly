@@ -1,0 +1,13 @@
+{
+  "id": "openai-4a2f3ca18e",
+  "date": "2026-10-16",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Benefit Street Partners answers questions faster with Codex",
+  "summary_zh": "OpenAI 发布案例，介绍 Benefit Street Partners 投资经理 Anant Kumar 借助 Codex 构建贷款估值对比工具和信贷协议分析工具。首个 BDC 追踪工具耗时约一天完成，信贷协议首轮分析约需 20 分钟，之后还需一小时以上人工复核。Kumar 表示，Codex 让投资委员会的后续问题能在当天甚至会议中更快得到回应。",
+  "source_url": "https://openai.com/index/benefit-street-partners",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-18T01:01:37+00:00"
+}

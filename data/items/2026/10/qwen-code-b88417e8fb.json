@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-b88417e8fb",
+  "date": "2026-10-22",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.3-nightly.20261021.79242671bb",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.3-nightly.20261021.79242671bb，主要变更包括：daemon 支持按会话定向刷新 Skill 与 Extension；managed-agent 新增只读 `--check` 预检、支持本地与 SSH 工作区文件引用、附件输入上限提升至 8 MiB，并随参考发行版提供配置模板与单机拓扑的 systemd 单元；serve 与 runtime-broker 方面涉及私有 CSI 文件轮次的恢复与 Hosted Harness 运行、Workspace 隔离绑定会话的预热等。该版本为 nightly 构建。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3-nightly.20261021.79242671bb",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T01:31:01+00:00"
+}

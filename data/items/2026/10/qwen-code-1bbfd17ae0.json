@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-1bbfd17ae0",
+  "date": "2026-10-21",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.4-preview.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.4-preview.0（预览版）。本次更新包括：daemon 支持按会话定向刷新 Skill 与 Extension；managed-agent 新增只读的 --check 预检、配置模板与 systemd 单元，附件输入上限提升至 8 MiB，并支持本地与 SSH 工作区文件引用；serve 与 hosted 相关流程补充了 Turn 恢复与后台唤醒的修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.4-preview.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-21T01:34:53+00:00"
+}

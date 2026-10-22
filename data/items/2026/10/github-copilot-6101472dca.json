@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-6101472dca",
+  "date": "2026-10-20",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot models deprecated on October 19, 2026",
+  "summary_zh": "GitHub 于 2026 年 10 月 19 日在多数 Copilot 体验（含 Copilot Chat、内联编辑、ask 与 agent 模式、代码补全）中弃用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 和 Grok 4.5，这些弃用此前已于 2026 年 9 月 18 日公布。官方建议改用 Gemini 3.8 Flash、GPT-6.1 Sol、GPT-6 Luna 和 Grok 4.7 等替代模型，并提示 Copilot Enterprise 管理员可能需在 Copilot 设置中通过模型策略启用替代模型的访问权限。",
+  "source_url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-20T01:49:23+00:00"
+}

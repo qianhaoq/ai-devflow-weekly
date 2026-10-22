@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-13a630d16e",
+  "date": "2026-10-20",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.25.3-nightly.20261019.5dcf7c7cb1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.25.3-nightly.20261019.5dcf7c7cb1，新增 daemon 支持按会话定向刷新 Skill 与 Extension，并为 managed-agent 增加只读 --check 预检、本地与 SSH 工作区文件引用、参考发行版配置模板及单机拓扑 systemd 单元。该版本还修复 managed-agent 写入者丢失后的唤醒恢复、SDK 会话创建容量、serve 中 Hosted stdio MCP 服务器进程组隔离等问题，并包含多项测试与性能改进。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3-nightly.20261019.5dcf7c7cb1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-20T01:49:46+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cursor-2bb487a128",
+  "date": "2026-10-20",
+  "vendor": "Cursor",
+  "category": "code",
+  "source_id": "cursor-changelog",
+  "title": "Cursor 页面更新（2026-10-20）",
+  "summary_zh": "Cursor 更新日志显示，云代理现可构建交互式画布，并支持通过链接分享给团队；Environments API 已开放 beta 版，可用于以编程方式创建和管理代理运行的云环境。云代理环境现支持最多 300 个仓库，大型环境加载速度提升 5 倍。",
+  "source_url": "https://cursor.com/changelog#2026-10-20",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-20T01:49:22+00:00"
+}

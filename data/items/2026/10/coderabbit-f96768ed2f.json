@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-f96768ed2f",
+  "date": "2026-10-20",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "CodeRabbit 页面更新（2026-10-20）",
+  "summary_zh": "CodeRabbit 更新了 PR Reviews 相关功能：原 Autofix 更名为 Fix comments，原 Autopilot 更名为 Autofix，旧命令在一段时间内仍可作为别名使用。CLI v0.9.0 支持通过 cr code 管理云任务，并完善了 shell 命令补全与更丰富的评审 JSON 读取。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-10-20",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-20T01:49:35+00:00"
+}
