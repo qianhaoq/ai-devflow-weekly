@@ -119,25 +119,41 @@ jobs:
         run: |
           set -euo pipefail
           declare -A approved_ids=()
+          declare -A ci_ids=()
           ci_found=false
           for attempt in {1..18}; do
             runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$SHA&event=pull_request&per_page=100")
+            for id in $(jq -r '.workflow_runs[] | select(.conclusion=="action_required" and .name=="CI") | .id' <<< "$runs"); do
+              ci_ids[$id]=1
+            done
             ids=$(jq -r '.workflow_runs[] | select(.conclusion=="action_required") | .id' <<< "$runs")
             for id in $ids; do
               if [ -z "${approved_ids[$id]:-}" ]; then
-                gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/approve" && echo "approved run $id" || echo "::warning::approve failed for run $id (editor label will start CI)"
-                approved_ids[$id]=1
+                if gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/approve"; then
+                  echo "approved run $id"
+                  approved_ids[$id]=1
+                else
+                  echo "::warning::approve failed for run $id (editor label will start CI)"
+                fi
               fi
             done
-            if jq -e 'any(.workflow_runs[]; .conclusion=="action_required" and .name=="CI")' <<< "$runs" >/dev/null; then
+            if [ -n "${!ci_ids[*]}" ]; then
               ci_found=true
-              break
+              for id in "${!ci_ids[@]}"; do
+                if [ -z "${approved_ids[$id]:-}" ]; then
+                  ci_found=false
+                  break
+                fi
+              done
+              if [ "$ci_found" = true ]; then
+                break
+              fi
             fi
             if [ "$attempt" -lt 18 ]; then
               sleep 10
             fi
           done
           if [ "$ci_found" = false ]; then
-            echo "::warning::no action_required CI pull_request run for $SHA"
+            echo "::warning::CI pull_request run for $SHA not approved"
           fi
           gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "@codex review"
