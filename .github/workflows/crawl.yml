@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -97,3 +98,18 @@ jobs:
             gh pr edit "$PR" --repo "$GITHUB_REPOSITORY" --remove-label "$label" 2>/dev/null \
               && echo "removed $label from #$PR" || echo "$label not present on #$PR"
           done
+
+      # PR 由 GITHUB_TOKEN 创建或推送，因此 pull_request 运行会变为 action_required，
+      # pull_request_target 门禁不会启动；workflow_dispatch 是文档明确的例外。
+      # 在 crawl/auto ref 上 dispatch 会为 PR head SHA 创建各 workflow 的最新 suite，
+      # 分支保护会读取这些 suite。
+      - name: Dispatch CI and gates on crawl PR head
+        if: steps.cpr.outputs.pull-request-number != '' && (steps.cpr.outputs.pull-request-operation == 'created' || steps.cpr.outputs.pull-request-operation == 'updated')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          set -euo pipefail
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto
+          gh workflow run qa-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
+          gh workflow run codex-gate.yml --repo "$GITHUB_REPOSITORY" --ref crawl/auto -f pr_number="$PR"
