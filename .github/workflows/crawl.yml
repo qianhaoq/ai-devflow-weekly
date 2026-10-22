@@ -118,20 +118,26 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ids=""
+          declare -A approved_ids=()
+          ci_found=false
           for attempt in {1..18}; do
-            ids=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$SHA&event=pull_request&per_page=100" --jq '.workflow_runs[] | select(.conclusion=="action_required") | .id')
-            if [ -n "$ids" ]; then
+            runs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$SHA&event=pull_request&per_page=100")
+            ids=$(jq -r '.workflow_runs[] | select(.conclusion=="action_required") | .id' <<< "$runs")
+            for id in $ids; do
+              if [ -z "${approved_ids[$id]:-}" ]; then
+                gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/approve" && echo "approved run $id" || echo "::warning::approve failed for run $id (editor label will start CI)"
+                approved_ids[$id]=1
+              fi
+            done
+            if jq -e 'any(.workflow_runs[]; .conclusion=="action_required" and .name=="CI")' <<< "$runs" >/dev/null; then
+              ci_found=true
               break
             fi
             if [ "$attempt" -lt 18 ]; then
               sleep 10
             fi
           done
-          if [ -z "$ids" ]; then
-            echo "::warning::no action_required pull_request runs for $SHA"
+          if [ "$ci_found" = false ]; then
+            echo "::warning::no action_required CI pull_request run for $SHA"
           fi
-          for id in $ids; do
-            gh api -X POST "repos/$GITHUB_REPOSITORY/actions/runs/$id/approve" && echo "approved run $id" || echo "::warning::approve failed for run $id (editor label will start CI)"
-          done
           gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "@codex review"
