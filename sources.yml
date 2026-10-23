@@ -179,8 +179,8 @@ sources:
     url: https://help.aliyun.com/zh/lingma/product-overview/release-notes
     official_domain: help.aliyun.com
     pricing_url: https://lingma.aliyun.com/lingma/pricing
-    notes: ""
-    verified: true
+    notes: "2026-10-23 实测 soft-404，title：404错误页-阿里云帮助中心；停用待复测"
+    verified: false
   - id: qwen-code-releases
     vendor: "阿里 Qwen Code"
     category: coding
