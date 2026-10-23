@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-be8869e594",
+  "date": "2026-10-23",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Custom skills, agents, and MCP servers in usage metrics API",
+  "summary_zh": "GitHub Copilot 用量指标 API 现在会显示组织自定义的 skills、custom agents、MCP servers、slash commands 和 plugins 的名称，不再将其归入 other 或 custom。每个 totals_by_* 列表的条目上限从 5 个提升至 25 个，超出部分合并到末尾的 other 条目，interaction_count 与 distinct_*_use_count 的计算方式保持不变。名称来自 Copilot CLI、GitHub Copilot 应用、ACP 集成和 Copilot SDK 等客户端遥测，且从本次发布后处理的报告日期起开始显示。",
+  "source_url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-23T01:30:21+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-e17bc67876",
+  "date": "2026-10-22",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "CodeRabbit 页面更新（2026-10-22）",
+  "summary_zh": "CodeRabbit 更新日志页面汇总了其在 GitHub、GitLab、Azure 和 Bitbucket 上的最新功能、集成与产品更新。其中提到可将 Claude Code 的 .claude/rules/ 规则接入 Code Guidelines，并将原 Autofix 更名为 Fix comments、原 Autopilot 更名为 Autofix，旧命令在一段时间内仍作为别名可用。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-10-22",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:47+00:00"
+}

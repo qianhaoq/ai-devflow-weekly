@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-d0db0936f4",
+  "date": "2026-10-22",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-release-notes",
+  "title": "Anthropic Claude Code 页面更新（2026-10-22）",
+  "summary_zh": "Anthropic Claude Code 的 CHANGELOG.md 页面显示，该文件位于 claude-code 仓库的 main 分支，共 9372 行（8516 行代码），大小约 1.02 MB。页面提供原始文件复制与下载、Blame、历史记录等操作入口。",
+  "source_url": "https://docs.anthropic.com/en/release-notes/claude-code#2026-10-22",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:44+00:00"
+}

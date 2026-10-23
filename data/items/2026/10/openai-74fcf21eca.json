@@ -1,0 +1,13 @@
+{
+  "id": "openai-74fcf21eca",
+  "date": "2026-10-21",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+  "summary_zh": "OpenAI 于 2026 年 10 月 21 日宣布，ChatGPT Ads 扩展至 26 个新国家，全球覆盖范围增至 89 个国家。自八个多月前推出广告以来，已有超过 10 万家广告主在 ChatGPT 上投放广告。广告仅出现在 Free 和 Go 套餐中，Plus、Pro 和 Enterprise 订阅保持无广告。",
+  "source_url": "https://openai.com/index/chatgpt-ads-expands-26-new-countries",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:46+00:00"
+}

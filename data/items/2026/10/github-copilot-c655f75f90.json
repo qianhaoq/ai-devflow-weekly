@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-c655f75f90",
+  "date": "2026-10-23",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Industry comparisons in the Copilot impact dashboard",
+  "summary_zh": "GitHub Copilot 的 impact dashboard 新增“Industry comparison”板块，企业及非企业所属组织可将自身的 Copilot agentic 采用率与杠杆情况，与参与同行的聚合基准进行比较。该功能为选择性加入且默认关闭，可按公司规模与行业选择同行组，排名基于 28 天报告期的同行中位数及同行组扩大后的前十分位。比较结果每日刷新，聚合基准不含可识别数据并在 30 天后删除。",
+  "source_url": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-23T01:30:21+00:00"
+}

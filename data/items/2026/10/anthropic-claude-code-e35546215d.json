@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-e35546215d",
+  "date": "2026-10-21",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.306",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.306，修复了云会话中未带会话环境变量启动时 `claude -p` 报“Not logged in”的问题。该版本还修复了在包含大量 MCP 工具的会话中，API 错误被替换为“prompt is too long”以及出现不必要压缩的问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.306",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T08:10:42+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-9db7d13375",
+  "date": "2026-10-20",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Copilot model policy API for enterprise, orgs, and teams",
+  "summary_zh": "GitHub 为 Copilot 模型策略新增 REST API，可获取和更新企业、企业团队、代理应用及组织四个层级的模型策略，相关 GET 与 PATCH 端点已正式可用。企业策略可在组织模式下将模型控制权下放给组织，或在企业团队模式下下放给团队和应用。",
+  "source_url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:41+00:00"
+}

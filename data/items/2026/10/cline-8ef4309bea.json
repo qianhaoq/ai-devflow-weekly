@@ -1,0 +1,13 @@
+{
+  "id": "cline-8ef4309bea",
+  "date": "2026-10-16",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "v4.1.25",
+  "summary_zh": "Cline 发布 v4.1.25，新增逐步推送的 Cline Cloud 会话，可在所选 GitHub 仓库和分支的托管沙箱中运行任务，任务状态显示在 Recent 和 History 中，完成后会通知，关闭编辑器后仍继续运行。未选择模型时，Cline provider 默认改用 Gemini 4 Argon，并刷新了模型目录，新增 Boundless 和 Standard Compute 提供商，多个提供商默认模型随之调整。此外修复了本地模型长请求超时、OpenAI Compatible 基础 URL 处理、附件丢失、流中断重试等问题。",
+  "source_url": "https://github.com/cline/cline/releases/tag/v4.1.25",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T08:10:49+00:00"
+}

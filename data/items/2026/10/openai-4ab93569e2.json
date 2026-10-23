@@ -1,0 +1,13 @@
+{
+  "id": "openai-4ab93569e2",
+  "date": "2026-10-22",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "How AT&T is rethinking in-house legal work with OpenAI",
+  "summary_zh": "OpenAI 发布案例，介绍 AT&T 内部法务部门如何在其 LegalEdge 团队基础上与 OpenAI 合作，探索支持法务工作的新方式。AT&T 计划构建自然语言受理系统，对请求进行分类和优先级排序，并关联相关先例、研究与过往工作，为律师提供背景信息和初步建议。AT&T 方面表示，决策始终由律师做出，合作目标是让律师把更多时间用于运用专业判断。",
+  "source_url": "https://openai.com/index/att-legal",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:46+00:00"
+}

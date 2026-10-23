@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-4fa808623e",
+  "date": "2026-10-16",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "See Your Runner's Desktop",
+  "summary_zh": "Sourcegraph Amp 现在支持查看和控制 macOS 或 Linux runner 的桌面，便于试用 Amp 构建的原生应用（如 iOS 应用）。在 macOS 应用的 Settings › Runner 中开启 Share This Mac's Display，或以 amp --no-tui --desktop 启动 runner 即可使用；Amp 客户端直连 runner，在本地网络或附近时几乎即时响应。",
+  "source_url": "https://ampcode.com/news/runner-desktop",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:48+00:00"
+}

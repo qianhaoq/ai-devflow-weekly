@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-a067beca54",
+  "date": "2026-10-22",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-10-22）",
+  "summary_zh": "Cognition Devin 于 2026-10-22 更新发布说明，列出近期已发布的功能、改进与缺陷修复。10 月 21 日的更新包括：会话中点击“Received feedback from …”行可打开对应的 PR 评论，Devin Review 支持 Bitbucket Cloud，以及 Devin Oncall 支持 Lite 模式等。10 月 19 日的更新包括工作日志显示更清晰，以及 Devin Oncall 正式可用（Generally Available）。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-10-22",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:47+00:00"
+}

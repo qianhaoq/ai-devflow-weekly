@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-75a2c3c010",
+  "date": "2026-10-23",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-10-23）",
+  "summary_zh": "OpenAI Codex 更新日志显示，Codex CLI 0.163.0 新增在 /config 中跨类别搜索偏好并即时修改受支持设置、在 Codex 响应时发送后续消息以即时引导、在 /keymap 配置 leader 键（默认 Ctrl+X）等能力，并支持从 /daemon 重启受管后台服务器。修复方面包括恢复已保存线程时还原权限与网络审批、网络代理在 DNS 查询前检查权限，以及 Windows 与 WSL 下的粘贴和复制行为改进。文档更新了迁移至 GPT-6 系列的 OpenAI Docs 指引，并说明 Linux 沙箱使用 bubblewrap 做文件系统隔离、seccomp 做系统调用过滤。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-10-23",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-23T01:30:23+00:00"
+}

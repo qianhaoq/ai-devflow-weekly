@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-e875761fb6",
+  "date": "2026-10-23",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.0-nightly.20261022.bf66a26c97",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.0-nightly.20261022.bf66a26c97（2026-10-23）。该版本新增 serve 守护进程令牌持久化、managed-agent 手动上下文压缩与会话生命周期 UI 及读取导出，并让 CLI 的 OpenTUI 输入、编辑与状态行对齐 Ink。此外还包含 shell 提醒模型记录命令写入文件、修复目录变更后误报中断等改动。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.0-nightly.20261022.bf66a26c97",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-23T01:30:30+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-cc33c437a3",
+  "date": "2026-10-22",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-10-22）",
+  "summary_zh": "OpenAI Codex 更新日志显示，Codex CLI 0.163.0 新增在 /config 中跨类别搜索偏好设置、在 Codex 响应时发送后续消息以即时引导，以及通过 /keymap 配置 leader key（默认 Ctrl+X）等能力。该版本还支持从 /daemon 重启受管后台服务器、并行运行只读工具，并默认对符合条件的账户启用 Daybreak。此外，本次更新修复了恢复已保存线程时的权限与网络审批、网络代理 DNS 查询前的权限检查等问题，并更新了 GPT-6 系列迁移相关文档。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-10-22",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:45+00:00"
+}

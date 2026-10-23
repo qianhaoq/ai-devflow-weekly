@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-af0defe4c9",
+  "date": "2026-10-22",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.26.0",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.26.0（2026-10-22）。本次更新包含 daemon 支持按会话定向刷新 Skill 与 Extension、managed-agent 新增只读 --check 预检、附件输入上限提升至 8 MiB，以及 serve 与 managed-agent 的多项修复与性能改进。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T08:10:54+00:00"
+}

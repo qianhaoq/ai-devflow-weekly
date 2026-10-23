@@ -1,0 +1,13 @@
+{
+  "id": "glm-83217eac43",
+  "date": "2026-10-23",
+  "vendor": "智谱 GLM",
+  "category": "code",
+  "source_id": "zhipu-release-notes",
+  "title": "智谱 GLM 页面更新（2026-10-23）",
+  "summary_zh": "智谱 GLM 更新日志页面于 2026-10-23 更新，列出多条模型与产品发布记录。其中 2026-08-26 上线 GLM-5.3-Flash 原生多模态模型，采用线性注意力与稀疏注意力混合架构（总参 320B，激活 18B）；2026-08-19 上线新一代旗舰模型 GLM-5.3，编程能力较 GLM-5.2 在内部 Z.ai Code Bench 上提升 50%。",
+  "source_url": "https://docs.bigmodel.cn/cn/update/new-releases#2026-10-23",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-23T01:30:28+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-ba6fa07d67",
+  "date": "2026-10-22",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+  "summary_zh": "OpenAI 于 2026 年 10 月 22 日宣布，Uber 在全公司范围内部署 ChatGPT Work，将其提供给全球超过 3 万名员工，此前该工具已在 1000 名员工中试点。ChatGPT Work 可连接 Google Drive、Gmail、Google Calendar 和 Slack 等日常工具，支持信息调研、会议简报、演示制作、数据分析和跨应用工作流，并将 GPT‑6.1 Sol 作为默认能力部署。Uber 的开发者与软件工程团队还将继续使用 Codex 加速软件开发。",
+  "source_url": "https://openai.com/index/uber-chatgpt-work-rollout",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-23T01:30:24+00:00"
+}

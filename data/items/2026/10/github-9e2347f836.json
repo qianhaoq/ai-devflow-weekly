@@ -1,0 +1,13 @@
+{
+  "id": "github-9e2347f836",
+  "date": "2026-10-23",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Meta API endpoints updated for Actions blob storage",
+  "summary_zh": "GitHub 为提升容量与可靠性，在 github.com 上为 GitHub Actions 新增了 blob 存储端点，meta API 现已包含这些新端点。使用网络允许列表访问 Actions blob 存储的组织需检查网络访问设置，确保放行 productionresultssa30 至 productionresultssa49 以及 productionresultssa100 至 productionresultssa199 的 blob.core.windows.net 主机；若已允许 productionresultssa*.blob.core.windows.net 则无需更改，若按单个主机放行则需添加新主机，以免作业摘要和日志中断。当前端点列表可通过 meta 数据的 REST API 端点获取。",
+  "source_url": "https://github.blog/changelog/2026-10-22-meta-api-endpoints-updated-for-actions-blob-storage",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-23T01:30:21+00:00"
+}

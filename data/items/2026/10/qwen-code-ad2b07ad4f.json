@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-ad2b07ad4f",
+  "date": "2026-10-22",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "SDK TypeScript Release v0.1.22",
+  "summary_zh": "阿里 Qwen Code 发布 SDK TypeScript v0.1.22，该版本捆绑 CLI 0.26.0，CLI 由与 SDK 相同的分支/ref 从源码构建。原文同时列出此前多个版本所捆绑的 CLI 版本，其中捆绑 CLI 0.23.0 包含两项修复：托管内存可用性遵循 `memory.enableManagedAutoMemory` 设置；按大小触发的微压缩会清理旧工具结果至低水位，从而在长时间工具密集会话中保留提供商提示缓存复用。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.22",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T08:10:54+00:00"
+}

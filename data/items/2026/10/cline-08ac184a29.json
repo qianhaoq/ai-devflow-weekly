@@ -1,0 +1,13 @@
+{
+  "id": "cline-08ac184a29",
+  "date": "2026-10-17",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "SDK v0.0.95",
+  "summary_zh": "Cline 发布 SDK v0.0.95：对 GPT-6 系列模型的 OpenAI 兼容请求改用 `max_completion_tokens` 而非 `max_tokens`，使 OpenAI 与 Azure 不再拒绝这些请求，Azure 的 `gpt-35-turbo` 仍保留 `max_tokens`。hub 守护进程现在记录启动它的客户端信息并作为 OTel 资源属性发布，遥测自检报告新增 `traces_exporter`。模型目录从 6,952 个刷新至 7,041 个，新增 CommandCode 与 Reflection 提供商，Cline 推荐列表重新以 Claude Sonnet 5.5 居首，`cline` 提供商的默认模型由 Gemini 4 Argon 改回 Claude Sonnet 5.5。",
+  "source_url": "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.95",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T08:10:49+00:00"
+}

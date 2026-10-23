@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-1288e651f2",
+  "date": "2026-10-20",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.304",
+  "summary_zh": "Claude Code 发布 v2.1.304，新增插件跳过钩子时的记录提示、`tool.check` 的 `decider: \"person\"` 与 `e.isReadOnly` 字段，以及 `/auto-mode-setup` 和 `/claude-api managed-agents-secure` 命令。该版本还修复了组织策略刷新、Linux 沙箱命令启动、挂载盘 `rm -r` 安全提示、插件与 mod 重载、Remote Control 启动及 OpenTelemetry 设置被忽略等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-22T08:10:42+00:00"
+}

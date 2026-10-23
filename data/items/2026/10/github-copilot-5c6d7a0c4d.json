@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-5c6d7a0c4d",
+  "date": "2026-10-16",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Multi-repository support and other improvements for GitHub in Slack and Teams",
+  "summary_zh": "GitHub 在 Slack 和 Teams 中的集成现已支持在单个对话中跨多个仓库操作，可直接创建 issue、打开 PR、跟踪 PR 和排查 bug，无需切换仓库或开启新对话。此外还改进了对话自然度（可在消息任意位置提及 @GitHub）、仓库切换、Slack 对话上下文引用以及整体可靠性。",
+  "source_url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-22T08:10:41+00:00"
+}
