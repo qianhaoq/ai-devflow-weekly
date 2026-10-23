@@ -38,6 +38,8 @@
 
 普通内容 PR 由 bot 合并；每日 crawl PR 只在 `editorial / QA Gate` 绿色后人工合并（`editorial-approved` 仅白名单用户打标有效），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
 
+每日 crawl PR 须用仓库 secret `CRAWL_PR_TOKEN`（PAT）开/更新；默认 `GITHUB_TOKEN` 开的 PR 不触发门禁。仍须带 `no-auto-merge`，禁止自动合并。
+
 ## Coding 工具顺序（2026-10-20 起）
 
 **适用范围（写死）**：下列 Codex / `coding` / `/home/box/.../codex-quota.sh` 顺序**仅**适用于已预装这些工具的**本机或 `/home/box` 工作站**。Copilot cloud、仅 Node·npm 的云端 agent、以及任何未预装 Codex/`coding` 的环境：**必须按该环境已有工具执行**；**严禁**把本机/box 工具序、`codex`/`coding` 或 `/home/box` 路径当作云端硬性要求。

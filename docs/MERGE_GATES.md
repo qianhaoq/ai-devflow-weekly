@@ -39,7 +39,7 @@ Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一�
 
 ## Acceptance Gate（M1，仅观察）
 
-`.github/workflows/acceptance.yml` 调用 devflow-gates 的可复用验收门禁（固定到合并 SHA），配置在 `.github/acceptance.yml`。每个 PR 上会有一条置顶评论（原地更新）列出 7 项指标：测试与变更行覆盖率、改源码须改测试（`no-test-needed` 标签 + 正文写明理由可豁免）、ruff 新增问题、PR 规模（不计 `data/`、`_weekly/`）、新依赖漏洞/许可证、PR 正文的自测/验收小节、Codex 门禁结论；JSON 报告在 artifact `acceptance-report`。M1 只报告不拦截，`acceptance / Acceptance Gate` **不**加入 branch protection；它不加/不摘任何标签。crawl PR 由 `GITHUB_TOKEN` 创建，其 `pull_request` 运行同样需要人工批准，编辑打标签时会正常触发。
+`.github/workflows/acceptance.yml` 调用 devflow-gates 的可复用验收门禁（固定到合并 SHA），配置在 `.github/acceptance.yml`。每个 PR 上会有一条置顶评论（原地更新）列出 7 项指标：测试与变更行覆盖率、改源码须改测试（`no-test-needed` 标签 + 正文写明理由可豁免）、ruff 新增问题、PR 规模（不计 `data/`、`_weekly/`）、新依赖漏洞/许可证、PR 正文的自测/验收小节、Codex 门禁结论；JSON 报告在 artifact `acceptance-report`。M1 只报告不拦截，`acceptance / Acceptance Gate` **不**加入 branch protection；它不加/不摘任何标签。crawl PR 现用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送，会正常触发 `pull_request` / `pull_request_target` 门禁。
 
 ## 流程
 
@@ -49,7 +49,7 @@ crawl（每日 07:17 北京时间）→ 开 PR（`no-auto-merge`）→ CI `ci / 
 
 Copilot review：auto-merge 默认要求当前 head 有 Copilot review。若仓库未启用 Copilot（请求返回 422）或不想用它，把仓库变量 `DISABLE_COPILOT_REVIEW` 设为 `true`，会同时关闭请求与合并要求。
 
-crawl PR 的必需检查：crawl 用 `GITHUB_TOKEN` 创建/推送 PR，GitHub 不会为它正常运行 `pull_request` / `pull_request_target`（`pull_request` 运行停在 action_required 等待批准），`workflow_dispatch` 运行的检查也不计入 PR。因此 crawl PR 的检查由编辑的 `editorial-approved` 打标（人工事件）触发：`ci.yml` 监听 `labeled`，gate 监听 `pull_request_target` labeled。随后在 PR 上评论 `@codex review`（Codex 不会自动审 bot 开的 PR）；Codex 完成后，每 15 分钟的 Gate Refresh 会重跑失败的 `codex / Codex Review Gate`。`crawl.yml` 更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`。
+crawl PR 的必需检查：`crawl.yml` 使用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送 PR，正常触发 `pull_request` / `pull_request_target` 门禁；默认 `GITHUB_TOKEN` 开的 PR 不会正常触发这些门禁。更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`，编辑须重新签字。`no-auto-merge` 标签与门禁通过后人工合并的要求不变，禁止自动合并。
 
 ## 自动修上限（2026-10-20）
 
