@@ -29,7 +29,8 @@ def page(monkeypatch, tmp_path):
 @pytest.mark.parametrize("html", [
     "<title>404错误页-阿里云帮助中心</title>",
     "<title>404 Not Found</title>",
-    "<title>Release notes</title><body>页面不存在</body>",
+    "<title>页面不存在</title>",
+    "<title>网页不存在</title>",
 ])
 @pytest.mark.parametrize("existing", [False, True])
 def test_soft404_never_sets_or_overwrites_baseline(page, html, existing):
@@ -54,13 +55,39 @@ def test_missing_date_updates_baseline_without_item(page):
     assert fetch.fetch_page_diff(SOURCE, TODAY) == []
 
 
-def test_dated_change_produces_unverified_item(page):
+@pytest.mark.parametrize("display_date", [
+    TODAY, "Oct 23, 2026", "October 23, 2026",
+    "2026年10月23日", "2026年10月23号",
+])
+def test_dated_change_produces_unverified_item(page, display_date):
     page("<body>Old release</body>")
     assert fetch.fetch_page_diff(SOURCE, TODAY) == []
-    page(f"<body>{TODAY} New release</body>")
+    page(f"<body>{display_date} New release</body>")
     items = fetch.fetch_page_diff(SOURCE, TODAY)
     assert len(items) == 1
     assert items[0]["source_url"] == f"{SOURCE['url']}#{TODAY}"
     assert items[0]["date"] == TODAY
     assert items[0]["verified"] is False
+    assert fetch.fetch_page_diff(SOURCE, TODAY) == []
+
+
+@pytest.mark.parametrize("message", ["404 Not Found", "页面不存在", "网页不存在"])
+def test_error_discussion_in_body_is_not_soft404(page, message):
+    common.save_state(SOURCE["id"], {"url": SOURCE["url"], "hash": "old"})
+    html = f"<title>Release notes</title><body>{TODAY} Handle {message}</body>"
+    page(html)
+    assert len(fetch.fetch_page_diff(SOURCE, TODAY)) == 1
+    assert common.load_state(SOURCE["id"])["hash"] == hashlib.sha256(
+        fetch.extract_text(html).encode()
+    ).hexdigest()
+    assert fetch.fetch_page_diff(SOURCE, TODAY) == []
+
+
+@pytest.mark.parametrize("display_date", [
+    "Oct 22, 2026", "October 23, 2025", "2026年10月22日",
+    "12026-10-23", "2026-10-230", "Oct 23, 20260", "2026 10 23",
+])
+def test_other_dates_and_arbitrary_numbers_do_not_produce_item(page, display_date):
+    common.save_state(SOURCE["id"], {"url": SOURCE["url"], "hash": "old"})
+    page(f"<title>Release notes</title><body>{display_date} New release</body>")
     assert fetch.fetch_page_diff(SOURCE, TODAY) == []

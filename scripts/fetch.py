@@ -17,7 +17,7 @@ import logging
 import os
 import re
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -218,7 +218,11 @@ def fetch_page_diff(source: dict, today: str) -> list[dict]:
     state_key = str(source.get("id") or vendor)
     state = common.load_state(state_key) or {}
     # 错误页不能覆盖有效基线，也不能成为首次抓取的基线。
-    if re.search(r"404\s*(?:错误页|not\s*found)|页面\s*不存在|网页\s*不存在", text, re.I):
+    titles = re.findall(r"(?is)<title\b[^>]*>(.*?)</title\s*>", resp.text)
+    if any(re.search(
+        r"404\s*(?:错误页|not\s*found)|页面\s*不存在|网页\s*不存在",
+        extract_text(title), re.I,
+    ) for title in titles):
         logging.warning("[%s] soft-404，跳过页面", source.get("id"))
         state["last_checked"] = common.utc_now_iso()
         common.save_state(state_key, state)
@@ -245,7 +249,19 @@ def fetch_page_diff(source: dict, today: str) -> list[dict]:
     )
     common.save_state(state_key, state)
     # 无当天日期的变化仍更新基线，避免反复误报，但不生成当天条目。
-    if not re.search(rf"(?<!\d){re.escape(today)}(?!\d)", text):
+    today_date = date.fromisoformat(today)
+    # 显式英文月份避免进程 locale 影响；只匹配当天的完整日期。
+    month = (
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+    )[today_date.month - 1]
+    date_patterns = [
+        rf"(?<!\d){re.escape(today_date.isoformat())}(?!\d)",
+        rf"(?<![a-z])(?:{month}|{month[:3]})\s+0?{today_date.day},\s+{today_date.year}(?!\d)",
+        rf"(?<!\d){today_date.year}年0?{today_date.month}月0?{today_date.day}[日号]",
+    ]
+    if not any(re.search(pattern, text, re.I)
+               for pattern in date_patterns):
         return []
     link = f"{url}#{today}"
     return [
