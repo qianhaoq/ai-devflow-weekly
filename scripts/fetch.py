@@ -4,8 +4,8 @@
 - rss：requests（带 UA）抓取 + feedparser 解析
 - github_releases：优先 GitHub API（JSON，可用 GITHUB_TOKEN 提额），失败回退 .atom（feedparser）
 - page_diff：抓 HTML、提取正文文本取 sha256，与 data/state/<source id>.json 中
-  上次快照比对；哈希变化才生成一条条目（source_url = 页面 URL + '#' + 日期）。
-  首次抓取只记录基线，不生成条目。
+  上次快照比对；哈希变化且文本含当天日期才生成条目（source_url = 页面 URL + '#' + 日期）。
+  首次抓取只记录基线，不生成条目；soft-404 不更新基线。
 """
 from __future__ import annotations
 
@@ -212,11 +212,18 @@ def fetch_page_diff(source: dict, today: str) -> list[dict]:
     resp.raise_for_status()
     if resp.encoding is None or resp.encoding.lower() == "iso-8859-1":
         resp.encoding = resp.apparent_encoding or "utf-8"
-    digest = hashlib.sha256(extract_text(resp.text).encode("utf-8")).hexdigest()
+    text = extract_text(resp.text)
 
     vendor = str(source.get("vendor") or source.get("id") or "unknown")
     state_key = str(source.get("id") or vendor)
     state = common.load_state(state_key) or {}
+    # 错误页不能覆盖有效基线，也不能成为首次抓取的基线。
+    if re.search(r"404\s*(?:错误页|not\s*found)|页面\s*不存在|网页\s*不存在", text, re.I):
+        logging.warning("[%s] soft-404，跳过页面", source.get("id"))
+        state["last_checked"] = common.utc_now_iso()
+        common.save_state(state_key, state)
+        return []
+    digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     if state.get("url") != url or not state.get("hash"):
         logging.info("[%s] 首次抓取（或 URL 变更），仅记录基线", source.get("id"))
         common.save_state(
@@ -237,6 +244,9 @@ def fetch_page_diff(source: dict, today: str) -> list[dict]:
         }
     )
     common.save_state(state_key, state)
+    # 无当天日期的变化仍更新基线，避免反复误报，但不生成当天条目。
+    if not re.search(rf"(?<!\d){re.escape(today)}(?!\d)", text):
+        return []
     link = f"{url}#{today}"
     return [
         build_item(
