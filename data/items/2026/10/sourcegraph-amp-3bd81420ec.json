@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-3bd81420ec",
+  "date": "2026-10-22",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Self-Hosted Orbs",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 22 日发布 Self-Hosted Orbs，用户可在自有基础设施上自行托管 orbs，由自己提供算力，Amp 将其转化为 orbs。使用方式是在自有基础设施中运行 amp orb provider，由其连接 Amp 并等待创建、暂停或删除 orbs 的请求，具体操作由用户提供的程序（如 dispatch.sh）执行。原文给出了 Docker、E2B、K8s、Apple containers、Modal 等示例。",
+  "source_url": "https://ampcode.com/news/self-hosted-orbs",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:52+00:00"
+}

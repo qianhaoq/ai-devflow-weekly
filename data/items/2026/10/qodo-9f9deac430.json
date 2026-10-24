@@ -1,0 +1,13 @@
+{
+  "id": "qodo-9f9deac430",
+  "date": "2026-10-17",
+  "vendor": "Qodo",
+  "category": "review",
+  "source_id": "qodo-pr-agent-releases",
+  "title": "v0.48.0",
+  "summary_zh": "Qodo 发布 v0.48.0，包含多项破坏性变更：`pip install pr-agent` 不再默认安装各 Git 平台 SDK，需按需安装对应 extras；Docker 服务镜像改为以非 root 用户 UID/GID 10001 运行；Azure DevOps 与 Bitbucket Server webhook 未配置凭据将被拒绝（HTTP 403）；GitLab 使用密钥提供程序时 webhook Secret Token 须改为 `<secret-name>:<webhook-token>` 格式。此外，命名空间级设置默认关闭，`pyproject.toml` 中的 `[tool.pr-agent]` 不再被读取，更多设置改为仅限主机配置，Gitea 与 Gerrit 改为从目标分支读取仓库设置，跨仓库读取需配置允许列表。",
+  "source_url": "https://github.com/The-PR-Agent/pr-agent/releases/tag/v0.48.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:53+00:00"
+}

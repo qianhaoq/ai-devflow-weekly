@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-ba4d3ab8dd",
+  "date": "2026-10-24",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Usage metrics API adds usage from tools like OpenCode",
+  "summary_zh": "GitHub Copilot 的用量指标 API 现在会报告更多工具（包括此前未被统计的 OpenCode 等）的模型使用情况，并在企业、组织及对应用户的 1 天和 28 天报告中新增 totals_by_client 数组。每个条目包含客户端、请求数、会话数、token 用量及按模型细分的数据，用于统计来自任何使用 Copilot 的工具的模型流量。该变更为增量式，现有字段不变，无用量时该数组为空。",
+  "source_url": "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}
