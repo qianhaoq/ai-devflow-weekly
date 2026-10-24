@@ -1,0 +1,13 @@
+{
+  "id": "openai-15c1f8ef7a",
+  "date": "2026-10-23",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+  "summary_zh": "OpenAI 与波兰 NASK 国家研究院签署协议，将围绕 AI 安全、安保与技术研究探索合作，汇聚双方专业能力以理解新兴风险、强化防护措施。NASK 的 AI 安全研究中心（即波兰人工智能安全研究所）将与 OpenAI 共同开展 AI 安全研究，探索评估能力日益增强的 AI 系统、识别潜在漏洞并加强防护。协议还建立在 OpenAI 与波兰网络防御方既有合作之上，NASK 下属的 CERT Polska 此前通过 Daybreak 获得 OpenAI 网络能力模型的访问权限。",
+  "source_url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:50+00:00"
+}
