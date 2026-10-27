@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-62c869d7db",
+  "date": "2026-10-24",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Turn notifications into code with GitHub Copilot in Teams",
+  "summary_zh": "GitHub 在 Teams 中推出新版 GitHub 应用，将通知与 Copilot 结合，用户可在频道、群聊或私聊中收到通知后 @mention GitHub，把 issue 通知转为拉取请求。该应用前身为 GitHub notifications，已安装用户需更新至最新版本，原有通知功能继续可用。旧版 GitHub 应用将更名为“GitHub (deprecated)”并于 11 月 16 日停用，用户需安装整合版应用以继续在 Teams 中使用 Copilot。",
+  "source_url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}

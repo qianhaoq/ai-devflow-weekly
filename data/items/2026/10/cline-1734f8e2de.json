@@ -1,0 +1,13 @@
+{
+  "id": "cline-1734f8e2de",
+  "date": "2026-10-16",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "SDK v0.0.94",
+  "summary_zh": "Cline 发布 SDK v0.0.94，插件改为仅在 worker 线程或子进程沙箱中运行，移除 in_process 模式及其静默回退，缺少 bootstrap 的主机会以 PluginBootstrapMissingError 报错。模型流开始后到达的 provider 错误最多重试 3 次，最终失败会记录到日志和 Langfuse traces，且不再触发整轮重试。此外刷新了模型目录（6,862 增至 6,952 个模型），Cline 推荐列表新增 Gemini 4 Argon、移除 Grok 4.7，cline provider 的捆绑默认模型改为 Gemini 4 Argon。",
+  "source_url": "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.0.94",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:52+00:00"
+}

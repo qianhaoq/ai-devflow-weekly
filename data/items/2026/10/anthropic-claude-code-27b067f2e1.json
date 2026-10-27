@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-27b067f2e1",
+  "date": "2026-10-24",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.310",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.310，新增 Monitor 工具及插件监控，并修复网关兼容、后台清理误删近期文件、压缩后请求失败等问题。该版本还改进了非交互会话的内存占用与沙箱提示，并为云会话、Claude Tag 和代码审查修复多项界面与权限问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}

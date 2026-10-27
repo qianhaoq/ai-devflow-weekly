@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-d85b259ea5",
+  "date": "2026-10-23",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.309",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.309，修复了 macOS 和 Linux 上沙箱化 Bash 命令在每条命令执行前于沙箱外运行 shell 启动文件的问题，以及 macOS 沙箱 `denyWrite` glob 模式在路径经符号链接到达时未按真实位置生效的问题。该版本还修复了沙箱化命令和自动接受的编辑可修改通过 `--mcp-config` 传入的 MCP 配置文件、被禁用的 MCP 服务器在后续权限提示中被重新连接，以及 Bash 权限检查在部分复合命令上的提示缺失等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}

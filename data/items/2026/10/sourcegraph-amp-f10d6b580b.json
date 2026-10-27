@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-f10d6b580b",
+  "date": "2026-10-19",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Assign It To Amp",
+  "summary_zh": "Sourcegraph Amp 现已成为 Linear 中的 agent，将 issue 指派给 Amp 即可在 Linear 中启动新的 Agent Session 并生成新的 orb，也可通过 @Amp 提及来启动会话。Amp 的回复会发回同一会话，该 Agent Session 也会出现在 Amp 侧边栏并可在 Amp 中完整查看。使用前需在 Linear 工作区安装 Amp agent，并在 Settings → MCP & Integrations 中将 Amp 账户连接到 Linear MCP。",
+  "source_url": "https://ampcode.com/news/assign-it-to-amp",
+  "verified": true,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:52+00:00"
+}

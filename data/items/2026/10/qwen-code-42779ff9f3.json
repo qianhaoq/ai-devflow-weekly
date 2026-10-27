@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-42779ff9f3",
+  "date": "2026-10-25",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.26.1",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.26.1，新增 serve 守护进程令牌持久化、managed-agent 手动上下文压缩与会话生命周期 UI 及读取导出，并让 CLI 的 OpenTUI 输入、编辑与状态行对齐 Ink。修复方面包括目录变更后的误中断、release 打包可执行位校验、web-shell 技能安装错误提示等，另有多项测试与 CI 调整。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.1",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-25T01:09:21+00:00"
+}

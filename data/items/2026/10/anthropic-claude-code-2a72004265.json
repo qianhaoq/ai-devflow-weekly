@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-2a72004265",
+  "date": "2026-10-22",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.307",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.307，新增 `/claude-api api-version` 命令以将 Claude API 代码迁移至 API 版本 `2026-10-21`，并新增 `claude_code.safety_event` OpenTelemetry 事件，用于记录被权限规则、自动模式、安全检查、钩子或沙箱阻止、提示或退回的每次工具调用。该版本还修复了多项问题，包括设置 `CLAUDE_CODE_DISABLE_1M_CONTEXT` 时带 `[1m]` 后缀的模型别名报模型未找到、`prompt-caching-scope` beta 头在自定义网关和 Foundry 上无效仍被发送、macOS 钥匙串锁定时 MCP 服务器误报需认证，以及 HTTP MCP 工具调用在连接中断时被重复发送等。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}

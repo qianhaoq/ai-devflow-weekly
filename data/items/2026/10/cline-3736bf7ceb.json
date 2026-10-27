@@ -1,0 +1,13 @@
+{
+  "id": "cline-3736bf7ceb",
+  "date": "2026-10-17",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "CLI v3.0.73",
+  "summary_zh": "Cline 发布 CLI v3.0.73，修复了 GPT-6 系列模型（如 gpt-6-sol、gpt-6.1-sol）在 OpenAI 及 Azure OpenAI 兼容端点上因发送 max_tokens 而非 max_completion_tokens 导致请求被拒的问题。未选择模型时，Cline provider 重新默认使用 Claude Sonnet 5.5，该模型也重回推荐列表首位。此外更新了模型目录，新增 CommandCode 和 Reflection 两个 provider，并调整了 302.AI、Eden AI、Prime Inference、CoreWeave、NanoGPT、Pioneer 和 Scaleway 的默认模型。",
+  "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.73",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:52+00:00"
+}

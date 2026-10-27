@@ -1,0 +1,13 @@
+{
+  "id": "cline-f5acbf7ed3",
+  "date": "2026-10-26",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "v4.1.26",
+  "summary_zh": "Cline 发布 v4.1.26，新增云任务支持：开启云会话后，API 配置中提供 Local 与 Cloud 切换，云任务可单独选择所用 Cline 模型，启动或恢复云沙箱时显示包含仓库、分支和步骤的进度卡片。该版本还更新了模型目录，新增 CommandCode、Reflection、Liquid Inference 和 Munito AI 等提供商，移除 CrofAI、iFlow 和 Llama，并调整了多个提供商的默认模型。此外修复了 GPT-6 模型在 OpenAI 及 Azure OpenAI 兼容端点上的兼容性、Gemini API 密钥的搜索与配额问题，以及任务启动时切换 Plan/Act 丢失首条提示等问题。",
+  "source_url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-27T02:04:38+00:00"
+}

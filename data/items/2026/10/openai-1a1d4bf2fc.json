@@ -1,0 +1,13 @@
+{
+  "id": "openai-1a1d4bf2fc",
+  "date": "2026-10-26",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+  "summary_zh": "OpenAI 于 2026 年 10 月 26 日发布说明，介绍 CodeRabbit 在其安全 agent 中以 GPT‑6.1 Sol 作为主要模型，将代码审查扩展到单个改动之外，帮助开发者理解复杂代码库中的风险。GPT‑6.1 Sol 可跨文件和组件关联行为以发现潜在安全问题，并在 Deep Scan 与 CodeRabbit Secure 中支持对依赖及关联仓库的更广泛调查。CodeRabbit 表示已用该模型在数千个仓库和组织中标记安全问题，并可对选定发现进行沙箱漏洞验证、为支持的问题起草修复 PR，最终由人工审核决定是否发布。",
+  "source_url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-27T02:04:36+00:00"
+}

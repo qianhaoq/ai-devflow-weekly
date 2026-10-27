@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-344482fd6d",
+  "date": "2026-10-27",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GPT-6.1 Terra in GitHub Copilot",
+  "summary_zh": "OpenAI 最新模型 GPT-6.1 Terra 已在 GitHub Copilot 中正式可用，面向日常智能体编程与终端工作，成本低于 GPT-6.1 Sol。早期测试中，它在终端和 C# 编程任务上的解决数量明显多于 GPT-5.6 Terra。该模型面向 Copilot Pro、Pro+、Max、Business 和 Enterprise 用户，可在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot 云代理等多个入口的模型选择器中选用，目前正逐步推送。",
+  "source_url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-27T02:04:33+00:00"
+}

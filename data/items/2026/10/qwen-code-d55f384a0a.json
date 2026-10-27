@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-d55f384a0a",
+  "date": "2026-10-24",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.1，包含一项破坏性变更：修复 qqbot 在线程作用域下按群组恢复会话隔离。新功能包括守护进程令牌持久化（--save-token 保存、token 子命令管理、stop 时移除）、Workspace 绑定 Managed Sessions 的空闲时手动上下文压缩，以及 OpenTUI 输入、编辑、草稿与 /statusline 行为对齐 Ink 等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.1",
+  "verified": true,
+  "signal_type": "release",
+  "fetched_at": "2026-10-25T01:09:21+00:00"
+}

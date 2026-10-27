@@ -1,0 +1,13 @@
+{
+  "id": "openai-250e5d8f30",
+  "date": "2026-10-27",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+  "summary_zh": "OpenAI 官方博客介绍了初创公司 Greptile 如何借助 GPT-6 Astra 的计算机使用能力，在代码审查之外自动化测试应用行为，例如启动开发服务器、调整浏览器视口并模拟用户操作以发现界面问题。Greptile 还通过 Daybreak 加强客户安全防护，并借助 Codex 与 MCP 服务器接入其代码库知识库，减少 AI 生成代码的回退与返工。",
+  "source_url": "https://openai.com/index/greptile-code-review-codex-astra",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-27T02:04:36+00:00"
+}

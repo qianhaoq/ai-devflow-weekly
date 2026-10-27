@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-38313c82af",
+  "date": "2026-10-27",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.311",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.311，为 `self-hosted-runner` 新增 `--hold-idle-file` 和 `--max-hold-min` 选项，并新增 Explanatory 输出风格的提示。该版本修复了多项问题，包括 CLAUDE.md 含超长列表项时启动及读写文件后的长时间卡顿、MCP 服务器未响应资源读取或技能仍在下载时中断 Claude 需等待超时才生效，以及标准上下文会话请求超过 200K tokens 时报“Usage credits required for 1M context”停止的问题，现改为压缩对话后继续。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-27T02:04:33+00:00"
+}
