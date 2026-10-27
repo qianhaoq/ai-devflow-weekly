@@ -7,7 +7,7 @@
   "title": "0.164.0",
   "summary_zh": "OpenAI Codex 发布 0.164.0，新增十个编号 `/presets` 槽位保存可复用提示词与斜杠命令，并支持通过内联 `/model`、`/permissions` 参数直接设置模型、推理强度、速度与权限配置。该版本还支持在 Kitty 或 Sixel 图形终端中全屏预览图像、使用 Codex 账户授权或专用登录认证企业 MCP 连接，并在受支持的远程 Bash 命令与 Zsh 快照会话中遮蔽凭据；Amazon Bedrock 设置向导默认启用。修复方面包括压缩失败不再残留部分摘要、恢复会话可找到压缩历史并还原线程设置、Windows 代理认证处理等。",
   "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-24T01:34:49+00:00"
 }

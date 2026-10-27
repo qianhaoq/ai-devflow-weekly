@@ -7,7 +7,7 @@
   "title": "Release v0.26.0",
   "summary_zh": "阿里 Qwen Code 发布 v0.26.0，官方说明无已知破坏性变更。本次更新包含多项功能：daemon 支持按会话定向刷新 Skill 与 Extension，managed-agent 新增只读 `--check` 部署预检、凭据引导及 systemd 部署支持，artifacts 可记录智能体创建或编辑的文件，web-shell 的 Token Usage 中展示各模型的 TTFT 与输出速度。",
   "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.0",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-24T01:34:55+00:00"
 }

@@ -7,7 +7,7 @@
   "title": "GitHub Copilot in Visual Studio — September update",
   "summary_zh": "GitHub Copilot 在 Visual Studio 的九月更新中，Git 代理现可探索拉取请求，在 Copilot Chat 中附加拉取请求作为上下文即可获得摘要及指向评论和文件的可导航链接，该功能需连接 Git 提供商的 MCP 服务器，支持 GitHub 和 Azure DevOps。Bring Your Own Model（BYOM）处于预览阶段，在 Community、Professional 和 Enterprise 版本中默认开启，但现需配合基于 GitHub Copilot SDK 的新 Agent（预览）使用，原有 Ask 和 Agent 模式不再支持 BYOM，更新后需重新添加此前配置的 Ollama 模型。此外，Error List 中的 NuGet Audit 警告新增修复操作，可打开 Copilot Chat 代理模式并借助 NuGet MCP 服务器修复存在漏洞的包，该更新面向所有 Copilot 计划用户。",
   "source_url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
-  "verified": false,
+  "verified": true,
   "signal_type": "changelog",
   "fetched_at": "2026-10-24T01:34:47+00:00"
 }

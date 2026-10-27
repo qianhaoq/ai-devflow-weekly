@@ -7,7 +7,7 @@
   "title": "v0.49.0",
   "summary_zh": "Qodo 发布 v0.49.0，新增 `pr-agent doctor` 部署预检命令，并为 `/describe`、`/improve`、`/review` 增加 `--json-output` 输出。升级说明提示多项不兼容变更：GitHub 轮询需配置 `github.polling_repositories` 允许列表，Jira `project_keys = []` 改为禁用查询（默认值变为 `[\"*\"]`），`litellm.extra_headers` 仅限主机配置，默认模型改为 `gpt-6.1-sol`（回退 `gpt-6-luna`）。该版本还包含 Jira 作用域 API 令牌、`/ask` 支持以 CI 产物为上下文，以及 DNS 重绑定拦截等安全加固。",
   "source_url": "https://github.com/The-PR-Agent/pr-agent/releases/tag/v0.49.0",
-  "verified": false,
+  "verified": true,
   "signal_type": "release",
   "fetched_at": "2026-10-26T01:08:52+00:00"
 }
