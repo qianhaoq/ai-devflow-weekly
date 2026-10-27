@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-831ab4bfc7",
+  "date": "2026-10-22",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.308",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.308，本次更新包含缺陷修复与可靠性改进。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}

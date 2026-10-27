@@ -1,0 +1,13 @@
+{
+  "id": "cline-aee7f5ee70",
+  "date": "2026-10-26",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "Desktop v0.0.49",
+  "summary_zh": "Cline 发布 Desktop v0.0.49，会话头部新增 Changes 按钮，可查看会话行数及最近一轮或整个会话中变更文件的差异；新增项目文件面板、集成终端面板，并将 PR 状态移入头部按钮。新版本还加入 Local Models 设置页管理 Ollama 和 LM Studio 模型、可配置快捷键，并修复 Hub 启动失败、超大转录会话恢复、ProxyJump 别名下 SSH 连接等问题。",
+  "source_url": "https://github.com/cline/cline/releases/tag/desktop-v0.0.49",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-27T02:04:38+00:00"
+}

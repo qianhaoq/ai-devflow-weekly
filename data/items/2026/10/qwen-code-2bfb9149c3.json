@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-2bfb9149c3",
+  "date": "2026-10-26",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "SDK TypeScript Release v0.1.23",
+  "summary_zh": "阿里 Qwen Code 发布 SDK TypeScript v0.1.23，该版本捆绑 CLI 0.26.1，CLI 由与 SDK 相同的分支/ref 从源码构建。原文未提供价格快照对比，不涉及价格变化。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.23",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-27T02:04:41+00:00"
+}

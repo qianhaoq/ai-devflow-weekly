@@ -1,0 +1,13 @@
+{
+  "id": "cline-fc466b1434",
+  "date": "2026-10-26",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "CLI v3.0.74",
+  "summary_zh": "Cline CLI v3.0.74 修复了多项运行问题：打开已在其他 Cline 应用中运行的任务时会附加到该运行而非另起一个无法停止的实例，应用中途关闭时等待中的请求会明确报错而非挂起；`cline hub status` 和 `cline doctor` 在 Hub 冻结时不再卡住，健康检查超时设为 3 秒并报告 Hub 未运行。模型请求重试次数由 5 次改为最多 3 次，Kimi K3 在 Extra High 和 Max 档改用 `max` 推理设置，Gemini API 密钥不再发送原生 Google Search，自动压缩不再对上下文上限未知的模型运行。此外还更新了模型目录，新增 Liquid Inference 和 Munito AI 提供商，移除 CrofAI、iFlow 和 Llama，ClinePass 默认模型改为 Kimi K3.1 Pro。",
+  "source_url": "https://github.com/cline/cline/releases/tag/cli-v3.0.74",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-27T02:04:38+00:00"
+}

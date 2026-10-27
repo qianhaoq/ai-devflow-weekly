@@ -1,0 +1,13 @@
+{
+  "id": "cline-d7dea01807",
+  "date": "2026-10-26",
+  "vendor": "Cline",
+  "category": "code",
+  "source_id": "cline-releases",
+  "title": "SDK v0.2.0",
+  "summary_zh": "Cline 发布 SDK v0.2.0：进行中的会话再次启动时会重新接入实时会话而非替换运行时，带提示词的启动会被拒绝；hub 记录所有注册能力的客户端并将请求转发给首个仍连接的客户端。模型请求重试上限由 5 次降至 3 次，仅流式输出推理后断连的回合会重试并丢弃部分推理；AI SDK 更新至 ai 7.0.136，gemini 提供方不再发送原生 Google Search（Vertex 保留）。此外修复了首次压缩后约 7 倍的大小估算偏差、改用单次 git cat-file 读取检查点差异，并刷新模型目录（7,041 → 6,457）。",
+  "source_url": "https://github.com/cline/cline/releases/tag/sdk/sdk/v0.2.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-27T02:04:38+00:00"
+}

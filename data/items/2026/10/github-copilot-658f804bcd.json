@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-658f804bcd",
+  "date": "2026-10-23",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Global default for Copilot features generally available",
+  "summary_zh": "GitHub 宣布，针对 Copilot Business 和 Copilot Enterprise 计划中已正式发布的 Copilot 功能及受支持的客户端能力，其全局默认策略自 2026 年 10 月 22 日起逐步强制执行，预计持续至 10 月 26 日，不同企业或组织生效时间可能不同。未配置的符合条件功能将按所选全局默认值（启用、禁用或由组织决定）设置，这是一次性变更；管理员已明确设置的单项功能保持不变，预览功能仍需主动选择加入。",
+  "source_url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:47+00:00"
+}

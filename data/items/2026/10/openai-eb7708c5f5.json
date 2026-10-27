@@ -1,0 +1,13 @@
+{
+  "id": "openai-eb7708c5f5",
+  "date": "2026-10-26",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "How Fanatics and OpenAI streamline the fan experience",
+  "summary_zh": "OpenAI 与 Fanatics 合作推出由 OpenAI 模型驱动的“Shop the Look”在线购物功能，已在 Fanatics.com 及 NFL、NBA、MLB、NHL 官方在线商店等多个站点上线，可根据球队与库存信息在商品页推荐搭配商品。Fanatics 使用 Codex 在不到一天内完成首批 50 个商品的测试，并在约 30,000 个 MLB 商品上测试推荐，新体验的互动率比此前版本高 10%。",
+  "source_url": "https://openai.com/index/fanatics-streamline-fan-experience",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-27T02:04:36+00:00"
+}

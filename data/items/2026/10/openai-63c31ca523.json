@@ -1,0 +1,13 @@
+{
+  "id": "openai-63c31ca523",
+  "date": "2026-10-22",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "What FDE means at OpenAI",
+  "summary_zh": "OpenAI 于 2026 年 10 月 22 日发布文章，由前向部署工程（FDE）负责人 Colin Jarvis 介绍该团队的含义与工作方式。文章称 FDE 团队于 2025 年初成立，旨在弥合模型能力与实际可靠使用之间的“部署差距”，与客户共同解决最难的问题，并将经验反馈给产品与研究。文中以农业企业 John Deere 为例，说明其借助 OpenAI API 为农户提供个性化支持。",
+  "source_url": "https://openai.com/index/forward-deployed-engineering-means",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-24T01:34:50+00:00"
+}
