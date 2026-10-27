@@ -70,16 +70,25 @@ sources:
     url: https://openai.com/news/rss.xml
     official_domain: openai.com
     pricing_url: null
-    notes: "官方新闻 RSS，量大需按 Codex 过滤"
+    include_keywords:
+      - codex
+      - coding agent
+      - coding agents
+      - agentic coding
+      - code review
+      - codebase
+      - software engineering
+      - programming
+    notes: "官方新闻 RSS，已按 Codex/研发工作流关键词过滤"
     verified: true
   - id: windsurf-changelog
     vendor: "Windsurf"
     category: coding
     type: page_diff
-    url: https://windsurf.com/changelog
-    official_domain: windsurf.com
+    url: https://docs.devin.ai/desktop/changelog
+    official_domain: docs.devin.ai
     pricing_url: https://windsurf.com/pricing
-    notes: ""
+    notes: "一手源为 Devin Desktop（原 Windsurf）stable changelog；与 devin-release-notes（overview）不同页"
     verified: true
   - id: devin-release-notes
     vendor: "Cognition Devin"

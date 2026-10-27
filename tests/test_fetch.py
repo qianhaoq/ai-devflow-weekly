@@ -1,4 +1,4 @@
-"""page_diff 的错误页、日期门禁与基线回归。"""
+"""抓取的关键词过滤、源配置、错误页、日期门禁与基线回归。"""
 import hashlib
 
 import pytest
@@ -10,6 +10,49 @@ import fetch
 
 TODAY = "2026-10-23"
 SOURCE = {"id": "example", "url": "https://example.com/releases", "vendor": "Example", "category": "coding"}
+
+
+def test_openai_news_keyword_configuration():
+    sources = {source["id"]: source for source in common.load_sources()}
+    assert set(sources["openai-news"]["include_keywords"]) == {
+        "codex", "coding agent", "coding agents", "agentic coding",
+        "code review", "codebase", "software engineering", "programming",
+    }
+
+
+def test_windsurf_desktop_source_is_distinct_from_devin_cloud():
+    sources = {source["id"]: source for source in common.load_sources()}
+    windsurf = sources["windsurf-changelog"]
+    assert windsurf["url"] == "https://docs.devin.ai/desktop/changelog"
+    assert windsurf["official_domain"] == "docs.devin.ai"
+    assert windsurf["verified"] is True
+    assert sources["devin-release-notes"]["url"] == "https://docs.devin.ai/release-notes/overview"
+    assert windsurf["url"] != sources["devin-release-notes"]["url"]
+
+
+@pytest.mark.parametrize("keyword", [
+    "codex", "coding agent", "coding agents", "agentic coding",
+    "code review", "codebase", "software engineering", "programming",
+])
+@pytest.mark.parametrize("field", ["title", "description"])
+def test_openai_rss_filters_title_and_summary(monkeypatch, keyword, field):
+    source = next(s for s in common.load_sources() if s["id"] == "openai-news")
+    matched = {"title": "Developer update", "description": "New capabilities"}
+    matched[field] = f"Introducing {keyword.upper()} improvements"
+    response = requests.Response()
+    response.status_code = 200
+    response._content = f"""<rss version="2.0"><channel><title>News</title>
+      <item><title>New image generation</title><description>Consumer features</description>
+        <link>https://openai.com/news/unrelated</link></item>
+      <item><title>{matched['title']}</title><description>{matched['description']}</description>
+        <link>https://openai.com/news/developer-update</link></item>
+    </channel></rss>""".encode()
+    monkeypatch.setattr(fetch, "http_get", lambda url: response)
+    # 显式配置应覆盖默认值；无关首条也不应占用 limit。
+    monkeypatch.setitem(fetch.DEFAULT_INCLUDE_KEYWORDS, "openai-news", ["consumer"])
+    items = fetch.fetch_feed(source, limit=1, cutoff=TODAY, signal_type="rss")
+    assert [item["source_url"] for item in items] == ["https://openai.com/news/developer-update"]
+    assert items[0]["verified"] is False
 
 
 @pytest.fixture
