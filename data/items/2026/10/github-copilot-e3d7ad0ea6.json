@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-e3d7ad0ea6",
+  "date": "2026-10-27",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot assisted permissions generally available",
+  "summary_zh": "GitHub Copilot 的 assisted permissions 已在 GitHub Copilot CLI、GitHub Copilot app 和 Visual Studio Code 中正式可用。当 Copilot 请求执行命令、访问文件系统路径或打开 URL 的权限时，由大语言模型评估该请求，被判定为明确安全的请求会自动放行，其他请求则需用户批准。企业管理员可通过企业托管设置阻止 Allow All 而保留 Assisted，或单独禁用 Assisted，也可为新会话选择默认权限模式。",
+  "source_url": "https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-28T02:14:12+00:00"
+}

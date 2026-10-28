@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-b33a2fd009",
+  "date": "2026-10-27",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Amp on Android",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 27 日发布 Android 应用，可从 ampcode.com/app 下载安装或扫描二维码获取。原文展示了该应用中的 Amp 设计讨论线程、Portals 标签页中的幻灯片，以及 Changes 标签页中的 present.js 差异。",
+  "source_url": "https://ampcode.com/news/amp-on-android",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-28T02:14:18+00:00"
+}

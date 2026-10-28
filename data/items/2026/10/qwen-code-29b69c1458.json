@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-29b69c1458",
+  "date": "2026-10-28",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.3-preview.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.3-preview.0 预览版本，新增记忆提取节奏可选开启、工具结果按自动压缩前余量收缩、Web Shell 在同页导航间保留 Generated UI 实例等改动，并修复核心 XML 调用恢复与 ACP 回退身份传递问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3-preview.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-28T02:14:22+00:00"
+}

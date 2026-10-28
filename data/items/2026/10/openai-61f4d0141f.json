@@ -1,0 +1,13 @@
+{
+  "id": "openai-61f4d0141f",
+  "date": "2026-10-21",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "OpenAI models are coming to Google Cloud",
+  "summary_zh": "OpenAI 与 Google Cloud 达成合作，将把 OpenAI 的前沿模型和 Codex 智能体工作流引入 Google Cloud 的 Model Garden，让客户可在其现有环境中原生访问这些模型。该集成将结合 Google Cloud 的访问控制、集中式数据治理和高性能基础设施，客户可通过 Google Cloud Marketplace 购买，并可用 GCP 承诺消费抵扣。OpenAI 模型后续还将登陆 Google Antigravity 和 Gemini Agent，正式可用计划在未来几周内推出，微软仍是 OpenAI 的主要云合作伙伴。",
+  "source_url": "https://openai.com/index/openai-models-google-cloud",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-28T02:14:16+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-f64da4eb0a",
+  "date": "2026-10-28",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.166.0-alpha.3",
+  "summary_zh": "OpenAI Codex 发布 0.166.0-alpha.3，属于预览版本。该条目未提供价格快照，不涉及价格变化信息。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0-alpha.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-28T02:14:15+00:00"
+}

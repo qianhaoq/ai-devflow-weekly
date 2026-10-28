@@ -1,0 +1,13 @@
+{
+  "id": "openai-d42fb1eb33",
+  "date": "2026-10-27",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Retell uses OpenAI models to help power 100M monthly calls",
+  "summary_zh": "OpenAI 发布案例称，语音 AI 平台 Retell 使用 OpenAI 模型支撑每月超 1 亿次通话，其月通话量从 2026 年初的 3000 万增长至 9 月的逾 1 亿，服务超过 4000 家企业。OpenAI 模型为 Retell 上 80% 的通话生成回复，客户问题解决率超过 80%，OpenAI 模型累计消耗超 1 万亿 token。Retell 工程师在开发中使用 Codex，并用 GPT‑6 Astra 测试前端界面；在 Retell 2026 年 10 月 13 日的基准测试中，GPT‑6 Astra 以 89.7% 的指令遵循得分排名第一。",
+  "source_url": "https://openai.com/index/retell-ai",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-28T02:14:16+00:00"
+}

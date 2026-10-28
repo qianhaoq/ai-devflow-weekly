@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-747b76bde7",
+  "date": "2026-10-28",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot supports server-to-server authentication",
+  "summary_zh": "GitHub Copilot 现已支持面向组织安装的 GitHub Apps 的服务器到服务器身份验证，该功能处于公开预览阶段。基于 GitHub Copilot SDK 构建的服务和代理无需依赖已登录用户的凭据，即可代表组织发起请求，使用量归属于拥有该安装的组织，并适用该组织的模型策略、预算和支出控制。组织所有者可查看哪些应用拥有访问权限，通过 AI 使用量 CSV 报告中的 app_client_id 字段识别应用归属的使用情况，并可通过暂停或卸载应用来停止其访问。",
+  "source_url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-28T02:14:12+00:00"
+}

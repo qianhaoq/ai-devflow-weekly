@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-57992868c7",
+  "date": "2026-10-27",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.2-preview.1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.2-preview.1（预览版），新增托管会话权限规则与自动批准、实验性共享 agent loop 及无头运行支持，并改进 OpenTUI 会话回放、检查点捕获与恢复。该版本还修复了 serve token 解析、成本估算中推理 token 重复计数、VSCode 拒绝编辑后未退出编辑模式等问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.2-preview.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-28T02:14:22+00:00"
+}
