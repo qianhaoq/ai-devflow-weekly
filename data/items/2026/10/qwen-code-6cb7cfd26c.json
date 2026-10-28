@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-6cb7cfd26c",
+  "date": "2026-10-27",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.2",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.2，包含一项破坏性变更：简化 Web Shell 控件并移除 cwd 提交。功能更新涉及托管会话权限规则与自动批准、实验性共享 agent loop 及无头运行、OpenTUI 会话恢复与检查点、消息持久队列、Web Shell 通过 Git URL 克隆仓库作为工作区等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.2",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-28T02:14:22+00:00"
+}

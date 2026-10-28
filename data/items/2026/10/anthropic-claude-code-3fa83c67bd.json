@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-3fa83c67bd",
+  "date": "2026-10-28",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.312",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.312，新增 Claude apps gateway 的 `oidc.user_id_claim` 配置，并支持在全屏模式下点击队列消息的“to send now”提示立即发送。该版本还修复了 VS Code 扩展登录后托管设置与组织策略未获取、超大 CLAUDE.md 等文件被覆盖、Bash `cd` 后目录级与 `paths:` 技能无法找到等问题，并调整了 Bedrock、Vertex、Foundry 和 Mantle 对未识别模型名的系统提示处理。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-28T02:14:13+00:00"
+}

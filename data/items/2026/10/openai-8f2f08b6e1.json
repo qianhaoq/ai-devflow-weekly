@@ -1,0 +1,13 @@
+{
+  "id": "openai-8f2f08b6e1",
+  "date": "2026-10-26",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+  "summary_zh": "OpenAI 官方博客介绍了其内部使用 Codex 高速模式 Ultrafast 进行事故调查的实践，工程师可同时排查多个潜在原因并快速获得回答。文中提到，安全调查过去需要一到两小时汇总和整理数据，现在缩短到 10 至 15 分钟，有时接近实时；多数工作响应时间在 30 秒以内。",
+  "source_url": "https://openai.com/index/openai-cut-incident-investigation",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-28T02:14:16+00:00"
+}

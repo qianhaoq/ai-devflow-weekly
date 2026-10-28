@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-8357008dcc",
+  "date": "2026-10-28",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.165.0",
+  "summary_zh": "OpenAI Codex 发布 0.165.0，新增内置 Google Cloud Vertex AI 提供商（通过 `model_provider = \"gcp\"` 配置），并在模型目录中加入 GPT-6.1 Terra。该版本还为会话选择器增加仓库过滤、为 agent 命令中心增加目录分组，并默认对支持的模型启用对话中调整推理强度、对新配置文件默认启用 memory v2。此外修复了 TUI 会话审批审阅者默认值、远程 MCP 工具请求取消及市场 URL 校验等问题。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-28T02:14:15+00:00"
+}
