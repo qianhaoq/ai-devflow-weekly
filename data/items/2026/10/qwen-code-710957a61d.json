@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-710957a61d",
+  "date": "2026-10-28",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.3",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.3，生成式 UI 卡片在导航、会话切换和分屏变化中保留输入与状态，并仅在支持渲染 MCP Apps 的客户端显示。新增可通过 --workflow-mode on、/workflows mode on、SDK 或 ACP 启用的持久会话 Workflow 模式，同时工具结果会在自动压缩前收缩至剩余空间，并支持识别 qwen-latest-series- 或 qwen4 别名的 1M token 上下文窗口。该版本无已知破坏性变更。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-29T02:26:39+00:00"
+}

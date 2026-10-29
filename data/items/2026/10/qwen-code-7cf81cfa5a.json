@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-7cf81cfa5a",
+  "date": "2026-10-29",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.26.3",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.26.3（2026-10-29）。本次更新新增托管会话权限规则与自动批准，引入实验性的共享 agent loop 并让 headless 模式运行于其上，同时修复 CLI、VSCode 扩展、OpenTUI 会话回放与检查点恢复等多处问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-29T02:26:39+00:00"
+}

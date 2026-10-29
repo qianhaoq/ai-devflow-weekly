@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-393d97d2e4",
+  "date": "2026-10-28",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Enterprise now includes access to GitHub Copilot",
+  "summary_zh": "GitHub 宣布，与 GitHub 或 Microsoft 账户团队合作的企业现在可为每位已授权用户获得包含在 GitHub Enterprise 中的 Copilot 访问权限，此前需分别管理 Copilot 席位数量与 AI 使用量。该模式下 AI 使用量从首次请求起按企业预算计量，无内置用量额度；代码补全和下一步编辑建议在无预算时仍可用，Copilot Chat、代码审查和云端 Copilot 需有可用预算。自助订阅暂不可用、将分阶段开放，现有自助订阅不受影响，Copilot Business 和 Copilot Enterprise 仍可购买。",
+  "source_url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:31+00:00"
+}

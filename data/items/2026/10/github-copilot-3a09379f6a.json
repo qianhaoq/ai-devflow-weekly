@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-3a09379f6a",
+  "date": "2026-10-28",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub intelligence puts your code, context, and history to work",
+  "summary_zh": "GitHub 发布 GitHub intelligence，作为源自 GitHub 数据图谱的上下文与学习层，帮助智能体记住团队工作方式、保持指导信息最新，并找到与任务相关的代码和开发历史。GitHub Copilot Memory 已在付费 Copilot 计划上正式可用，可跨会话和客户端记住个人偏好与仓库约定；Copilot dreaming 处于公开预览阶段，可反思过往工作以改进后续智能体会话，且需主动开启。",
+  "source_url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:31+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-75e2017ed4",
+  "date": "2026-10-28",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+  "summary_zh": "OpenAI 与 ServiceNow 扩大合作，将更多 OpenAI 模型和智能体引入 ServiceNow 产品，并把 ServiceNow 工作流与 ChatGPT、Codex 连接，帮助企业构建应用、处理 IT 请求和应对安全问题。新的 ServiceNow 集成将把业务上下文和工作流操作带入 ChatGPT，ServiceNow 还在预览 ChatGPT 内的交互式体验。双方计划在应用开发等领域开发新能力，包括在 ServiceNow 的 AI Workflow Factory 中集成 Codex。",
+  "source_url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:34+00:00"
+}

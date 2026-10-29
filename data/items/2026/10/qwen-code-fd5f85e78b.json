@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-fd5f85e78b",
+  "date": "2026-10-29",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.3-nightly.20261028.ca204559a7",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.3-nightly.20261028.ca204559a7（2026-10-29）。本次更新包括：修复配置中被静默丢弃的控件上报问题、生成视图跟随宿主主题、回收 HTML 导出渲染器包约 92 KB，以及 CI 自动修复轮次预算、verify-pr 更新后重新验证触发等改动。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3-nightly.20261028.ca204559a7",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-29T02:26:39+00:00"
+}

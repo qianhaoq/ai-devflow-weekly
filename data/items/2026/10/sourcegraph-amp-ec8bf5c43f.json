@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-ec8bf5c43f",
+  "date": "2026-10-28",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Your Own Self-Hosted Orbs",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 28 日发布更新，用户不再需要加入工作区即可自托管 orbs。此前只有工作区管理员能管理自托管 orb 提供方，现在用户可在个人 Settings → Orbs 中添加提供方，配置方式与工作区提供方相同；创建线程时，该提供方会显示在 Self-Hosted 下并标记为 Personal。",
+  "source_url": "https://ampcode.com/news/personal-self-hosted-orbs",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:36+00:00"
+}
