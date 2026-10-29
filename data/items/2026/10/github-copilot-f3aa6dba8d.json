@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-f3aa6dba8d",
+  "date": "2026-10-28",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot app, Universe releases",
+  "summary_zh": "GitHub Copilot 应用推出 Projects 功能，现已进入公开预览，可为跨多个仓库或涉及规格、设计、素材的工作提供统一空间，由 Copilot 在后台协调多个代理执行并返回结果供审阅。该应用还支持在聊天中用自然语言生成和编辑图片，并可在 macOS 和 Windows 上以公开预览形式使用 Computer Use，让 Copilot 读取应用内容、点击控件、输入或编辑文本并在应用间导航，控制应用前需用户批准，组织可通过管理设置禁用该功能。",
+  "source_url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:31+00:00"
+}

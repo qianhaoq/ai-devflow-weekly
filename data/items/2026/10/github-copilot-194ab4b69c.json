@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-194ab4b69c",
+  "date": "2026-10-29",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Route and orchestrate models with GitHub Copilot Fusion",
+  "summary_zh": "GitHub Copilot Fusion 正式可用，用户在模型选择器中选择 Copilot Fusion 后，由系统为每个任务智能路由和编排所用模型，无需手动切换。它提供 Fusion Standard、High、Max 三档 effort 级别，并可通过 Single、Cascade、Critique 等工作流协调多个模型。管理员可控制 Copilot Fusion 可用的模型及是否设为默认。",
+  "source_url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:31+00:00"
+}

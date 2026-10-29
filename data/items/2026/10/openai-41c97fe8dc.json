@@ -1,0 +1,13 @@
+{
+  "id": "openai-41c97fe8dc",
+  "date": "2026-10-28",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Legora is building the agentic operating system for legal work",
+  "summary_zh": "OpenAI 官方介绍了法律科技公司 Legora 如何基于 OpenAI 模型与编码代理构建“法律工作的代理式操作系统”，帮助法律团队加快分析并聚焦更高价值工作。Legora 自 GPT‑3.5 发布起便与 OpenAI 合作，OpenAI 现为其关键模型供应商，支撑代理式法律工作和大规模文档审阅等核心流程。Legora 内部也使用 ChatGPT Work、Codex 等提升研发效率，官方原文称其可将缺陷报告到可用修复的周期缩短至约五分钟。",
+  "source_url": "https://openai.com/index/legora",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-29T02:26:34+00:00"
+}
