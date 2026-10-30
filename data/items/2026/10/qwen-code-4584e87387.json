@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-4584e87387",
+  "date": "2026-10-29",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.4",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.4，官方说明无已知破坏性变更。本次更新包含多项功能改进，如生成式 UI 跟随宿主主题、扩展支持无作用域 npm 安装与更新、Web Shell 在 Token Usage 中内联显示模型耗时，以及多项缺陷修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.4",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-30T02:36:07+00:00"
+}

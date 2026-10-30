@@ -1,0 +1,13 @@
+{
+  "id": "windsurf-46ee943867",
+  "date": "2026-10-30",
+  "vendor": "Windsurf",
+  "category": "code",
+  "source_id": "windsurf-changelog",
+  "title": "Windsurf 页面更新（2026-10-30）",
+  "summary_zh": "Windsurf 于 2026-10-30 更新页面，列出 Devin Desktop（Windsurf）各稳定版本发布说明，最新版本为 v3.11.234（2026 年 10 月 29 日），修复了大型 Devin Local 会话内存占用过高的问题，并恢复了 Devin Local 的多选问题功能。此前 v3.11.231（10 月 28 日）修复了 Devin Local 中部分工具请求的允许/拒绝按钮显示问题。",
+  "source_url": "https://docs.devin.ai/desktop/changelog#2026-10-30",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-30T02:36:01+00:00"
+}

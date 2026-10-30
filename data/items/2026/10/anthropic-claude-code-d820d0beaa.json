@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-d820d0beaa",
+  "date": "2026-10-30",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.314",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.314，新增 `permissions.blockWritesOutsideWorkingDirectories` 设置，使 Write、Edit 和 NotebookEdit 在所有权限模式下拒绝工作目录之外的路径；Claude apps gateway 上游新增可选 `groups` 列表，仅将指定 IdP 组内的开发者路由至该上游（含故障转移时），Bedrock 上游新增 `guardrail_trace` 以记录触发的 Amazon Bedrock 护栏过滤器。VS Code 与 Claude Desktop 的 Code 标签页新增空闲压缩：闲置的 200K+ token 对话会被摘要，若提示缓存已过期则在下次消息时使用该摘要。本次更新还修复了多项问题，包括管理员限制模型 effort 时出现“Invalid effort level”、`claude -p` 启动失败却以 0 退出且无输出、Bedrock 多图会话及 `/compact` 报“400 Input is too long”、Microsoft Foundry 资源缺少默认模型部署时回退到同系列旧模型等。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-30T02:35:58+00:00"
+}
