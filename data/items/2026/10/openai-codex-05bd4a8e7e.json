@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-05bd4a8e7e",
+  "date": "2026-10-30",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.166.0",
+  "summary_zh": "OpenAI Codex 发布 0.166.0，新增键盘驱动的转录选择（支持按词、行、页移动，集成搜索与可配置快捷键），并在异步问答、选项、回答和转录回复中统一渲染 Markdown。该版本将 GPT-6.1 Terra 加入内置、Vertex AI 和 Amazon Bedrock 模型目录，新增 `codex queue --resume` 用于在排队消息后恢复未加载线程，并新增 `codex doctor --network-only` 用于配置、连接和 WebSocket 诊断。此外还修复了恢复或分叉线程时保留审批与权限设置、macOS 独立发布清理等问题。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-30T02:36:00+00:00"
+}

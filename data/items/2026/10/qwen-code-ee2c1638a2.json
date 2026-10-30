@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-ee2c1638a2",
+  "date": "2026-10-30",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.4-nightly.20261029.70be140e14",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.4-nightly.20261029.70be140e14。本次更新为 managed 增加有界 SQL 历史查询与 WebShell 实时消息分页，Generated UI 默认开启并支持基于卡片值继续对话，web-shell 新增会话概览与分屏视图快捷键、俄语区域设置及状态栏后台代理计数，同时包含 managed-agent 升级命令加固与 CI 调整等修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.4-nightly.20261029.70be140e14",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-30T02:36:07+00:00"
+}

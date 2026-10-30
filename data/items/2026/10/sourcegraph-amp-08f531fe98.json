@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-08f531fe98",
+  "date": "2026-10-29",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Visualize This",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 29 日发布更新，用户现在可以直接在对话线程中让 Amp 生成可视化内容或构建界面，包括图表、时间线、示意图和可点击交互的原型。官方原文展示了真实线程中的示例，例如可视化仓库近一个月的提交记录，以及为 diff stat 设计适配桌面与移动端的多种展示方案。",
+  "source_url": "https://ampcode.com/news/visualize-this",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-30T02:36:03+00:00"
+}

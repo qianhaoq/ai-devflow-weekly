@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-f3c21701db",
+  "date": "2026-10-29",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "macOS Satellites",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 10 月 29 日发布 macOS Satellites（beta），让 Amp 在云端 Mac 上构建、测试和运行 iOS 或 Mac 应用。线程仍运行在 Linux orb 上，Mac 作为第二台机器挂载，约 30 秒启动并预装 Xcode 与模拟器，构建结果回传线程，Mac 标签页可实时查看或接管操作。Mac 用完后保留 20 分钟以便复用构建缓存，随后删除；提供 mac.medium（6 CPU、14 GB，$2/小时）与 mac.large（12 CPU、28 GB，$4/小时）两档，费用从套餐包含的 orb 用量中扣除，用尽后走 Amp credits。",
+  "source_url": "https://ampcode.com/news/macos-satellites",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-10-30T02:36:03+00:00"
+}
