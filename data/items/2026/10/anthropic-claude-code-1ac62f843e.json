@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-1ac62f843e",
+  "date": "2026-10-31",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.316",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.316，新增 `CLAUDE_CODE_DISABLE_ULTRATHINK` 等环境变量，并为 Claude apps gateway 增加共享组预算、分层策略模式及 Bedrock 上游的 `guardrail.input_tagging` 等能力。该版本同时弃用 Opus 4.8 的 fast mode（2026 年 10 月 30 日起，11 月 30 日移除，之后请求将报错且不回退），并修复了 macOS/Linux 上退出后 shell 命令残留、Bash 工具中别名与脚本异常、Vertex AI 与 Amazon Bedrock 模型切换报错等多项问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-10-31T02:20:39+00:00"
+}
