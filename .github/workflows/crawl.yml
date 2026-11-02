@@ -83,10 +83,10 @@ jobs:
             自动抓取生成的条目数据与周刊更新。
 
             - 运行 `python scripts/validate.py` 已通过
-            - 门禁齐绿（含 `editorial / QA Gate`）后自动合入；须白名单打标 `editorial-approved`
+            - 齐绿后自动合入
           delete-branch: true
 
-      # 更新 crawl PR 后仍撤销旧签字，编辑须重新审核新 head。
+      # 更新 crawl PR 后仍撤销旧签字；签字仅为可选观察，不挡齐绿后自动合入。
       - name: Invalidate sign-off labels on updated crawl PR
         if: steps.cpr.outputs.pull-request-operation == 'updated'
         env:
