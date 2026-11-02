@@ -9,8 +9,6 @@
 - `ci / Build & Test`
 - `ci / Secret Scan`
 - `codex / Codex Review Gate`
-- `qa / QA Gate`（`qa-passed`，见 `QA.md`）
-
 - `qa / QA Gate`（label `qa-passed`，见 `QA.md`）
 
 `editorial / QA Gate` / 白名单 `editorial-approved` 如仍运行，仅为 crawl 内容质量实践与可选观察，**不**列入 `required_checks` 或 branch protection、**不**挡合入。
