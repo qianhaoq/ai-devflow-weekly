@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-3f75b1fc2e",
+  "date": "2026-11-01",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.26.5",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.26.5。本次更新为 WebShell 增加会话概览与分屏视图的键盘快捷键、状态栏任务胶囊显示运行中的后台代理数量，并为 Goal 卡片和 Goals 对话框新增俄语区域设置；Generated UI 默认开启，支持沿用卡片中的值继续对话。此外还包含托管代理升级命令加固、一键更新覆盖范围扩展及多项 CI 与测试修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.5",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-02T02:29:32+00:00"
+}
