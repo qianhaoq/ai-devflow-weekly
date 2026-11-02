@@ -26,4 +26,4 @@ pytest -q
 不要自动改写 `sources.yml` 与 `docs/editorial.md` 的口径；如确需变更，在 PR 中说明理由。
 
 ## Merge gates
-Content PRs are bot-merged (crawl PRs: merged manually only once `editorial / QA Gate` is green; `editorial-approved` counts only from allowlisted labelers) after: `ci / Build & Test` green, review done, no unresolved P0/P1 (P2 optional), editorial agent approved. Crawl PRs keep the `no-auto-merge` label. See docs/MERGE_GATES.md and docs/editorial.md.
+This repo defaults to auto-merge for content and crawl PRs alike once gates are green: `ci / Build & Test` green, review done, no unresolved P0/P1 (P2 optional), and editorial agent approved (`editorial-approved` counts only from allowlisted labelers; `editorial / QA Gate` must be green). Do not require `no-auto-merge` or manual-only merge for crawl. See docs/MERGE_GATES.md and docs/editorial.md.

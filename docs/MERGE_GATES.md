@@ -1,6 +1,6 @@
 # MERGE_GATES · 合并门禁
 
-普通内容 PR 由 auto-merge bot 合并；每日 crawl PR（带 `no-auto-merge`）**只能人工合并，且须 `editorial / QA Gate` 为绿色之后**。合并前必须同时满足：
+本仓默认自动合入：普通 PR 与每日 crawl PR 均由 auto-merge bot 在齐绿后合入（须 `editorial / QA Gate` 等必需检查为绿色）。合并前必须同时满足：
 
 1. **CI 通过**：必需检查 `ci / Build & Test`（validate.py + pytest）为绿色。
 2. **Review 完成**：代码/内容 review 已完成。
@@ -22,9 +22,9 @@
 
 Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一律阻断（`block_unlabeled: true`，默认，fail-closed）；显式 P2（Codex、Copilot 或人工）不阻断；P2 可回复 `P2: defer — <理由>` 后 Resolve。线程 Resolve 不会触发 Actions：由每 15 分钟的 Gate Refresh 重跑，或 `workflow_dispatch` 填 PR 号。
 
-## no-auto-merge 标签：crawl PR 人工合并
+## 默认 auto-merge（含 crawl）
 
-`crawl.yml` 创建的 PR 一律带 `no-auto-merge` 标签，auto-merge 永不合入它们。**crawl PR 只能人工合并**，且只能在 `editorial / QA Gate` 为绿色之后（同时其余必需检查也须为绿色）。保留此标签，不要移除。
+不再强制给 crawl PR 贴 `no-auto-merge`，也不再要求只能人工合并。`crawl.yml` 创建/更新的 PR 在必需检查齐绿（含 `editorial / QA Gate`）且 P0/P1 清零后，由 auto-merge bot 合入。editorial 白名单打标质量要求不变。
 
 ## editorial-approved 只认白名单用户
 
@@ -43,13 +43,13 @@ Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一�
 
 ## 流程
 
-crawl（每日 07:17 北京时间）→ 开 PR（`no-auto-merge`）→ CI `ci / Build & Test` → review（处理 P0/P1）→ editorial（白名单用户打 `editorial-approved`）→ `editorial / QA Gate` 绿色后人工合并 → `pages.yml` 部署站点与 feed.xml。
+crawl（每日 07:17 北京时间）→ 开 PR → CI `ci / Build & Test` → review（处理 P0/P1）→ editorial（白名单用户打 `editorial-approved`）→ 必需检查齐绿后 auto-merge / bot 合入 → `pages.yml` 部署站点与 feed.xml。
 
 初始脚手架是唯一的直接推送 main 的例外。
 
 Copilot review：auto-merge 默认要求当前 head 有 Copilot review。若仓库未启用 Copilot（请求返回 422）或不想用它，把仓库变量 `DISABLE_COPILOT_REVIEW` 设为 `true`，会同时关闭请求与合并要求。
 
-crawl PR 的必需检查：`crawl.yml` 使用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送 PR，正常触发 `pull_request` / `pull_request_target` 门禁；默认 `GITHUB_TOKEN` 开的 PR 不会正常触发这些门禁。更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`，编辑须重新签字。`no-auto-merge` 标签与门禁通过后人工合并的要求不变，禁止自动合并。
+crawl PR 的必需检查：`crawl.yml` 使用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送 PR，正常触发 `pull_request` / `pull_request_target` 门禁；默认 `GITHUB_TOKEN` 开的 PR 不会正常触发这些门禁。更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`，编辑须重新签字。齐绿后同样走 auto-merge，不再强制 `no-auto-merge` / 人工合。
 
 ## 自动修上限（2026-10-20）
 

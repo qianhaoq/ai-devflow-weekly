@@ -36,11 +36,11 @@
 
 ## MERGE_GATES（合并门禁）
 
-普通内容 PR 由 bot 合并；每日 crawl PR 只在 `editorial / QA Gate` 绿色后人工合并（`editorial-approved` 仅白名单用户打标有效），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+**本仓默认自动合入**（普通 PR 与每日 crawl 一视同仁）。齐绿（必需检查全绿 + P0/P1 清零）后走 auto-merge / 产品 owner squash，**勿等人、勿卡钱浩 Approve**。前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准（`editorial-approved` 仅白名单用户打标有效，`editorial / QA Gate` 须绿）。crawl 在 CI / Codex / editorial 等门禁齐绿后**同样自动合入**；**不再强制**贴 `no-auto-merge`，也**不再**要求只能人工合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
 
-每日 crawl PR 须用仓库 secret `CRAWL_PR_TOKEN`（PAT）开/更新；默认 `GITHUB_TOKEN` 开的 PR 不触发门禁。仍须带 `no-auto-merge`，禁止自动合并。
+每日 crawl PR 须用仓库 secret `CRAWL_PR_TOKEN`（PAT）开/更新；默认 `GITHUB_TOKEN` 开的 PR 不触发门禁。
 
-**齐绿合入（2026-11-02，仅普通 agent/feature PR）**：必需检查全绿且 P0/P1 清零后，产品 owner 可直接 Approve/squash 或走 auto-merge，**勿等人卡**（不必等钱浩再点）。若 GitHub「至少 1 个写权限 Approve」导致作者无法自 Approve：产品 owner/agent 可 (1) 临时把本仓 `main` 的 `required_approving_review_count` 降到 `0`，(2) squash 合入，(3) **立刻改回 `1`**。禁止 `--admin` 硬过；P0/P1 仍必清。稳态审批数保持 `1`，勿永久改成 `0`。每日 crawl PR 仍按上文：须 editorial 签字 + `no-auto-merge`，本条不削弱该规则。
+**齐绿合入（2026-11-02）**：必需检查全绿且 P0/P1 清零后，产品 owner 可直接 Approve/squash 或走 auto-merge，**勿等人卡**（不必等钱浩再点）。若 GitHub「至少 N 个写权限 Approve」挡住合入：产品 owner/agent 可临降 `required_approving_review_count`（含降至 `0`）、squash 合入后按需改回；**本仓稳态可为 0 / 无必需审批**。禁止 `--admin` 硬过；P0/P1 仍必清。crawl 同样适用本条（仍须 editorial 白名单签字质量要求，但不禁自动合）。
 
 ## Coding 工具顺序（2026-11-02 起）
 

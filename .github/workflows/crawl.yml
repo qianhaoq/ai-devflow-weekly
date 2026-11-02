@@ -83,9 +83,7 @@ jobs:
             自动抓取生成的条目数据与周刊更新。
 
             - 运行 `python scripts/validate.py` 已通过
-            - 人工复核后再合并；`no-auto-merge` 标签表示禁止自动合并
-          labels: |
-            no-auto-merge
+            - 门禁齐绿（含 `editorial / QA Gate`）后自动合入；须白名单打标 `editorial-approved`
           delete-branch: true
 
       # 更新 crawl PR 后仍撤销旧签字，编辑须重新审核新 head。

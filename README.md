@@ -76,7 +76,7 @@ GitHub Actions：`LLM_API_KEY` 配在 **Secrets**，`LLM_BASE_URL` / `LLM_MODEL`
 - `ci.yml`：PR 与 push main 时安装依赖 → `validate.py` → `pytest -q`。
 - `crawl.yml`：每日 07:17（北京时间，cron `17 23 * * *`）抓取 → 摘要 → 校验 →
   生成周刊，并用 `peter-evans/create-pull-request@v7` 向 `crawl/auto` 分支开
-  PR（标签 `no-auto-merge`，人工复核后合并）。
+  PR（门禁齐绿后自动合入；须白名单 `editorial-approved`）。
 - `pages.yml`：push main 后生成 `_data/items.json` → Jekyll 构建 → 部署到
   GitHub Pages。
 
@@ -93,4 +93,4 @@ pytest -q
 
 ## MERGE_GATES（合并门禁）
 
-普通内容 PR 由 bot 合并；每日 crawl PR 只在 `editorial / QA Gate` 绿色后人工合并（`editorial-approved` 仅白名单用户打标有效），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+**本仓默认自动合入**（普通 PR 与每日 crawl 一视同仁）。齐绿（必需检查全绿 + P0/P1 清零）后走 auto-merge / 产品 owner squash，勿等人、勿卡钱浩 Approve。前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准（`editorial-approved` 仅白名单用户打标有效）。crawl 齐绿后同样自动合入，不再强制 `no-auto-merge`。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
