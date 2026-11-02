@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-845192bdcb",
+  "date": "2026-11-01",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.5",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.5，无已知破坏性变更。该版本新增 Managed 本地 H2 与 Hosted MySQL 的有界 SQL 历史查询，支持分页查看近期消息、日志事务及精确查找操作或命令；默认启用 Generated UI，并支持将交互卡片值作为可移除上下文继续对话。此外还包含 Web Shell 键盘快捷键、俄语区域设置、后台代理计数显示、归档会话快捷操作及多项 PR 自动化流程改进。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-02T02:29:32+00:00"
+}
