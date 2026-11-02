@@ -26,7 +26,7 @@ Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一�
 
 - Require status checks to pass，且 **Require branches to be up to date（strict）**
 - 必需检查仅为：`ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`
-- `required_approving_review_count` 已是 `0`
+- `required_approving_review_count` 等审批规则由主管维护（agent 不改 branch protection）
 - qa / editorial 如仍运行仅为可选观察，不在 protection、不挡合入
 
 
