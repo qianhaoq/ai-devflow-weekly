@@ -26,4 +26,4 @@ pytest -q
 不要自动改写 `sources.yml` 与 `docs/editorial.md` 的口径；如确需变更，在 PR 中说明理由。
 
 ## Merge gates
-Content PRs are bot-merged (crawl PRs: merged manually only once `editorial / QA Gate` is green; `editorial-approved` counts only from allowlisted labelers) after: `ci / Build & Test` green, review done, no unresolved P0/P1 (P2 optional), editorial agent approved. Crawl PRs keep the `no-auto-merge` label. See docs/MERGE_GATES.md and docs/editorial.md.
+All PRs including crawl default to squash auto-merge once required checks (`ci / Build & Test`, `ci / Secret Scan`, `codex / Codex Review Gate`) are green and P0/P1 are cleared (P2 optional). Enable squash auto-merge on crawl/agent PRs. Crawl no longer defaults to `no-auto-merge` or manual merge; manually applying that label opts out. `qa-passed` / `editorial-approved` and their Gates are observation/optional only, outside auto-merge required checks and branch protection. Use `CRAWL_PR_TOKEN` (PAT) to open/update crawl PRs so gates fire. The repository has `allow_auto_merge` enabled; branch protection/rules are managed by the supervisor, never agents. See docs/MERGE_GATES.md and docs/editorial.md.

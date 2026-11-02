@@ -83,12 +83,10 @@ jobs:
             自动抓取生成的条目数据与周刊更新。
 
             - 运行 `python scripts/validate.py` 已通过
-            - 人工复核后再合并；`no-auto-merge` 标签表示禁止自动合并
-          labels: |
-            no-auto-merge
+            - 门禁齐绿且 P0/P1 清零后可 auto-merge / AI squash 合入（齐绿即合）
           delete-branch: true
 
-      # 更新 crawl PR 后仍撤销旧签字，编辑须重新审核新 head。
+      # 更新 crawl PR 后仍撤销旧签字；QA 须重新通过，editorial 签字仅作观察。
       - name: Invalidate sign-off labels on updated crawl PR
         if: steps.cpr.outputs.pull-request-operation == 'updated'
         env:
@@ -99,3 +97,20 @@ jobs:
             gh pr edit "$PR" --repo "$GITHUB_REPOSITORY" --remove-label "$label" 2>/dev/null \
               && echo "removed $label from #$PR" || echo "$label not present on #$PR"
           done
+
+      - name: Enable squash auto-merge
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.CRAWL_PR_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          has_opt_out=$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json labels \
+            --jq 'any(.labels[]; .name == "no-auto-merge")')
+          if [ "$has_opt_out" = "true" ]; then
+            echo "Skipping auto-merge for PR #$PR because it has the no-auto-merge label"
+            gh pr merge "$PR" --repo "$GITHUB_REPOSITORY" --disable-auto \
+              || echo "Could not disable auto-merge for PR #$PR; it may already be disabled"
+          else
+            gh pr merge "$PR" --repo "$GITHUB_REPOSITORY" --auto --squash \
+              || echo "Auto-merge may already be enabled or PR #$PR is not mergeable yet"
+          fi

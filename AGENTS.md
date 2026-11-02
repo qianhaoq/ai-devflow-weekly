@@ -36,18 +36,21 @@
 
 ## MERGE_GATES（合并门禁）
 
-普通内容 PR 由 bot 合并；每日 crawl PR 只在 `editorial / QA Gate` 绿色后人工合并（`editorial-approved` 仅白名单用户打标有效），前提：CI `ci / Build & Test` 绿色 + review 完成 + 无未解决 P0/P1（P2 可选）+ editorial agent 批准。每日 crawl PR 始终带 `no-auto-merge` 标签——合并是编辑签字后的有意步骤，不自动合并。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+本仓默认自动合入（含每日 crawl PR）：必需 CI/Codex 检查 `ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate` 齐绿且无未解决 P0/P1 即合；P2 可选，不阻塞合并。**勿等人卡、不必等钱浩再点**。
 
-每日 crawl PR 须用仓库 secret `CRAWL_PR_TOKEN`（PAT）开/更新；默认 `GITHUB_TOKEN` 开的 PR 不触发门禁。仍须带 `no-auto-merge`，禁止自动合并。
+仓库已开启 `allow_auto_merge`：crawl/agent PR 开出后应 enable squash auto-merge，门禁齐绿即合。`qa / QA Gate` 与 `editorial / QA Gate` 如仍存在仅为可选观察，不在 branch protection / `auto-merge.yml` 的 `required_checks`、不挡合入。branch protection / rules（含 `required_approving_review_count`）由主管改，agent 不改。
 
-## Coding 工具顺序（2026-10-20 起）
+每日 crawl PR 仍须用仓库 secret `CRAWL_PR_TOKEN`（PAT）开/更新；默认 `GITHUB_TOKEN` 开的 PR 不触发门禁。不再打 `no-auto-merge` 标签，齐绿后自动合入。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+
+## Coding 工具顺序（2026-11-02 起）
 
 **适用范围（写死）**：下列 Codex / `coding` / `/home/box/.../codex-quota.sh` 顺序**仅**适用于已预装这些工具的**本机或 `/home/box` 工作站**。Copilot cloud、仅 Node·npm 的云端 agent、以及任何未预装 Codex/`coding` 的环境：**必须按该环境已有工具执行**；**严禁**把本机/box 工具序、`codex`/`coding` 或 `/home/box` 路径当作云端硬性要求。
 
-1. **（本机/box）默认用 Codex CLI**（ChatGPT 账号登录），模型 `gpt-6.1-sol`（`~/.codex/config.toml`）。
-2. **周额度用完后继续用 credits** 跑 Codex；**credits 也用完**再切：`coding glm`（一般代码）/ `coding kimi`（前端/交互/UI）。
-3. 查额度（仅本机/box）：`/home/box/.coding-plans/codex-quota.sh`（退出码 0=继续 Codex，1=切 glm/kimi，2=未知；`--json`、`--probe`），或 Codex TUI 内 `/status`。云端无此脚本时跳过。
-4. 凭证 `~/.codex/auth.json` 及任何 API key **绝不打印、外传或提交**；`.codex/`、`auth.json` 已在 `.gitignore`。
+1. **（本机/box）优先用 Codex CLI**（ChatGPT 账号登录），模型 `gpt-6.1-sol`（`~/.codex/config.toml`）；出口优先 box（美区）。
+2. **Codex 不可用**（区域 403 / 额度与 credits 耗尽 / 鉴权失败等）再切：`coding glm`（一般代码）/ `coding kimi`（前端/交互/UI）。
+3. **不默认 Cursor Cloud Agent**（Cloud 上 OpenAI/Codex 常不可用；真要开只能选非 OpenAI 模型，一般不必）。
+4. 查额度（仅本机/box）：`/home/box/.coding-plans/codex-quota.sh`（退出码 0=继续 Codex，1=切 glm/kimi，2=未知；`--json`、`--probe`），或 Codex TUI 内 `/status`。云端无此脚本时跳过。
+5. 凭证 `~/.codex/auth.json` 及任何 API key **绝不打印、外传或提交**；`.codex/`、`auth.json` 已在 `.gitignore`。
 
 ## 测试与门禁（禁止弱化凑绿）
 
