@@ -1,35 +1,34 @@
 # MERGE_GATES · 合并门禁
 
-本仓默认自动合入；必需检查齐绿即合（含 crawl PR）。必需检查为 `ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`、`qa / QA Gate`（`qa-passed`），review 完成且须无未解决 P0/P1；P2 不阻塞合并。勿等人卡、不必等钱浩再点。内容口径见 [editorial.md](editorial.md)。
+本仓默认自动合入；必需检查齐绿即合（含 crawl PR）。必需检查为 `ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`，且须无未解决 P0/P1；P2 不阻塞合并。勿等人卡、不必等钱浩再点。内容口径见 [editorial.md](editorial.md)。
 
 ## Check names after devflow-gates migration
 
-本仓库的 CI / Codex / QA / Auto Merge 改为调用 `qianhaoq/devflow-gates` 的 reusable workflow（固定到 commit `fe7cf65`，即 fe7cf651ef515f165041738dc285b03ce3817bb9）。Check 名变为 `<caller job> / <called job>`，`auto-merge.yml` 的 `required_checks` 使用以下四个名字：
+本仓库的 CI / Codex / QA / Auto Merge 改为调用 `qianhaoq/devflow-gates` 的 reusable workflow（固定到 commit `fe7cf65`，即 fe7cf651ef515f165041738dc285b03ce3817bb9）。Check 名变为 `<caller job> / <called job>`，branch protection 与 `auto-merge.yml` 的 `required_checks` 必须使用以下名字：
 
 - `ci / Build & Test`
 - `ci / Secret Scan`
 - `codex / Codex Review Gate`
-- `qa / QA Gate`（label `qa-passed`，见 `QA.md`）
 
-`editorial / QA Gate` / 白名单 `editorial-approved` 如仍运行，仅为 crawl 内容质量实践与可选观察，**不**列入 `required_checks` 或 branch protection、**不**挡合入。
+`qa / QA Gate` 与 `editorial / QA Gate` 如仍运行仅为可选观察，不在 required_checks 或 branch protection、不挡合入。
 
 旧的裸名 `Build & Test` / `Codex Review Gate` 在合入后不再产生，若仍为 required 会让所有 PR 永久挂起。
 
 Codex 线程分级（共享实现）：显式 P0/P1 阻断；未标注线程一律阻断（`block_unlabeled: true`，默认，fail-closed）；显式 P2（Codex、Copilot 或人工）不阻断；P2 可回复 `P2: defer — <理由>` 后 Resolve。线程 Resolve 不会触发 Actions：由每 15 分钟的 Gate Refresh 重跑，或 `workflow_dispatch` 填 PR 号。
 
-## no-auto-merge 标签：可选逃生
+## editorial-approved 白名单（可选观察）
 
-crawl PR 不再默认打 `no-auto-merge`；若有人手工添加该标签才禁止 auto-merge，默认路径是齐绿自动 squash 合入。仓库已开启 `allow_auto_merge`，crawl/agent PR 开出后应 enable squash auto-merge。
-
-## editorial-approved 白名单（内容质量实践，非合入硬门禁）
-
-白名单打标与 `editorial / QA Gate` 可作为 crawl 内容质量实践保留；**不是**必需 status check，不挡合入。
+此签字与 Gate 仅为可选观察，不挡合入。
 
 `editorial / QA Gate` 调用 devflow-gates QA Gate 的 `allowed_labelers`：通过 issue events/timeline API 读取 `editorial-approved` 的 `labeled` 事件，只有 actor 在白名单内的那次打标才计入（默认 `qianhaoq`，可用仓库变量 `EDITORIAL_LABELERS` 逗号分隔覆盖）。只看该标签**最后一次** `labeled` 事件的 actor；之后若有 `unlabeled` 则视为未签字。变量设置了但解析不出任何用户（如 `" "`、`","`）时 gate 直接失败。其他人（包括 PR 作者本人，除非其在白名单内）打的标签不算签字，gate 保持红色；每次 push 标签仍会被摘除。
 
-## Branch protection / rules
+## Branch protection
 
-branch protection / rules 由主管管理，agent 不修改，也不得用 `--admin` 绕过。策略要求的必需检查为 `ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`、`qa / QA Gate`；editorial 为观察项。若现有保护仍要求 editorial，由主管调整；本次变更不修改线上保护规则。
+- Require status checks to pass，且 **Require branches to be up to date（strict）**
+- 必需检查仅为：`ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`
+- `required_approving_review_count` 已是 `0`
+- qa / editorial 如仍运行仅为可选观察，不在 protection、不挡合入
+
 
 ## Acceptance Gate（M1，仅观察）
 
@@ -37,13 +36,14 @@ branch protection / rules 由主管管理，agent 不修改，也不得用 `--ad
 
 ## 流程
 
-crawl（每日 07:17 北京时间）→ 开 PR（enable auto-merge，无默认 `no-auto-merge`）→ CI / codex / qa 绿 + review 完成且 P0/P1 清零 → auto-merge squash → `pages.yml` 部署站点与 feed.xml。
+crawl（每日 07:17 北京时间）→ 开 PR（齐绿后自动合入，不打 `no-auto-merge`）→ 必需 CI/Codex 绿且无未解决 P0/P1 → squash 合入 → `pages.yml` 部署站点与 feed.xml。
 
 初始脚手架是唯一的直接推送 main 的例外。
 
 Copilot review：auto-merge 默认要求当前 head 有 Copilot review。若仓库未启用 Copilot（请求返回 422）或不想用它，把仓库变量 `DISABLE_COPILOT_REVIEW` 设为 `true`，会同时关闭请求与合并要求。
 
-crawl PR 的必需检查：`crawl.yml` 使用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送 PR，正常触发 `pull_request` / `pull_request_target` 门禁；默认 `GITHUB_TOKEN` 开的 PR 不会正常触发这些门禁。更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`，避免旧签字用于新 head；QA 须重新通过，editorial 签字仅作可选观察。必需门禁齐绿后自动合入。
+crawl PR 的必需检查：`crawl.yml` 使用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送 PR，正常触发 `pull_request` / `pull_request_target` 门禁；默认 `GITHUB_TOKEN` 开的 PR 不会正常触发这些门禁。更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`，避免旧签字用于新 head；签字仅为可选观察，不挡合入。不再打 `no-auto-merge`，齐绿后自动合入。
+
 
 ## 自动修上限（2026-10-20）
 

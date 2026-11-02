@@ -93,4 +93,4 @@ pytest -q
 
 ## MERGE_GATES（合并门禁）
 
-本仓默认自动合入，齐绿即合（含每日 crawl）：`ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate`、`qa / QA Gate`（`qa-passed`）全绿，review 完成且 P0/P1 清零后即可 squash auto-merge（P2 可选）。crawl PR 不再默认打 `no-auto-merge`，不再要求人工点合并；手工添加该标签可禁止 auto-merge。`editorial-approved` / `editorial / QA Gate` 仅作观察或可选签字参考，不挡默认 auto-merge，不列入 auto-merge 的 `required_checks`。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
+本仓默认自动合入（含每日 crawl PR）：必需检查 `ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate` 齐绿且无未解决 P0/P1 即合；勿等人卡。qa / editorial 如仍存在仅为可选观察，不挡合入。crawl 不再打 `no-auto-merge`，齐绿后自动合入。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
