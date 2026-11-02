@@ -83,10 +83,10 @@ jobs:
             自动抓取生成的条目数据与周刊更新。
 
             - 运行 `python scripts/validate.py` 已通过
-            - 齐绿后自动合入
+            - 门禁齐绿且 P0/P1 清零后可 auto-merge / AI squash 合入（齐绿即合）
           delete-branch: true
 
-      # 更新 crawl PR 后仍撤销旧签字；签字仅为可选观察，不挡齐绿后自动合入。
+      # 更新 crawl PR 后仍撤销旧签字；QA 须重新通过，editorial 签字仅作观察。
       - name: Invalidate sign-off labels on updated crawl PR
         if: steps.cpr.outputs.pull-request-operation == 'updated'
         env:
@@ -97,3 +97,12 @@ jobs:
             gh pr edit "$PR" --repo "$GITHUB_REPOSITORY" --remove-label "$label" 2>/dev/null \
               && echo "removed $label from #$PR" || echo "$label not present on #$PR"
           done
+
+      - name: Enable squash auto-merge
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.CRAWL_PR_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          gh pr merge "$PR" --repo "$GITHUB_REPOSITORY" --auto --squash \
+            || echo "Auto-merge may already be enabled or PR #$PR is not mergeable yet"
