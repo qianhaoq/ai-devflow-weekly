@@ -38,7 +38,7 @@
 
 本仓默认自动合入（含每日 crawl PR）：必需 CI/Codex 检查 `ci / Build & Test`、`ci / Secret Scan`、`codex / Codex Review Gate` 齐绿且无未解决 P0/P1 即合；P2 可选，不阻塞合并。**勿等人卡、不必等钱浩再点**。
 
-`required_approving_review_count` 已是 `0`；editorial / QA Gate 如仍存在仅为可选观察，不在 branch protection、不挡合入。
+`required_approving_review_count` 已是 `0`。`editorial / QA Gate` 与白名单 `editorial-approved` 可作为 crawl 内容质量实践保留，但**不是**必需 status check、**不**挡合入（也不在 `auto-merge.yml` 的 `required_checks` / branch protection）。
 
 每日 crawl PR 仍须用仓库 secret `CRAWL_PR_TOKEN`（PAT）开/更新；默认 `GITHUB_TOKEN` 开的 PR 不触发门禁。不再打 `no-auto-merge` 标签，齐绿后自动合入。详见 [docs/MERGE_GATES.md](docs/MERGE_GATES.md)，内容口径见 [docs/editorial.md](docs/editorial.md)。
 

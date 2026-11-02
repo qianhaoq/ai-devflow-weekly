@@ -76,7 +76,7 @@ GitHub Actions：`LLM_API_KEY` 配在 **Secrets**，`LLM_BASE_URL` / `LLM_MODEL`
 - `ci.yml`：PR 与 push main 时安装依赖 → `validate.py` → `pytest -q`。
 - `crawl.yml`：每日 07:17（北京时间，cron `17 23 * * *`）抓取 → 摘要 → 校验 →
   生成周刊，并用 `peter-evans/create-pull-request@v7` 向 `crawl/auto` 分支开
-  PR（门禁齐绿后自动合入；须白名单 `editorial-approved`）。
+  PR（门禁齐绿后自动合入；`editorial-approved` 仅为内容质量实践，非硬门禁）。
 - `pages.yml`：push main 后生成 `_data/items.json` → Jekyll 构建 → 部署到
   GitHub Pages。
 
