@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-8491ebd6e6",
+  "date": "2026-11-03",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.317",
+  "summary_zh": "Claude Code 发布 v2.1.317，为 `/schedule` 增加云定时任务连接器警告，并在 Web 或 Shell 工具调用发送账户邮箱前增加确认检查。Agent SDK 钩子回调新增 `onFailure: \"block\"` 选项，OTel 指标新增 `anthropic.plan`、`anthropic.seat_type`、`anthropic.provider` 和 `anthropic.custom_base_url` 字段。该版本还修复了桌面端 MCP 服务器首轮后断开、`claude auth status` 在令牌刷新保存前退出等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-03T03:55:17+00:00"
+}

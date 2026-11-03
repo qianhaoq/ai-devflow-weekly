@@ -1,0 +1,13 @@
+{
+  "id": "github-0e5ffbeff8",
+  "date": "2026-11-02",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "pull_request_target blocked by default December 2",
+  "summary_zh": "GitHub 宣布自 2026 年 12 月 2 日起，GitHub Actions 将在所有公开仓库中默认阻止 pull_request_target 事件，除非适用的 Actions 事件策略明确允许；该规则的强制执行原定于 2026 年 11 月 2 日。规则先以评估模式运行，并在 11 月 9 日和 11 月 16 日的 16:00–18:00（UTC）进行两次临时强制执行窗口，帮助识别受影响的工作流。该变更适用于 GitHub Free、GitHub Team 和 GitHub Enterprise Cloud 上的公开仓库，私有和内部仓库不受影响。",
+  "source_url": "https://github.blog/changelog/2026-11-02-pull_request_target-blocked-by-default-december-2",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-03T03:55:16+00:00"
+}

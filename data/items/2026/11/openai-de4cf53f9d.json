@@ -1,0 +1,13 @@
+{
+  "id": "openai-de4cf53f9d",
+  "date": "2026-11-02",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Scaling Git at OpenAI",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/scaling-git-at-openai",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-03T03:55:20+00:00"
+}
