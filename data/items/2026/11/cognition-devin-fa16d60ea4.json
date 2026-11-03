@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-fa16d60ea4",
+  "date": "2026-11-03",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-11-03）",
+  "summary_zh": "Cognition Devin 发布 2026-11-03 更新，代码扫描的单次仓库上限从 500 提升至 1,000，UI 与 API 同步生效。会话的 Findings 标签页可开关自动扫描，扫描详情与 Devin MCP 的 get_scan 工具会显示自动扫描计划。此外，只读用户现在会在编辑器中看到缺少写权限的提示，Slack 自动化条件支持“not in”频道列表。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-11-03",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-03T03:55:20+00:00"
+}

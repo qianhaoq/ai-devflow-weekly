@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-d33d62cc97",
+  "date": "2026-11-03",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.6",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.6，无已知破坏性变更。Web Shell 新增侧边栏活动视图、会话“添加到分屏视图”选项，并在 Token 用量面板中加入请求成功率、输出速度、首 token 延迟及按模型展示的失败详情等指标。此外还包含 OAuth 刷新锁清理、MCP 工具重名处理、LSP 代码导航报错提示等多项修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.6",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-03T03:55:25+00:00"
+}

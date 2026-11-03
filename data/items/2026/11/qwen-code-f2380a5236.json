@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-f2380a5236",
+  "date": "2026-11-03",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.5-nightly.20261102.0441faff21",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.5-nightly.20261102.0441faff21，该版本为 nightly 构建。完整变更记录见官方 GitHub 对比链接。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5-nightly.20261102.0441faff21",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-03T03:55:25+00:00"
+}

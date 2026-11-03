@@ -1,0 +1,13 @@
+{
+  "id": "openai-598c6194c0",
+  "date": "2026-11-02",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Qodo builds context into AI code review with Codex",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/qodo-codex-plugin",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-03T03:55:20+00:00"
+}
