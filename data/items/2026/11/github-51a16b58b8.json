@@ -1,0 +1,13 @@
+{
+  "id": "github-51a16b58b8",
+  "date": "2026-11-04",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Dependabot version updates support Agent Package Manager",
+  "summary_zh": "GitHub 的 Dependabot 版本更新现已支持 Agent Package Manager（APM），可自动为 apm.yml 中声明的受支持 git 依赖创建拉取请求，并在存在 apm.lock.yaml 时重新生成该文件。该支持仅覆盖版本更新，不包含安全更新。APM 支持已在 github.com 上面向所有 GitHub 计划正式可用，并将登陆 GitHub Enterprise Server 3.24。",
+  "source_url": "https://github.blog/changelog/2026-11-03-dependabot-version-updates-support-agent-package-manager",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-04T03:00:13+00:00"
+}

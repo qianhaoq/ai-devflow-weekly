@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-d78831b0a2",
+  "date": "2026-11-03",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Service Accounts",
+  "summary_zh": "Sourcegraph Amp 新增 Service Accounts，即由工作区拥有、不绑定单一用户的账户，由工作区管理员创建，拥有独立的 API 密钥和第三方凭证。服务账户下的每个线程可被工作区其他成员查看，并支持多人协作发送消息。官方建议将其用于属于团队而非个人的工作，例如代码库审查与维护、公共文档的定期检查，以及 CI 等程序化调用场景。",
+  "source_url": "https://ampcode.com/news/service-accounts",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-04T03:00:18+00:00"
+}

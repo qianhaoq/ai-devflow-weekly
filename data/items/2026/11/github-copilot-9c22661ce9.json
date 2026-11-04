@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-9c22661ce9",
+  "date": "2026-11-03",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot is now available in JetBrains Air",
+  "summary_zh": "GitHub Copilot 现已在 JetBrains Air 中可用，用户可委派编码任务、引导执行并审查结果。该集成基于 Agent Client Protocol（ACP），支持在 JetBrains IDE 或云端运行任务，云端任务使用 Copilot 订阅而非 JetBrains AI credits。本地任务需在 JetBrains IDE 中安装 Air 并连接 GitHub Copilot 账户；云端任务需 Air Teams 启用的企业组织中的 JetBrains 账户、GitHub Copilot 订阅，且由 Air 管理员启用 Copilot。",
+  "source_url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-04T03:00:13+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-6385d8e47a",
+  "date": "2026-11-04",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.318",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.318，新增在会话中记录用户对启用 mods 的答复、Claude apps 网关 mantle 上游的 `assume_role` 支持，以及 mod 的 `$.model.fork` 新增 `effort` 选项。`claude auth status` 和 `claude -p` JSON 结果中新增存储的 claude.ai 登录到期时间，并在到期前 10 天于 `claude -p` 文本输出中给出单行 stderr 警告。该版本还修复了 `--continue` 在工具调用重试耗尽后丢失先前对话（2.1.314 回归）、macOS 多 Bash 命令会话卡顿、权限提示被误答等多项问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-04T03:00:13+00:00"
+}

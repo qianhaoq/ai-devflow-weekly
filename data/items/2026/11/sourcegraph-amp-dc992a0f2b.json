@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-dc992a0f2b",
+  "date": "2026-11-02",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Artifacts",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 11 月 2 日发布 Artifacts 功能，代理可在单个线程中与用户及团队成员共同编辑属于该线程的文档。代理在有待阅读内容（如计划、报告或通话记录）时会主动写入 Artifact 而非长篇回复，并在再次处理时先读取用户编辑再整合。用户可在任意线程通过 Views → Artifacts 打开，或直接让 Amp 撰写。",
+  "source_url": "https://ampcode.com/news/artifacts",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-04T03:00:18+00:00"
+}
