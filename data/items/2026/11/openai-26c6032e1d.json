@@ -1,0 +1,13 @@
+{
+  "id": "openai-26c6032e1d",
+  "date": "2026-11-03",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Accelerating engineering for the physical world",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-04T03:00:16+00:00"
+}

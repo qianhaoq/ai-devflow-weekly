@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-873b16d9c0",
+  "date": "2026-11-04",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "libcap 2.75 source archive",
+  "summary_zh": "OpenAI Codex 发布了 libcap 2.75 源码归档，这是用于为 Codex 的 Linux musl 包构建 Bubblewrap 的未经修改的 libcap 2.75 源码归档镜像。原文同时给出了上游归档链接及 libcap-2.75.tar.xz 的 SHA-256 校验值。",
+  "source_url": "https://github.com/openai/codex/releases/tag/libcap-v2.75",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-04T03:00:15+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-0f281cabd4",
+  "date": "2026-11-04",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "BYOK and enterprise custom models in the Copilot usage API",
+  "summary_zh": "GitHub Copilot 用量指标 API 现可单独展示 BYOK 用量，与 Copilot 托管模型用量区分开。本地 BYOK 由开发者在客户端配置，请求直接发往其自有提供商密钥或本地模型，可通过 used_local_byok、totals_by_local_byok 及活跃用户数查看；企业自定义模型由管理员在 GitHub 设置中配置，请求经 GitHub 路由至提供商，通过 totals_by_client 中的 is_custom_enterprise_model 识别。两类数据均出现在企业及组织报告中，覆盖用户级与聚合级、1 天与 28 天报告。",
+  "source_url": "https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-04T03:00:13+00:00"
+}
