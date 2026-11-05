@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-36e8056ee2",
+  "date": "2026-11-05",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.7-nightly.20261104.b9e20830f7",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.7-nightly.20261104.b9e20830f7。该版本包含多项修复与功能更新，如保留 Gemini 工具重放所需的 thought signatures、识别 Hugging Face TGI 上下文溢出错误以触发响应式压缩、支持目录未列出的 Qwen2-VL、Qwen2.5-VL 和 QVQ 模型接收图像，以及在 OpenTUI 终端中运行 prompt.submit 钩子等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7-nightly.20261104.b9e20830f7",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-05T03:29:06+00:00"
+}

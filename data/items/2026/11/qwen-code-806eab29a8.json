@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-806eab29a8",
+  "date": "2026-11-04",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.7",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.7，无已知破坏性变更。新增 operator 级 model.catalogRefresh 设置，并支持在关闭隐私用量统计时停止后台目录刷新、保留本地元数据；同时为 managed-agent 会话创建提供完整模型配置支持。此外还包含 Web Shell 频道事件页、远程连接设置、/verify-pr 本地 Docker 方案等多项功能与若干问题修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.7",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-05T03:29:06+00:00"
+}
