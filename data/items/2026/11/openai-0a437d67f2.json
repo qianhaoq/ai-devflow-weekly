@@ -1,0 +1,13 @@
+{
+  "id": "openai-0a437d67f2",
+  "date": "2026-11-04",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Introducing Images 2.6",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/introducing-images-2-6",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-05T03:29:00+00:00"
+}

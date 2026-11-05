@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-a05548ef29",
+  "date": "2026-11-05",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot is now available in Xcode’s coding assistant",
+  "summary_zh": "GitHub Copilot 现已可在 Xcode 内置编码助手中直接使用，该集成处于公开预览阶段，从 Xcode 27.3 beta 起提供。使用需 Mac 运行 macOS Tahoe 26.6 或更高版本，并支持所有 Copilot 计划；原有的 GitHub Copilot for Xcode 扩展仍作为独立选项保留。",
+  "source_url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-05T03:28:57+00:00"
+}

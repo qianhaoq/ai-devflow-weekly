@@ -1,0 +1,13 @@
+{
+  "id": "openai-3a06f84c0f",
+  "date": "2026-11-04",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/openai-to-acquire-pierre",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-05T03:29:00+00:00"
+}
