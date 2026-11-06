@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-dcf7efe8bc",
+  "date": "2026-11-06",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Usage metrics API adds code review details and addressed rate",
+  "summary_zh": "GitHub Copilot 的企业与组织仓库级用量指标报告新增 copilot_code_review 对象，用于展示 Copilot 代码审查反馈的处理情况。该对象包含被评估评论数、已处理评论数（可据此计算各仓库的 addressed rate），以及按严重程度、审查层级、评论类型和自定义配置的细分计数，并新增统计 Copilot 首次审查后无人请求变更即合并的 PR 数。评论在 PR 合并时计入，机器人发起的 PR 通常不评估评论。",
+  "source_url": "https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-06T03:25:57+00:00"
+}

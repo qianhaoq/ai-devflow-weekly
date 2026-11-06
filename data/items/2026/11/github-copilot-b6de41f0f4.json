@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-b6de41f0f4",
+  "date": "2026-11-06",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Usage metrics API flags telemetry and version gaps",
+  "summary_zh": "GitHub Copilot 用量指标 API 新增按用户字段，可显示哪些用户缺少客户端遥测，或所用 IDE、扩展版本低于用量指标的最低版本要求。企业版和组织版用户报告新增 client_telemetry_present 与 usage_metrics_requirements 字段，企业版和组织版报告则新增每日受影响用户数统计。缺少遥测的用户仍计为活跃，但其报告缺少代码行数、功能与模型细分等明细，常见原因包括编辑器或扩展过旧、IDE 遥测被关闭，以及代理或防火墙拦截事件。",
+  "source_url": "https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-06T03:25:57+00:00"
+}

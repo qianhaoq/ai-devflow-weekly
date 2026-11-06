@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-2a86e6ca6e",
+  "date": "2026-11-06",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.8-nightly.20261105.7bd78683e6",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.8-nightly.20261105.7bd78683e6，包含多项修复与性能优化，如修复 GitHub 入站读取失败后的恢复机制、会话列表标题在转录重建后保留，以及按需加载 MCP 客户端的 Google 认证提供方等。新增功能包括为沙箱化验证轮次提供 PR 评审线程、为 autofix-pr 的辅助拒绝提供错误码与后续步骤，并支持 QQ 机器人以主动群消息投递循环消息。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.8-nightly.20261105.7bd78683e6",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-06T03:26:07+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-84086a4586",
+  "date": "2026-11-06",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.8",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.8，官方说明无已知破坏性变更。该版本新增多项功能，包括在 CLI、VS Code 和 Desktop 中支持 Qwen 订阅，以及 OpenTUI 终端中运行 prompt.submit 钩子、Ink TUI 模型轮次与工具批次接入共享循环、web-shell 频道编辑器高级设置折叠与 GitHub PR/Issue 链接等。同时修复了核心、守护进程、Mods、CLI 及 CI 相关多项问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.8",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-06T03:26:07+00:00"
+}
