@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-085a6df572",
+  "date": "2026-11-06",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-11-06）",
+  "summary_zh": "OpenAI Codex 于 2026-11-06 发布 Codex CLI 0.167.0。新功能包括用 `codex agents --no-daemon` 打开 agent 命令中心、命令中心与会话选择器标记未读结果、在终端会话选择器切换已连接后端并保留草稿，以及支持在受支持的终端中预览本地图片附件。此外还修复了切换模型提供方后已保存聊天仍可见、Ctrl+L 清屏后可通过 Ctrl+T 查看历史消息等问题。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-11-06",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-06T03:26:00+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-7248e0d852",
+  "date": "2026-11-06",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.26.8",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.26.8，更新以修复为主，涉及 core 的 OAuth 刷新锁删除、MCP 工具重名保留、LSP 无就绪服务器时拒绝查询，以及 web-shell 的 Plugins 返回控件与 Workflow 控件位置调整等。新功能包括 web-shell 新增对话活动视图和会话菜单中的“Add to Split View”。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.8",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-06T03:26:07+00:00"
+}

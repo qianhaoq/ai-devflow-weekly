@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-faee6f8c48",
+  "date": "2026-11-05",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "GitLab Integration",
+  "summary_zh": "Sourcegraph Amp 现已集成 GitLab，支持 gitlab.com 和自托管实例。连接 GitLab 账户后可从 GitLab 仓库启动项目，Orbs 会以用户身份克隆和推送，并已登录 glab，因此智能体可以打开合并请求、发表评论以及读取 issue 和流水线。Amp 还可订阅其打开的合并请求的评论和 CI，让审阅者的请求或失败的流水线进入编写代码的线程。",
+  "source_url": "https://ampcode.com/news/gitlab",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-06T03:26:03+00:00"
+}

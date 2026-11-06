@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-e2baf2e1c3",
+  "date": "2026-11-06",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.167.0",
+  "summary_zh": "OpenAI Codex 发布 0.167.0，新增通过 `codex agents --no-daemon` 打开 agent 命令中心，命令中心与会话选择器会标记未读结果，并支持在终端会话选择器中切换已连接后端且保留草稿。该版本还支持在支持的终端中预览本地图片附件、在“Sign in another way”下找到 API key 与云提供商选项，并可通过 `/experimental` 选择启用 macOS 或 Windows 系统代理设置。修复方面包括切换模型提供商后已保存聊天仍可见、`Ctrl+L` 清屏后可用 `Ctrl+T` 查看早前消息，以及网络审批提示在请求结束后关闭等。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-06T03:26:00+00:00"
+}
