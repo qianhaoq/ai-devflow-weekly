@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-d28d7745dd",
+  "date": "2026-11-07",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Copilot code review: API management and review overview updates",
+  "summary_zh": "GitHub Copilot 代码审查现可通过 REST 和 GraphQL API 管理设置，覆盖从企业策略到单个仓库的层级，并支持通过显式归属字段识别 Copilot 的审查与评论。审查概览评论改为更紧凑的布局，将审查投入度与调查移入页脚，跳过和排除内容的文件合并为“未审查文件”区域。此次更新还包含计费、自动审查与可靠性方面的修复，适用于 Copilot Pro、Pro+、Max、Business 和 Enterprise 计划。",
+  "source_url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-07T02:47:09+00:00"
+}

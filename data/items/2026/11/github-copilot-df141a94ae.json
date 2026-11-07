@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-df141a94ae",
+  "date": "2026-11-07",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Copilot impact dashboard adds chat and VS Code agent usage",
+  "summary_zh": "GitHub Copilot 的 impact dashboard 中，Agent adoption 图表新增了 Copilot Chat 和 VS Code Agents window，覆盖的 Copilot 体验增至九项；企业版和组织版 28 天使用指标报告也加入了 chat 与 vscode_agent 条目。原先的“Passive users”群体更名为“Chat-first users”，以更准确描述其主要使用聊天功能的特征。官方说明，聊天和 VS Code Agents window 仅作为功能参与度报告，不计入 adoption phases，且该变更仅适用于企业版和组织版的 28 天报告。",
+  "source_url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-07T02:47:09+00:00"
+}

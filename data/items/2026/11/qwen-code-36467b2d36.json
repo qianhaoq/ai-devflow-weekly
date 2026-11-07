@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-36467b2d36",
+  "date": "2026-11-07",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.9-nightly.20261106.80fd7c3353",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.9-nightly.20261106.80fd7c3353。本次更新新增 hooks 对本地会话的 FileChanged 通知，并调整 web-shell 会话搜索位置、优化 managed-agent 运行时绑定与工具执行准入等性能。此外还包含多项测试、CI 与文档修复。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9-nightly.20261106.80fd7c3353",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-07T02:47:17+00:00"
+}

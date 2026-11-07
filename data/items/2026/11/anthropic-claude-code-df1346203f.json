@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-df1346203f",
+  "date": "2026-11-07",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.319",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.319。此次更新调整了关闭遥测或功能标志时的自动模式行为，并新增终端内 MCP 任务支持及 `CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND` 环境变量、`permissions.denyInsteadOfPrompting` 设置、`/claude-api latency-optimize` 命令等。同时修复了旧版握手 MCP 服务器连接失败、`/diff` 显示异常及斜杠命令前导空白被当作纯文本发送等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-07T02:47:10+00:00"
+}
