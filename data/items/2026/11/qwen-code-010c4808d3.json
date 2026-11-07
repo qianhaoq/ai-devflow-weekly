@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-010c4808d3",
+  "date": "2026-11-07",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.9",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.9，无已知破坏性变更。本次更新增强了 Skill 安装与激活能力，包括批量启用或禁用 1-100 个用户 Skill、支持大体积 Skill ZIP 上传及安装回执查询，并为 TypeScript SDK 和 WebShell 增加相应支持；同时改进了 Web Shell 会话标题显示、草稿保留、批量删除与 listSessions 分页，以及托管代理与会话的自动化、持久化提问和性能表现。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-07T02:47:17+00:00"
+}

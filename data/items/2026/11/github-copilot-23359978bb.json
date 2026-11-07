@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-23359978bb",
+  "date": "2026-11-07",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "@GitHub in Slack and Teams is generally available and more",
+  "summary_zh": "GitHub 宣布 Slack 和 Teams 中的 @GitHub 正式可用，用户可在对话中调查缺陷、创建 issue、实施更改并打开拉取请求。Teams 新增 Canvas，支持在对话旁审阅实施计划、代码更改和预览并协作完善。此外还改进了上手流程、后续消息回复的可靠性，并为 @GitHub 创建的 issue 和拉取请求添加来源说明。",
+  "source_url": "https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-07T02:47:09+00:00"
+}

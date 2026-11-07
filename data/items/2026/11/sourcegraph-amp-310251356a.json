@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-310251356a",
+  "date": "2026-11-06",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Spaces",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 11 月 6 日推出 Spaces，一种与智能体及团队交互的新方式。一个 space 是与单个智能体的对话，该智能体会为你生成并协调其他智能体，无需再自行创建和整理线程。官方还列举了用其协作开发新功能、发布与支持功能以及定期安全审查等使用示例。",
+  "source_url": "https://ampcode.com/news/spaces",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-07T02:47:14+00:00"
+}

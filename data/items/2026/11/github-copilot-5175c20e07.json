@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-5175c20e07",
+  "date": "2026-11-07",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot weekly releases — November 2",
+  "summary_zh": "GitHub Copilot 发布 11 月 2 日当周更新，Copilot 已进入 JetBrains Air 和 Xcode 的内置编码助手，其中 Xcode 集成处于公开预览，需 Xcode 27.3 beta 及以上版本。GitHub Copilot 应用新增从拉取请求直接设置 Agent Merge、会话上下文压缩、CSV/TSV 表格视图等能力；CLI 的 /settings 改为统一仪表盘；VS Code 1.145 版带来实验性聊天视图模式、远程应用预览与本地定时自动化等更新。",
+  "source_url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-07T02:47:09+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-25ab9c0d0a",
+  "date": "2026-11-06",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Close the Loop",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 11 月 6 日发布 Close the Loop：在项目设置中启用反馈组件并在网站添加一段脚本后，用 ?amp 访问站点即可显示标注组件，点击页面任意位置写下修改指令并发送给 Amp。首次使用需登录 Amp，随后 Amp 会在项目中新建线程并执行修改，用户可像处理其他变更一样从该线程发布。该组件默认不可见，仅在带 ?amp 访问或此前使用过时显示。",
+  "source_url": "https://ampcode.com/news/close-the-loop",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-07T02:47:14+00:00"
+}
