@@ -1,0 +1,13 @@
+{
+  "id": "qodo-f1959e85dd",
+  "date": "2026-11-08",
+  "vendor": "Qodo",
+  "category": "review",
+  "source_id": "qodo-pr-agent-releases",
+  "title": "v0.50.0",
+  "summary_zh": "Qodo 发布 PR-Agent v0.50.0，包含多项破坏性变更：仓库级 `.pr_agent.toml` 不再能覆盖 GitHub 限速与重试、`config.num_retries`、自定义标签等设置，这些配置改为仅限主机配置，且 `config.num_retries` 上限为 10；`config.ai_timeout` 和 `pr_code_suggestions.max_number_of_calls` 不能再通过评论命令设置。该版本移除两个无效设置，并将 `config.enable_auto_approval` 改为仅限主机配置，自动批准路径在本版本中仍处于禁用状态。此外，PyPI 发布改用 Trusted Publishing 并生成包证明，同时新增 Microsoft Teams 输出、Claude Sonnet 5.5/Haiku 5.5 与 Kimi K3/K3.1 Pro 模型支持等功能。",
+  "source_url": "https://github.com/The-PR-Agent/pr-agent/releases/tag/v0.50.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-08T02:28:22+00:00"
+}

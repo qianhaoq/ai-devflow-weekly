@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-73d89de065",
+  "date": "2026-11-08",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.26.9-nightly.20261107.65e1f1aeaa",
+  "summary_zh": "阿里 Qwen Code 发布 v0.26.9-nightly.20261107.65e1f1aeaa（2026-11-08）。本次变更包括：文档补充 OpenAI 兼容提供商下的 Wally；修复 core 共享 gh runner 与不可用视图目录命名、telemetry 将 OpenAI cache_write_tokens 上报为缓存创建、CI 将外部 PR 直接路由到一次性 runner；新增启动上下文中标注当前 shell 的功能，并补充 daemon 会话级权限投票文档。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.9-nightly.20261107.65e1f1aeaa",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-08T02:28:24+00:00"
+}
