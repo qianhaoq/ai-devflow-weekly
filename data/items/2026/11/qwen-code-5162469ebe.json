@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-5162469ebe",
+  "date": "2026-11-08",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.0。Managed-agent 会话可同时保留多个子问题、按任意顺序作答，并按子问题隔离草稿与错误；Web Shell 新增任务问答热力图和“Ask for details”侧任务，用于解释待选的 Ask User Question 选项而不代为作答。GitHub 频道编辑器新增仓库过滤允许/阻止列表，Shell 工具编辑在 sed 替换中安全处理 CRLF 与 Unicode，被取消的命令会报告为中断并保留部分输出。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-08T02:28:24+00:00"
+}
