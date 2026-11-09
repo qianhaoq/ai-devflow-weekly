@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-da4a815e32",
+  "date": "2026-11-09",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "CodeRabbit 页面更新（2026-11-09）",
+  "summary_zh": "CodeRabbit 更新日志汇总了其在 GitHub、GitLab、Azure 和 Bitbucket 上的最新功能、集成与产品更新。其中 GitLab 群组 webhook 迁移脚本的 --group 选项现会更新匹配的群组 webhook、校验其 URL 与可见设置，并移除所选范围内匹配的项目 webhook；无匹配群组钩子的群组保持不变，脚本不会新建。迁移默认先预览变更，不同群组密钥需在密钥映射中使用 group:ID 键，群组钩子需 GitLab Premium 或 Ultimate 及群组 Owner 或实例管理员权限。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-11-09",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-09T02:39:28+00:00"
+}
