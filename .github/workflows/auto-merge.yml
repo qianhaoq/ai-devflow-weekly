@@ -69,8 +69,9 @@ jobs:
         codex / Codex Review Gate
         ci / Secret Scan
       merge_method: squash
-      # Same switch as ai-review.yml: DISABLE_COPILOT_REVIEW=true turns off both the request and the merge requirement.
-      require_copilot: ${{ vars.DISABLE_COPILOT_REVIEW != 'true' }}   # head Copilot review required unless disabled; CHANGES_REQUESTED vetoes
+      # Copilot is retired as a merge gate; DISABLE_COPILOT_REVIEW=true is already set.
+      # Durable default: require_copilot: false.
+      require_copilot: false
 
   # A merge made with GITHUB_TOKEN does not fire `push`, so pages.yml would
   # never deploy a bot merge. After an Auto Merge evaluation, dispatch Pages
