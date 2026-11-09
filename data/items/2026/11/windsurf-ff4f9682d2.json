@@ -1,0 +1,13 @@
+{
+  "id": "windsurf-ff4f9682d2",
+  "date": "2026-11-09",
+  "vendor": "Windsurf",
+  "category": "code",
+  "source_id": "windsurf-changelog",
+  "title": "Windsurf 页面更新（2026-11-09）",
+  "summary_zh": "Windsurf（Devin Desktop）发布 v3.12.32 更新，Agent Command Center 的会话头部“…”菜单可查看、开关或重新认证 MCP 服务器；本地 agent 拒绝首个提示时，文本会退回输入框并显示原因，便于修改后重发。该版本编辑器升级至 VS Code 1.141.2 与 Electron 43.8.3（含 Chromium 安全修复），并修复了本地会话工作目录保留、计划审批卡片查看完整计划、第三方 ACP agent 权限请求导致崩溃等问题。",
+  "source_url": "https://docs.devin.ai/desktop/changelog#2026-11-09",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-09T02:39:27+00:00"
+}
