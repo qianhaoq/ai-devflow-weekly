@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-348a6fcb90",
+  "date": "2026-11-09",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Portals on Your Runner",
+  "summary_zh": "Sourcegraph Amp 的 Portals 功能现已支持本地机器，可在本地启动开发服务器或构建网站，并从对应线程的 Portal 标签页打开。macOS 应用可在 Settings › Runner 中开启 Allow Portals，或以 `amp --no-tui --remote-control-portals` 启动 runner；本地 Portals 仅本人可访问，若需与工作区共享，可用 `--share` 启动共享 runner 或在 macOS 应用中开启 Share With Workspace。",
+  "source_url": "https://ampcode.com/news/runner-portals",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-10T04:37:06+00:00"
+}

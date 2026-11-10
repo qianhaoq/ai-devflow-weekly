@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-a6fe4efff0",
+  "date": "2026-11-09",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.1，官方说明无已知破坏性变更。该版本新增多项功能，包括在启动上下文中显示当前 shell、可通过用户级设置与环境变量启用 LSP、为机器人消息提供可选的 forwardBotMessages、默认后台执行可配置，以及 Web Shell 的工作区折叠与拖拽排序、侧边栏多选批量固定与归档等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-10T04:37:10+00:00"
+}

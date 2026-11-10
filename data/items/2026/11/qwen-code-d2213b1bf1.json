@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-d2213b1bf1",
+  "date": "2026-11-09",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.27.1",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.27.1，更新内容包括在 OpenAI 兼容提供商文档中补充 Wally、启动上下文中显示当前 shell、修复桌面端已保存网页预览的恢复问题，以及新增 QQ 机器人可选转发机器人消息等。该版本还包含遥测、CI、CLI 与内存管理等多处修复与改进。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-10T04:37:10+00:00"
+}

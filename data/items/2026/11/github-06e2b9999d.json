@@ -1,0 +1,13 @@
+{
+  "id": "github-06e2b9999d",
+  "date": "2026-11-09",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Secret scanning detects secrets in GitHub Actions workflow logs",
+  "summary_zh": "GitHub 密钥扫描功能现已支持检测 GitHub Actions 工作流日志中的密钥，该功能目前处于公开预览阶段。工作流运行完成后，GitHub 会扫描其日志中的服务商模式，发现结果会显示在仓库的密钥扫描警报列表中，并附有指向对应工作流日志的链接。该预览仅面向拥有 GitHub Secret Protection 或 GitHub Advanced Security 的 GitHub Enterprise Cloud 企业开放，默认禁用，且只扫描启用后完成的工作流运行，不会回填现有日志。",
+  "source_url": "https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-10T04:37:02+00:00"
+}
