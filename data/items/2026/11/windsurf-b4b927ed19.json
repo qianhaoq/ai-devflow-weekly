@@ -1,0 +1,13 @@
+{
+  "id": "windsurf-b4b927ed19",
+  "date": "2026-11-10",
+  "vendor": "Windsurf",
+  "category": "code",
+  "source_id": "windsurf-changelog",
+  "title": "Windsurf 页面更新（2026-11-10）",
+  "summary_zh": "Windsurf 发布 Devin Desktop（Windsurf）稳定版更新，最新版本为 v3.12.43（2026年11月9日），前序版本 v3.12.32（11月8日）亦有更新记录。v3.12.43 中，Devin Local 在输出上限前中断的响应会继续该轮对话，GPT 模型不再停下来询问其可自行推断的输入；Devin Local 的图片读取新增 image_size 参数，默认发送原图最长边的 70%、至少 1024 px。该版本还修复了 Devin Cloud 用量受限时 Devin Local 会话后续提示被阻塞等问题。",
+  "source_url": "https://docs.devin.ai/desktop/changelog#2026-11-10",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-10T04:37:05+00:00"
+}

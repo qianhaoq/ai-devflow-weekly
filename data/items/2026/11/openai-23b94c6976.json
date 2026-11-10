@@ -1,0 +1,13 @@
+{
+  "id": "openai-23b94c6976",
+  "date": "2026-11-09",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "CodeRabbit scales agentic software development and ships 20x more",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/coderabbit-codex-daybreak",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-10T04:37:05+00:00"
+}
