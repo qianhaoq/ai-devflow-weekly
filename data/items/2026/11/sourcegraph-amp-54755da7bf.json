@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-54755da7bf",
+  "date": "2026-11-10",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Boxes",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 11 月 10 日推出 boxes，一种始终在线的计算机，可将用 Amp 构建的应用部署其上，最小规格为每 30 天 18 美元。每个 box 是单台 VM，可部署多个应用并各自获得独立 URL，常驻不关机，也可按计划开关以节省费用；每个 box 自带 runner，可让 agent 直接在 box 上运行。boxes 按分钟计费，提供 b1.tiny、b1.small（默认）、b1.medium、b1.large 四种规格，并可与工作区共享。",
+  "source_url": "https://ampcode.com/news/boxes",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-11T02:46:39+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-31de89519a",
+  "date": "2026-11-11",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.167.1",
+  "summary_zh": "OpenAI Codex 发布 0.167.1 版本，完整变更记录见官方对比链接（rust-v0.167.0...rust-v0.167.1）。原文未提供该版本的具体功能变更说明。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-11T02:46:36+00:00"
+}

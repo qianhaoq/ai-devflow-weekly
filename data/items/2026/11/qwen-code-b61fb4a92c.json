@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-b61fb4a92c",
+  "date": "2026-11-11",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.2-preview.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.2-preview.0（预览版），主要包含多项修复与功能更新：修复 CI 中 prettier 忽略集读取、Agent Host 注册重试、入站任务记录 authorExclude 校验等问题，并新增从原始 Runtime 导入 Skills、Tool v4 执行度量、私有 BTW 与会话回顾等功能。此外还涉及 CLI 会话历史、OpenTUI 模型轮次走共享 agent loop、Mods 运行模型补全等改动。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-preview.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-11T02:46:42+00:00"
+}

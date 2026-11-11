@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-871ae47d30",
+  "date": "2026-11-11",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub App support for Enterprise Copilot seat management",
+  "summary_zh": "GitHub 发布更新，Enterprise GitHub Apps 现在可以调用企业级 Copilot 席位管理 API，用于控制哪些用户和企业团队被分配 Copilot 席位。这些 API 通过面向 Apps 的新企业细粒度权限“Enterprise Copilot license management”访问。",
+  "source_url": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-11T02:46:34+00:00"
+}
