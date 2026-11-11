@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-0fe8b882db",
+  "date": "2026-11-11",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Gemini 4 Carbon in GitHub Copilot",
+  "summary_zh": "GitHub Copilot 已正式上线 Google 最新模型 Gemini 4 Carbon，该模型面向复杂编码、智能体与推理任务，侧重安全代码生成与安全相关工作。Copilot Pro+、Max、Business 和 Enterprise 用户可在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot coding agent、github.com、GitHub Mobile、JetBrains IDE、Xcode、Eclipse 等处的模型选择器中选用，推出将逐步进行。Copilot Enterprise 和 Business 管理员可通过 Copilot 设置中的模型策略管理访问权限。",
+  "source_url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-11T02:46:34+00:00"
+}

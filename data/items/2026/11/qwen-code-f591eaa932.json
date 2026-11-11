@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-f591eaa932",
+  "date": "2026-11-11",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "SDK TypeScript Release v0.1.32",
+  "summary_zh": "阿里 Qwen Code 发布 SDK TypeScript v0.1.32，该版本捆绑 CLI 0.27.2，CLI 由与 SDK 相同的分支/ref 从源码构建。原文未列出具体变更，仅提示查看提交历史。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.32",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-11T02:46:42+00:00"
+}

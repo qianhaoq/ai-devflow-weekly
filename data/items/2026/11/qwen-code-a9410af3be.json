@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-a9410af3be",
+  "date": "2026-11-11",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.2",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.2。Web Shell 可配置微信、QQ 和邮件渠道，支持扫码登录、扫码进度、身份展示及登出；Mods 支持一次性 $.model.complete 调用、通过 ui.render 改写显示的 AssistantMessage 文本，并用 $.store 持久化插件值。该版本还让 /btw 附带问题纳入会话并回放上下文，待审批项显示在实时面板并可在终端失焦时触发提示，Web Shell 在输入框下方展示轮次、输出速度、总 token 与缓存命中率。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-11T02:46:42+00:00"
+}

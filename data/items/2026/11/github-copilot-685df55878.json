@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-685df55878",
+  "date": "2026-11-11",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "C++ language server now auto-configures MSBuild builds",
+  "summary_zh": "GitHub Copilot CLI 的 Microsoft C++ 语言服务器现已内置 MSBuild 编译命令提取器并自动调用，代理无需再先发现并运行单独的配置技能即可获得精确的代码智能。此前为 MSBuild 项目配置转到定义、查找引用等功能需自备 compile_commands.json 或由 Copilot 定位并运行配置技能，现在打开项目启动语言服务器时会自动调用提取器，MSBuild 项目的编译数据库生成具有确定性，减少了设置阶段的 token 消耗。其他构建系统仍可自备 compile_commands.json 或使用技能生成，使用需有效的 GitHub Copilot 订阅。",
+  "source_url": "https://github.blog/changelog/2026-11-10-c-language-server-now-auto-configures-msbuild-builds",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-11T02:46:34+00:00"
+}
