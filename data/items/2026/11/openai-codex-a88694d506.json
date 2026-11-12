@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-a88694d506",
+  "date": "2026-11-12",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.167.2",
+  "summary_zh": "OpenAI Codex 发布 0.167.2 版本，新增功能：在 Google Cloud Vertex AI 上，Codex 默认以增量方式发送工具更新。如需关闭该行为，可在 config.toml 的 [features] 下将 incremental_tools_legacy_gcp 设为 false。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.167.2",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-12T03:48:46+00:00"
+}
