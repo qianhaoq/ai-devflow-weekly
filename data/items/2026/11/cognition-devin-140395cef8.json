@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-140395cef8",
+  "date": "2026-11-12",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-11-12）",
+  "summary_zh": "Cognition Devin 发布 2026 年 11 月 11 日的更新，涵盖侧边栏导航快捷键自定义、按服务用户筛选会话、堆叠 PR 可见性改进以及设计模式等多项功能与修复。更新还包括仓库设置建议分组审批、批量添加密钥支持 Shell 风格行、Devin 可自行设置提醒，以及扫描与发现相关的多项改进。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-11-12",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-12T03:48:47+00:00"
+}

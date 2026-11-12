@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-3e3134e1ad",
+  "date": "2026-11-11",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v1.0.0-preview",
+  "summary_zh": "阿里 Qwen Code 发布 v1.0.0-preview，官方说明预览期间部分接口、配置选项和行为可能变化。该版本整合 Qoder 与 Qwen Code 的智能体能力，覆盖代码理解、实现、调试与测试，并支持 Qwen 和 Qoder 账号、多模型提供商及自定义兼容端点。同时提供 macOS、Linux、Windows 原生安装包，无需单独安装 Node.js，并支持会话恢复与非交互式执行。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-12T03:48:52+00:00"
+}
