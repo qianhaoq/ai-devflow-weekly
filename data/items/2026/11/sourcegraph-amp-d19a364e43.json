@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-d19a364e43",
+  "date": "2026-11-12",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Bye Bye, Dial",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 11 月 12 日发布更新，取消 Dial 及其 low、medium、high、ultra 四种模式，改为模型选择器，用户可为每个线程选择模型及其 effort，并可在对话中途切换。选择器会显示每个模型将由哪项订阅或 API 密钥计费，或是否使用 Amp credits；新线程默认使用 Staff Pick（当前为 Claude Opus 5.5）。原文说明，引入自带订阅与密钥后，所选模型同时决定计费来源，因此改为显式选择模型。",
+  "source_url": "https://ampcode.com/news/bye-bye-dial",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-13T03:25:25+00:00"
+}

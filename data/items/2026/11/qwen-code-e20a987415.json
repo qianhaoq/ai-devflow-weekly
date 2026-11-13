@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-e20a987415",
+  "date": "2026-11-12",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v1.0.0-preview.1",
+  "summary_zh": "阿里 Qwen Code 发布 v1.0.0-preview.1 预览版。此次更新修复了 Qwen 订阅账号登录后无法使用订阅模型的问题，模型目录现可随登录状态自动切换，无需手动配置提供商；同时将订阅模型目录与思考预算映射同步至 Qwen Code 0.27.x，并优化了错误提示。此外，Qoder 模型已支持并行工具调用，多工具任务不再严格串行执行，完成速度更快。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v1.0.0-preview.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-13T03:25:28+00:00"
+}

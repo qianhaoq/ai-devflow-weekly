@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-ad590a020b",
+  "date": "2026-11-13",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.2-nightly.20261112.70a487be84",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.2-nightly.20261112.70a487be84，主要修复 managed-agent 在 Session 关闭时释放 MCP owner、加固 Harness 错误码解析与异常原因处理，并调整 managed-agent 异步准入为唯一发布模式。web-shell 新增在输入框上方以 chips 展示未完成后台任务、紧凑审批选择器并标记完全访问权限；channels 支持按 UI 语言本地化绑定会话事件提示。文档补充 Wiro AI 作为 OpenAI 兼容 provider 的说明，并在 README 中新增 Qwen Code 1.0 Preview 入口。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261112.70a487be84",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-13T03:25:28+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-1e1f91e95e",
+  "date": "2026-11-13",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.323",
+  "summary_zh": "Claude Code 发布 v2.1.323，新增实验性可选 Code Mode，让 Claude 通过编写 JavaScript 调用工具。该版本为 plugin.json 增加 engines[\"claude-code\"] 版本范围限制，并扩展 claude plugin validate 的 TypeScript 钩子类型检查与 $ 名词校验。此外还修复了 /compact 重复执行、恢复会话消息拼接、大文件编辑后内存峰值等多项问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-13T03:25:20+00:00"
+}
