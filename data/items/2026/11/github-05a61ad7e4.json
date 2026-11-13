@@ -1,0 +1,13 @@
+{
+  "id": "github-05a61ad7e4",
+  "date": "2026-11-13",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Actions for ARM32 Linux & Windows retirement",
+  "summary_zh": "GitHub 宣布将于 2026 年 12 月 8 日前停止在 Windows 和 Linux 上支持 GitHub Actions 托管运行器的 ARM32 作业执行，包括移除托管运行器对原生 AArch32 用户空间执行的支持。该决定源于 node20 支持终止，因为 Node 24 不支持 ARM32。",
+  "source_url": "https://github.blog/changelog/2026-11-12-actions-for-arm32-linux-windows-retirement",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-13T03:25:20+00:00"
+}

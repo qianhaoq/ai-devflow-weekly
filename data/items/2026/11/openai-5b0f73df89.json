@@ -1,0 +1,13 @@
+{
+  "id": "openai-5b0f73df89",
+  "date": "2026-11-13",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+  "summary_zh": "",
+  "source_url": "https://openai.com/business/customer-stories/amplitude",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-13T03:25:23+00:00"
+}

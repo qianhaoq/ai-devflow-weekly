@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-130f7e7004",
+  "date": "2026-11-13",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.3",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.3，无已知破坏性变更。本次更新在 Web Shell 输入框上方新增未完成后台工作流、shell、监控与本地代理的状态标签，替代原状态栏任务提示；为 PR 会话中的 GitHub 频道事件提示新增中文界面本地化；并加入仅发送用途的钉钉 webhook 频道，可将通知与任务成功结果以 Markdown 推送至钉钉群机器人。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-13T03:25:28+00:00"
+}

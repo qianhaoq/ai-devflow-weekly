@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-9771f4fc87",
+  "date": "2026-11-13",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.27.3",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.27.3，包含多项修复与功能更新：修复 CLI/core 中 Agent Host 重试丢失应答的注册请求、channels 入站任务记录的 authorExclude 校验、core 按 bash 规则解析 ANSI-C 词与 -c 选项终止符等问题；新增 managed-agent 从原始 Runtime 导入 Skills、Tool v4 执行度量、私有 BTW 与 session recap，以及 serve 的 PR-watch 主机发现与有序关闭等能力。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-13T03:25:28+00:00"
+}
