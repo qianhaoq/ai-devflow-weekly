@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-e8c3c46993",
+  "date": "2026-11-14",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Gemini 4 Hydrogen in GitHub Copilot",
+  "summary_zh": "GitHub Copilot 已正式上线 Google 最新的 Flash 模型 Gemini 4 Hydrogen，该模型面向快速高效的智能体编码、工具调用和多步骤工作流，指令遵循能力较 Gemini 3.8 Flash 有所提升。Copilot Pro、Pro+、Max、Business 和 Enterprise 用户可在 VS Code、Visual Studio、Copilot CLI、Copilot 编码智能体、GitHub Copilot 应用、github.com、GitHub Mobile、JetBrains IDE、Xcode、Eclipse 及 Copilot SDK 的模型选择器中选用，目前正逐步推送。该模型按使用量计费，采用提供商标价；Enterprise 和 Business 管理员可通过 Copilot 设置中的模型策略管理访问权限。",
+  "source_url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-14T03:13:36+00:00"
+}

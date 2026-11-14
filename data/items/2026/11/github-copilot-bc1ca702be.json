@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-bc1ca702be",
+  "date": "2026-11-14",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Upcoming deprecation of selected GitHub Copilot models in December",
+  "summary_zh": "GitHub 将于 2026 年 12 月 14 日在所有 Copilot 体验（含 Copilot Chat、内联编辑、ask 与 agent 模式及代码补全）中弃用 Claude Fable 5、Claude Haiku 4.5、Gemini 3.8 Flash、Gemini 4 Argon、Grok 4.6 和 Kimi K3 等模型，并给出了对应的建议替代模型。其中 Claude Haiku 4.5 对年度计划的个人订阅用户仍保留可用，此次弃用不适用于这些用户。官方建议在此日期前更新工作流与集成以改用受支持模型，弃用后无需手动移除这些模型。",
+  "source_url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-14T03:13:36+00:00"
+}

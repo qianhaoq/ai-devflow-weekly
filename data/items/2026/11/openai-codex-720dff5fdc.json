@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-720dff5fdc",
+  "date": "2026-11-13",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.169.0",
+  "summary_zh": "OpenAI Codex 发布 0.169.0，终端工作区支持多个侧聊标签页，重启后可重新打开已保存的本地侧聊，并可按名称、提示预览或工作目录搜索较早任务。全屏记录新增“折叠轮次详情”选项，终端中可添加或编辑自定义模型提供商，macOS 和 Linux 上开启 Cloud 连接后可在终端发送图片、选择模型与推理强度并归档或恢复 Cloud 会话。修复方面包括 `codex exec` 在不受信任目录中保持项目配置和 MCP 服务器禁用、Windows 沙箱路径处理及 macOS 粘贴图片方向等问题。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-14T03:13:37+00:00"
+}

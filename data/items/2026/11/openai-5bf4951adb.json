@@ -1,0 +1,13 @@
+{
+  "id": "openai-5bf4951adb",
+  "date": "2026-11-13",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Introducing ChatGPT Wallet",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/introducing-chatgpt-wallet",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-14T03:13:39+00:00"
+}
