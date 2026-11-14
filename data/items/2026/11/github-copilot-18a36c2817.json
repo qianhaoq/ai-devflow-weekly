@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-18a36c2817",
+  "date": "2026-11-14",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Enterprise Server support in the GitHub Copilot app",
+  "summary_zh": "GitHub Copilot 应用现已支持 GitHub Enterprise Server（GHES），用户可添加 GHES 账户以处理远程仓库、议题和拉取请求。该功能此前为需主动选择的预览版，现已正式可用，需先使用 GitHub.com 或 GHE.com 账户登录，再在 Settings > Accounts > Add account 中选择 GitHub Enterprise Server。该功能适用于 GitHub Copilot 应用 1.2.0 及更高版本，GHES 不支持云会话。",
+  "source_url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-14T03:13:36+00:00"
+}

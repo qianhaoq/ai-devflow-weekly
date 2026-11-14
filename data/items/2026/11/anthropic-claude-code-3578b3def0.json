@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-3578b3def0",
+  "date": "2026-11-14",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.325",
+  "summary_zh": "Claude Code 发布 v2.1.325，修复了 zstd 压缩响应解码中的安全问题，并新增 VS Code 等集成终端中关于重新运行 notebook 单元格的提示。该版本还修复了子代理模型设置、会话恢复、第三方网关上下文长度报错、计划编辑保存及多项界面与命令问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-14T03:13:36+00:00"
+}
