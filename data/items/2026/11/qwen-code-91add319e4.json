@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-91add319e4",
+  "date": "2026-11-14",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.2-nightly.20261113.6f754be654",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.2-nightly.20261113.6f754be654，新增 managed-agent 客户端文件系统注册、长频道回复按有序多段投递、飞书自定义机器人 webhook 投递等特性，并修复权限 AUTO 分类器授权判断、web-shell 多项显示与交互问题及 MCP、DOMPurify、qs、URI、Hono 等依赖安全漏洞。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261113.6f754be654",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-15T02:38:37+00:00"
+}
