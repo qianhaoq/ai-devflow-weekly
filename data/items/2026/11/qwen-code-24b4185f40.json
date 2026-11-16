@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-24b4185f40",
+  "date": "2026-11-15",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.27.4",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.27.4（2026-11-15）。本次更新包括：managed-agent 支持将客户端文件系统注册到托管会话、将长频道回复规划为有序多段投递；channels 新增飞书自定义机器人 webhook 投递；core 与 CLI 改为每轮通过单次 runAgentLoop 调用运行；并修复了权限 AUTO 分类器授权判断、web-shell 多项交互问题及 MCP、DOMPurify、qs、URI、Hono 等依赖的安全漏洞。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.4",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-16T02:43:33+00:00"
+}

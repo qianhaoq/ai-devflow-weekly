@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-1f8670917f",
+  "date": "2026-11-16",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.3-nightly.20261115.6e3b2dcc19",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.3-nightly.20261115.6e3b2dcc19（2026-11-16）。本次更新新增 web-shell 侧边栏工作区筛选、managed-agent 钉钉适配器，并让 agent loop 开关可被强制关闭；同时修复 managed-agent 陈旧子任务恢复、SDK Skill 变更走原生 REST、CLI 任务选择与认证弹窗等问题，并更新存在漏洞的依赖。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3-nightly.20261115.6e3b2dcc19",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-16T02:43:33+00:00"
+}
