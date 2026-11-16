@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-e369d6f27e",
+  "date": "2026-11-15",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.4",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.4，Managed Agent 会话可在不持久化凭据或路径的情况下访问已授权的本地目录，并打开交互式 Managed Web Terminal。该版本支持向飞书和企微 webhook 发送输出，长回复按有序分段投递而非截断；Auto Mode 对高风险操作要求显式授权，并新增 Web Shell Goals 页面合并可信工作区目标、恢复 CLI /memory 控制及 Codex 记忆导入的 SDK API。官方说明无已知破坏性变更。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.4",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-16T02:43:33+00:00"
+}
