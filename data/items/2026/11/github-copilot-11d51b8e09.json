@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-11d51b8e09",
+  "date": "2026-11-17",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot weekly releases — November 9",
+  "summary_zh": "GitHub Copilot 发布 11 月 9 日当周更新，Copilot 应用支持接入 GitHub Enterprise Server 仓库（正式可用，仍需 GitHub.com 或 GHE.com 账户，GHES 不支持云会话），并新增 Claude Fable 5.2 与 Gemini 4 Carbon 两款模型，面向 Pro+、Max、Business 和 Enterprise 用户。VS Code 1.146 版本引入实验性的模型对比功能与 Agents 窗口 Inbox 模式，聊天窗口为预览功能，并提醒 Local harness 将于 2027 年 2 月移除。",
+  "source_url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:12+00:00"
+}

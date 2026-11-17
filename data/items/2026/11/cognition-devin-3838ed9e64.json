@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-3838ed9e64",
+  "date": "2026-11-17",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-11-17）",
+  "summary_zh": "Cognition Devin 于 2026-11-17 更新发布说明，新增会话订阅侧边栏与“Mark done”功能，可将会话移入 Done 文件夹且不中断运行。更新还引入跨服务身份“phonebook”，支持在 Devin 与 Slack 等已连接服务间匹配并标记成员身份。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-11-17",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:15+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-f9ace2a74e",
+  "date": "2026-11-17",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot models deprecated on November 16, 2026",
+  "summary_zh": "GitHub 于 2026 年 11 月 16 日弃用 Claude Opus 4.8、Claude Opus 5 和 GPT-5.6 Terra 三款模型，涉及 Copilot Chat、内联编辑、ask 与 agent 模式及代码补全等多数 Copilot 体验，官方建议分别改用 Claude Opus 5.5、Claude Opus 5.5 和 GPT-6.1 Sol 或 GPT-6 Luna。Claude Opus 4.8 仍对年付计划的个人订阅用户开放，Claude Opus 5 已从模型选择器移除但保留运行时拒绝回退能力，现有企业模型策略继续适用。在默认模型启用下，建议的替代模型会自动为 Copilot Enterprise 和 Copilot Business 客户启用，除非管理员关闭全局默认或明确禁用；移除已弃用模型无需任何操作。",
+  "source_url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:12+00:00"
+}

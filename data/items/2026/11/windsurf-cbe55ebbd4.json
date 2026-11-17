@@ -1,0 +1,13 @@
+{
+  "id": "windsurf-cbe55ebbd4",
+  "date": "2026-11-17",
+  "vendor": "Windsurf",
+  "category": "code",
+  "source_id": "windsurf-changelog",
+  "title": "Windsurf 页面更新（2026-11-17）",
+  "summary_zh": "Windsurf（Devin Desktop）发布 v3.13.4 更新，为 Agent Command Center 新增标签页，可在同一窗口内保留多个会话与页面并各自维护前进/后退历史；本地会话改为在后台进程运行，关闭或重开客户端及 CLI 不会中断会话。Files 标签页现可预览本地 PDF、以表格形式显示 CSV 和 TSV 文件并支持更多媒体类型，Devin Local 会将各子代理输出嵌套显示并展示运行中的子代理数量。此外，会话内嵌 IDE 改为按 Cmd/Ctrl+S 手动保存并用圆点标记未保存标签，聊天差异与行数改用 Devin 配色，同时修复了新建会话默认代理、会话重开后无法接收消息、登录失败及部分 Linux/Windows 崩溃等问题。",
+  "source_url": "https://docs.devin.ai/desktop/changelog#2026-11-17",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:15+00:00"
+}

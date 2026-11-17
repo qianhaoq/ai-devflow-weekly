@@ -1,0 +1,13 @@
+{
+  "id": "github-4f85959693",
+  "date": "2026-11-16",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Take GitHub Mobile with you on iPhone Duo",
+  "summary_zh": "GitHub Mobile 现已支持 iPhone Duo，展开时布局会自动适配，并提供垂直标签页，便于在 Copilot、Pull Requests、Issues 和 Notifications 等关键区域之间切换。该更新已在 iOS 版 GitHub Mobile 中上线，官方表示将继续完善这一支持，以更充分地利用更大屏幕。",
+  "source_url": "https://github.blog/changelog/2026-11-16-take-github-mobile-with-you-on-iphone-duo",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:12+00:00"
+}
