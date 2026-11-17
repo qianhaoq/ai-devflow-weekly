@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-328f5dc06a",
+  "date": "2026-11-17",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.326",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.326，新增在启用 agent teams 时开启 Code Mode 的支持，并对 `--allowedTools`、`--disallowedTools`、`--tools` 中不完整的规则条目增加启动警告。该版本还新增 `/status` 中显示功能被提供商或环境变量关闭的行、Ctrl+O 查看隐藏启动提示，以及默认关闭的 `OTEL_RESOURCE_INCLUDE_HOST` 选项。此外修复了多项问题，包括 `Edit` 拒绝规则下 `cp` 被拒、Bash 删除或覆盖文件命令被误记为搜索或读取，以及设置文件写入失败时未提示等。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-17T05:04:12+00:00"
+}

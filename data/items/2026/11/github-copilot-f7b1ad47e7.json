@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-f7b1ad47e7",
+  "date": "2026-11-17",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "VS Code retires the Local harness in February 2027",
+  "summary_zh": "VS Code 1.146 已将 Local harness 标记为弃用，并计划于 2027 年 2 月将其移除。其替代者 Microsoft Copilot harness 自 VS Code 1.143 起成为新会话的默认选项，基于 Copilot SDK 构建，并与 Copilot CLI 和 GitHub Copilot 应用共享编码代理运行时。仍在使用 Local harness 的用户需在 2027 年 2 月前新建会话并在 Session Target 中选择 Copilot，同时检查自定义配置的兼容性。",
+  "source_url": "https://github.blog/changelog/2026-11-16-vs-code-retires-the-local-harness-in-february-2027",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:12+00:00"
+}

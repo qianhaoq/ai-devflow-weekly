@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-4b8c3044ce",
+  "date": "2026-11-17",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Control where GitHub Copilot customizations come from",
+  "summary_zh": "GitHub 为 Copilot 企业管理员新增控制项，可通过 strictPluginOnlyCustomization 托管设置要求所选 Copilot 自定义项来自插件或托管设置，而非用户或项目的独立配置。该限制可应用于 skills、自定义代理、hooks、MCP 服务器和可执行 Copilot 扩展五类，也可只选其中部分类别。此设置需与 strictKnownMarketplaces 配合使用以限制可用市场来源，可在 GitHub Enterprise Cloud 上为持有 Copilot Business 或 Copilot Enterprise 许可证的成员配置。",
+  "source_url": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-17T05:04:12+00:00"
+}

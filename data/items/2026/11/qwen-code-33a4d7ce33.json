@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-33a4d7ce33",
+  "date": "2026-11-17",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.27.4-nightly.20261116.eb3a599ef3",
+  "summary_zh": "阿里 Qwen Code 发布 v0.27.4-nightly.20261116.eb3a599ef3。本次更新新增 web-shell 侧边栏工作区筛选、managed-agent 钉钉适配器，并修复 managed-agent 陈旧公共子任务恢复、SDK Skill 变更路由等问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.4-nightly.20261116.eb3a599ef3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-17T05:04:19+00:00"
+}
