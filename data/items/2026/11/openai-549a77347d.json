@@ -1,0 +1,13 @@
+{
+  "id": "openai-549a77347d",
+  "date": "2026-11-18",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Introducing GPT-6.2 Astra and Sol",
+  "summary_zh": "",
+  "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:04+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-1560056f3e",
+  "date": "2026-11-18",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.327",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.327，新增 `/install-github-app` 修改仓库前的确认、从 stdin 读取 MCP 服务器 JSON 的 `claude mcp add-json` 命令，以及 `/status` 中列出损坏的 agent、skill、命令等文件的功能。该版本还修复了 `/export` 覆盖已有文件、项目级 `claude mcp add/remove` 误删 `.mcp.json` 其他顶层键、`/rewind` 恢复失败时无提示关闭等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-18T04:18:01+00:00"
+}

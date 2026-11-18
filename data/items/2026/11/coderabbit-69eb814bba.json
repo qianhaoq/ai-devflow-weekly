@@ -1,0 +1,13 @@
+{
+  "id": "coderabbit-69eb814bba",
+  "date": "2026-11-18",
+  "vendor": "CodeRabbit",
+  "category": "review",
+  "source_id": "coderabbit-changelog",
+  "title": "CodeRabbit 页面更新（2026-11-18）",
+  "summary_zh": "CodeRabbit 更新日志显示，V3 评审设置预览中，若配置层设置 progress_updates: false 且未提供 legacy_commit_status，将同时禁用两种评审进度格式，需设为 true 才能继续报告；显式 legacy_commit_status: true 在继承与全局覆盖后仍为 true 时仍可启用报告，V2 行为不变。CodeRabbit Verify 可在隔离沙箱中启动应用、按用户方式操作变更并报告缺陷，附复现步骤、截图和会话录制，测试版期间免费。",
+  "source_url": "https://docs.coderabbit.ai/changelog#2026-11-18",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:05+00:00"
+}

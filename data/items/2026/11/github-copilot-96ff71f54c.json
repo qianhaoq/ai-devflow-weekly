@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-96ff71f54c",
+  "date": "2026-11-18",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available",
+  "summary_zh": "OpenAI 的 GPT-6.2 Astra 与 GPT-6.2 Sol 已在 GitHub Copilot 中正式可用，两款模型均面向智能体编程与代码审查，早期测试中比此前的 GPT-6 模型发现更多真实问题且使用更少 token。两款模型面向 Copilot Pro+、Max、Business 和 Enterprise 用户开放，可在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot 编码智能体、github.com、GitHub Mobile、JetBrains IDE、Xcode、Eclipse 等模型选择器中使用，并将逐步推送。Copilot Enterprise 和 Copilot Business 管理员可通过 Copilot 设置中的模型策略管理访问权限。",
+  "source_url": "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:01+00:00"
+}

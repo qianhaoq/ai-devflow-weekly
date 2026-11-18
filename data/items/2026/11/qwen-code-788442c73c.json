@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-788442c73c",
+  "date": "2026-11-17",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Qwen Code Desktop v0.28.0",
+  "summary_zh": "阿里 Qwen Code 发布 Qwen Code Desktop v0.28.0。本次更新新增 web-shell 侧边栏工作区筛选、managed-agent 钉钉适配器，并让核心循环开关支持强制关闭；同时修复了 managed-agent 陈旧子任务恢复、SDK Skill 变更路由、CLI 任务选择保持及 web-shell 语音听写发送前收尾等多项问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.28.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-18T04:18:08+00:00"
+}
