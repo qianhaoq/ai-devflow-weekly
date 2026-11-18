@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-2d11cd195d",
+  "date": "2026-11-18",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.170.0",
+  "summary_zh": "OpenAI Codex 发布 0.170.0，新增 TUI 实时语音通话的 WebRTC 协商、OpenTelemetry HTTP 导出器认证头自动刷新，以及跨环境同名 MCP 服务器的实验性支持。该版本还修复了超大 WebSocket 请求回退 HTTP、MCP OAuth 凭证竞争、Cloud 会话自动重连及 Windows 文件替换与沙箱权限等问题，并更新了沙箱权限配置文档。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.170.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-18T04:18:03+00:00"
+}

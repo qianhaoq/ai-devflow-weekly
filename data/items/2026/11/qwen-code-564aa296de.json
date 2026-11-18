@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-564aa296de",
+  "date": "2026-11-18",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.28.1-preview.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.28.1-preview.0 预览版本。此次更新包含新增 GitHub 作为第三个托管渠道适配器、web-shell 统一聊天界面契约与能力守卫、从输入框芯片解释后台任务等特性，并修复了 serve 的 SSE 监听余量与停滞写入回收、managed-agent 的 Harness 准入恢复等问题。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.1-preview.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-18T04:18:08+00:00"
+}

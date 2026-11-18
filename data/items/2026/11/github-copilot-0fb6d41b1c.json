@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-0fb6d41b1c",
+  "date": "2026-11-18",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot app, Microsoft Ignite releases",
+  "summary_zh": "GitHub Copilot 应用新增对 Azure DevOps 仓库的支持（公开预览），可在应用内克隆仓库、创建分支、修改代码并提交拉取请求，但 Azure DevOps 仓库不支持云会话。浏览器使用功能进入公开预览，可在 Chromium 浏览器中让 Copilot 填写表单、提取网页信息或测试调试 Web 应用，默认关闭。GitHub Enterprise Server 支持从预览转为正式可用，需更新至应用 1.2.0 或更高版本，GHES 同样不支持云会话。",
+  "source_url": "https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:01+00:00"
+}

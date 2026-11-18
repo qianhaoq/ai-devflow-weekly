@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-f8e626aac8",
+  "date": "2026-11-18",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-11-18）",
+  "summary_zh": "OpenAI Codex 于 2026-11-18 发布 Codex CLI 0.170.0。新功能包括在 TUI 中为实时语音通话加入 WebRTC 协商、为 OpenTelemetry HTTP 导出器加入自动刷新的认证头，以及跨环境使用同名 MCP 服务器的实验性支持。此外还修复了 WebSocket 请求回退、MCP OAuth 凭据竞争、Cloud 对话重连及 Windows 沙箱权限等问题，并更新了沙箱文档。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-11-18",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:03+00:00"
+}

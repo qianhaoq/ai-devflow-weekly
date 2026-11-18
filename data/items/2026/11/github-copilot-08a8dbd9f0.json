@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-08a8dbd9f0",
+  "date": "2026-11-18",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "GitHub Copilot Fusion updates: more availability, benchmarks, and models",
+  "summary_zh": "GitHub Copilot Fusion 现已上线 github.com、Visual Studio 以及 iOS 和 Android 的 GitHub Mobile beta 应用，生产版 GitHub Mobile 的支持稍后推出。Copilot Fusion 已列入由 Stanford、Harbor 和 Laude Institute 托管的 Terminal-Bench 4.1 公开排行榜，其中 Copilot Fusion Max 在该基准上的解决率为 71.2%。此次更新还为 Copilot Fusion Max、High 和 Standard 分别新增了 Claude Sonnet 5.5、GPT-6.1 Terra 和 MAI-Code-2 模型。",
+  "source_url": "https://github.blog/changelog/2026-11-17-github-copilot-fusion-updates-more-availability-benchmarks-and-models",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:01+00:00"
+}

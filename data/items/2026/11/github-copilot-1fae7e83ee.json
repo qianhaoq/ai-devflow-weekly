@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-1fae7e83ee",
+  "date": "2026-11-18",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot",
+  "summary_zh": "GitHub Copilot 上线了微软新一代 MAI 编码模型 MAI Code 2 与 MAI Code 2 Flash，前者面向深度调试、多文件实现、重构和仓库级推理等复杂任务，后者为轻量、经济的日常开发模型，适用于代码解释、定向编辑和快速迭代。两款模型均面向 agentic 编码工作流，按用量计费，可在 VS Code、Visual Studio、Copilot CLI、GitHub 网站及移动端等处的模型选择器中选用。MAI Code 2 面向 Copilot Pro、Pro+、Max、Business 和 Enterprise，MAI Code 2 Flash 还额外覆盖 Free 和 Student；企业版与商业版管理员可通过模型策略管理访问权限。",
+  "source_url": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:01+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-4dbe531998",
+  "date": "2026-11-17",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.28.0",
+  "summary_zh": "阿里 Qwen Code 发布 v0.28.0，官方说明无已知破坏性变更。本次更新包含多项功能：web-shell 新增侧边栏工作区筛选、本地文件桥接更易发现和使用、按轮次展示 hook 统计等；managed-agent 新增钉钉适配器并支持外部工作区执行；core 默认让无头会话、Ink TUI 与子代理运行在共享 agent loop 上，并支持强制关闭 loop 开关。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-18T04:18:08+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-d463ce8086",
+  "date": "2026-11-18",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Copilot code review: Adaptive effort, secret detection, and more",
+  "summary_zh": "GitHub Copilot 代码审查新增自适应审查力度功能，可根据拉取请求的复杂度和风险自动选择 Lite、Balanced 或 Max 级别，目前处于公开预览阶段。同时新增跨仓库上下文（面向公开仓库公开预览）和审查中的密钥检测（公开预览），后者结合确定性方法与 AI/ML 检测识别暴露的凭据。上述功能面向 Copilot Pro、Pro+、Max、Business 和 Enterprise 计划提供。",
+  "source_url": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-18T04:18:01+00:00"
+}
