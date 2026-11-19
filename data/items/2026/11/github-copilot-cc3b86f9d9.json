@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-cc3b86f9d9",
+  "date": "2026-11-19",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Connect Supabase, Box, Calendly, and more to Copilot",
+  "summary_zh": "GitHub Copilot 新增 Box、Buildkite、Calendly、ClickUp、Mixpanel、Supabase、Webflow、Wix 八个可通过 GitHub 验证的 MCP 服务器（连接器）接入的服务，这些连接器处于公开预览阶段，加入后可与 Slack、Figma、Sentry 等已有的 25 个以上服务一并使用。用户可在 Copilot 应用、Copilot CLI、VS Code 或 github.com 上完成连接，连接一次即可跨 Copilot 使用。连接器对所有 Copilot 计划开放公开预览，Copilot Business 或 Copilot Enterprise 需由管理员启用 Editor 预览功能策略，若企业 MCP 允许列表逐项列出连接器，管理员还需将新连接器加入其中。",
+  "source_url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-19T04:11:07+00:00"
+}

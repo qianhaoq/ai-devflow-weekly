@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-f9b17ed5db",
+  "date": "2026-11-19",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Customize GitHub Copilot for your team",
+  "summary_zh": "GitHub Copilot 团队自定义功能已正式可用，组织团队的维护者和管理员可将已批准的 Agent 插件设为团队默认，成员无需各自重复配置。团队默认插件对团队直属成员在 VS Code、GitHub Copilot 应用和 Copilot CLI 中默认启用，子团队成员不继承，成员可在策略允许时自行关闭。企业与组织策略优先于团队选择，该功能适用于 Copilot Business 和 Copilot Enterprise。",
+  "source_url": "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-19T04:11:07+00:00"
+}

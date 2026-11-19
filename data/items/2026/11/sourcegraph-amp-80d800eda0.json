@@ -1,0 +1,13 @@
+{
+  "id": "sourcegraph-amp-80d800eda0",
+  "date": "2026-11-17",
+  "vendor": "Sourcegraph Amp",
+  "category": "agent-platform",
+  "source_id": "amp-news",
+  "title": "Amp for Windows",
+  "summary_zh": "Sourcegraph Amp 于 2026 年 11 月 17 日发布 Windows 应用，并提供了文档与原生应用列表的入口。",
+  "source_url": "https://ampcode.com/news/amp-for-windows",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-19T04:11:11+00:00"
+}

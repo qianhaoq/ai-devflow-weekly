@@ -1,0 +1,13 @@
+{
+  "id": "github-7e8aaa6e49",
+  "date": "2026-11-19",
+  "vendor": "GitHub",
+  "category": "ci",
+  "source_id": "github-actions-changelog",
+  "title": "Wait for pull request events with GitHub CLI",
+  "summary_zh": "GitHub CLI 在 v2.105.0 中支持 GitHub Event Streams，用户和 agent 可用 gh event listen 配合拉取请求 URL 等待指定事件，无需循环轮询，默认在首个事件后退出，并支持 --count、--follow、--timeout 以及 --jq、--template 等选项。该功能可等待已提交的评审、拉取请求状态与 head 变更、合并冲突和已完成的检查套件，也可用 gh event subscription 的 create、list、view、delete 直接管理订阅。gh event 命令处于预览阶段且可能变化，需要 Event Streams 访问权限（GitHub.com 上同为预览），需加入等待名单并升级至 gh v2.105.0 或更高版本。",
+  "source_url": "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-19T04:11:07+00:00"
+}
