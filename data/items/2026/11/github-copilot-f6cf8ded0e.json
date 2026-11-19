@@ -1,0 +1,13 @@
+{
+  "id": "github-copilot-f6cf8ded0e",
+  "date": "2026-11-19",
+  "vendor": "GitHub Copilot",
+  "category": "code",
+  "source_id": "copilot-changelog",
+  "title": "Gemini 4 Neon in GitHub Copilot",
+  "summary_zh": "GitHub Copilot 已正式上线 Gemini 4 Neon，该模型面向智能体编程、多步工具调用和知识工作，据 Google 称其质量接近 Gemini 4 Carbon，但每任务 token 成本更低，响应更快，在编程任务中未经请求的改动更少，也更少对代码、工具或测试结果作出无依据的断言。该模型按提供商列表价格以用量计费，向 Copilot Pro+、Max、Business 和 Enterprise 用户开放，可在 VS Code、Visual Studio、Copilot CLI、GitHub Copilot coding agent、GitHub Copilot 应用、github.com、iOS 和 Android 版 GitHub Mobile、JetBrains IDE、Xcode、Eclipse 的模型选择器中选择，并将逐步推送。Copilot Enterprise 和 Copilot Business 管理员可通过 Copilot 设置中的模型策略管理访问权限，默认情况下新模型会自动启用，除非管理员关闭全局默认或明确禁用该模型。",
+  "source_url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-19T04:11:07+00:00"
+}

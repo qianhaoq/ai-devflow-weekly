@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-249cf944c1",
+  "date": "2026-11-19",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.328",
+  "summary_zh": "Claude Code 发布 v2.1.328，为 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 和 Claude apps gateway 上的 Claude Opus 4.6 与 Sonnet 4.6 新增 auto 模式，无权限模式的交互会话将默认以此启动。本次更新还为 mcp_tool 钩子新增 `\"onFailure\": \"block\"` 选项，并补充多项自托管运行器参数与指标。此外修复了 zsh 中 Bash 命令报错、自动压缩复用旧系统提示、markdown 渲染卡死及令牌计数重复等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-19T04:11:07+00:00"
+}

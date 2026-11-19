@@ -1,0 +1,13 @@
+{
+  "id": "windsurf-516f3925d2",
+  "date": "2026-11-19",
+  "vendor": "Windsurf",
+  "category": "code",
+  "source_id": "windsurf-changelog",
+  "title": "Windsurf 页面更新（2026-11-19）",
+  "summary_zh": "Windsurf（Devin Desktop）发布 v3.14.30825 更新，修复了命令面板中密码提示的明文显示问题、Plan Editor 打开计划文件显示空白页的问题，以及部分有 Devin Desktop 访问权限但无 CLI 权限的账号在 Devin Local 登录失败的问题。远程窗口中，Open Folder 与 Add Folder to Workspace 现在支持按回车或点击 OK/Add 接受已补全的文件夹路径。",
+  "source_url": "https://docs.devin.ai/desktop/changelog#2026-11-19",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-19T04:11:10+00:00"
+}
