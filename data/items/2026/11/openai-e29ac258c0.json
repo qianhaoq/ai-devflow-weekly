@@ -1,0 +1,13 @@
+{
+  "id": "openai-e29ac258c0",
+  "date": "2026-11-19",
+  "vendor": "OpenAI",
+  "category": "agent-platform",
+  "source_id": "openai-news",
+  "title": "Explore the Codex Security Plugin",
+  "summary_zh": "",
+  "source_url": "https://openai.com/business/learn/codex-security-plugin-demo",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-20T03:58:17+00:00"
+}
