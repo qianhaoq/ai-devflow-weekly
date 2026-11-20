@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-d83ffef19c",
+  "date": "2026-11-20",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.171.0-alpha.13.1",
+  "summary_zh": "OpenAI Codex 发布 0.171.0-alpha.13.1 版本，该版本为 alpha 预览版本。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0-alpha.13.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-20T03:58:16+00:00"
+}

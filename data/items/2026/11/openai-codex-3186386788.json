@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-3186386788",
+  "date": "2026-11-20",
+  "vendor": "OpenAI Codex",
+  "category": "code",
+  "source_id": "openai-codex-releases",
+  "title": "0.171.0",
+  "summary_zh": "OpenAI Codex 发布 0.171.0，模型目录新增 GPT-6.2 Sol 和 Astra，其中 Sol 为默认目录选项；TUI 工作区默认启用，支持可搜索的文档预览、图片预览和子代理记录。该版本还为非 Vim 提示编辑器加入可配置的撤销与重做快捷键，并新增 `codex exec --remote <ADDR>`、`/rc` 与 `/remote` 等远程会话管理功能。",
+  "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-20T03:58:16+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-codex-c9170e246d",
+  "date": "2026-11-20",
+  "vendor": "OpenAI Codex",
+  "category": "agent-platform",
+  "source_id": "openai-codex-changelog",
+  "title": "OpenAI Codex 页面更新（2026-11-20）",
+  "summary_zh": "OpenAI Codex 于 2026-11-20 发布 Codex CLI 0.171.0。新功能包括在模型目录中加入 GPT-6.2 Sol 和 Astra（Sol 为默认目录选项）、默认启用带可搜索文档预览与子代理记录的 TUI 工作区，以及为提示编辑器增加可配置的撤销/重做快捷键。修复项涉及会话切换时保留草稿与排队输入、切换工作目录时保持权限配置，以及滚动、光标和终端重绘等问题。",
+  "source_url": "https://developers.openai.com/codex/changelog#2026-11-20",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-20T03:58:16+00:00"
+}

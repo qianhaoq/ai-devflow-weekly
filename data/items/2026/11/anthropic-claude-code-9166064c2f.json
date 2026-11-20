@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-9166064c2f",
+  "date": "2026-11-20",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.329",
+  "summary_zh": "Anthropic Claude Code 发布 v2.1.329，新增文件夹 hooks 声明位置的信任提示、非交互宿主中托管设置 hooks 加载失败的警告，并在 `/tasks` 中展示本次会话的定时任务、`/loop` 唤醒、目标及会话分支。该版本还修复了 `~/.claude.json` 在网络卡顿或文件锁导致不可读时被重置、macOS 上反复退出登录、`/terminal-setup` 损坏 VS Code 设置等问题，并修复了 Code Mode 内存失控循环与后台任务卡住等缺陷。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-20T03:58:14+00:00"
+}
