@@ -40,7 +40,7 @@ crawl（每日 07:17 北京时间）→ 开 PR（齐绿后自动合入，不打 
 
 初始脚手架是唯一的直接推送 main 的例外。
 
-Copilot review：auto-merge 默认要求当前 head 有 Copilot review。若仓库未启用 Copilot（请求返回 422）或不想用它，把仓库变量 `DISABLE_COPILOT_REVIEW` 设为 `true`，会同时关闭请求与合并要求。
+Copilot 已退役为合并门禁：不要求 Copilot review，也不自动邀请。独立评审由 Codex / Claude / 人工承担。仓库变量 `DISABLE_COPILOT_REVIEW=true` 已设置；工作流的持久默认值为 `require_copilot: false`，Copilot 请求 job 使用 `if: false`。
 
 crawl PR 的必需检查：`crawl.yml` 使用仓库 secret `CRAWL_PR_TOKEN`（PAT）创建/推送 PR，正常触发 `pull_request` / `pull_request_target` 门禁；默认 `GITHUB_TOKEN` 开的 PR 不会正常触发这些门禁。更新 PR 时仍会摘掉旧的 `qa-passed` / `editorial-approved`，避免旧签字用于新 head；签字仅为可选观察，不挡合入。不再打 `no-auto-merge`，齐绿后自动合入。
 
