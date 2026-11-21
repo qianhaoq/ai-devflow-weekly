@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Introducing GPT-6.2 Astra and Sol",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 两款模型：Astra 面向高难度项目，Sol 面向日常工作。官方称两者在复杂任务上以更少输出 token 取得更好结果，Astra 在 Agents’ Last Exam 等基准上创下新高，Sol 在多项基准上接近或超过其他领先模型。API 方面，Astra 输入输出 token 价格较 GPT-6 Astra 低 20%，Sol 维持 GPT-6.1 Sol 的价格。",
   "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
   "verified": false,
   "signal_type": "changelog",

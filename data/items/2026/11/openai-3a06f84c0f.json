@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "OpenAI to acquire Pierre Computer Company, Inc.",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 4 日宣布将收购 Pierre Computer Company, Inc.，后者是 Code Storage 及一系列开源开发者工具背后的公司，Codex 应用中的 Trees 和 Diffs 库即来自 Pierre。OpenAI 表示，收购完成后希望推进源码管理的未来，让 Codex 连接企业交付的代码与人员决策；Pierre 的开源项目将保持开源，客户在收购完成后可继续使用 Code Storage，同时 OpenAI 将把其功能引入 Codex。该收购尚需满足包括监管批准在内的惯例成交条件，成交前双方仍为独立公司。",
   "source_url": "https://openai.com/index/openai-to-acquire-pierre",
   "verified": false,
   "signal_type": "changelog",

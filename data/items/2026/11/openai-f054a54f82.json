@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "How Revolut raises ambition without lowering the bar",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 发布 Revolut 客户案例，介绍其借助 OpenAI 模型与 Codex 在软件工程和金融犯罪防控等场景中提升团队效率。Revolut 的 FinCrime 智能体基于 OpenAI 模型自动完成筛查与调查流程，GPT‑5.5 的发布被视为关键转折点。Codex 使编码时间从任务开始到功能合并缩短 30–60%。",
   "source_url": "https://openai.com/business/customer-stories/revolut",
   "verified": false,
   "signal_type": "changelog",

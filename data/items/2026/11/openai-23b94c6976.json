@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "CodeRabbit scales agentic software development and ships 20x more",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 官方博客介绍了初创公司 CodeRabbit 使用 OpenAI 模型治理和验证 AI 生成的代码，并借助 Codex 在相同工程团队规模下实现 20 倍软件交付量。CodeRabbit 的 AI 治理与控制平台已被超过 20,000 家组织和 150,000 多个开源项目使用，其最新产品 CodeRabbit Secure 结合 Daybreak 与 Codex 模型来发现和修复漏洞。CodeRabbit 表示，OpenAI 模型更好的性价比帮助其部署更多子代理，GPT‑6 Luna 等低成本模型支持更多子代理，GPT‑6 Astra 等模型负责规划与编排。",
   "source_url": "https://openai.com/index/coderabbit-codex-daybreak",
   "verified": false,
   "signal_type": "changelog",

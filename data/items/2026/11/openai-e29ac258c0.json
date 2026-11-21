@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Explore the Codex Security Plugin",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 发布 Codex Security Plugin 产品演示，展示从入门到查看录制结果的工作流程。该条目为 changelog，来源为官方演示页面。",
   "source_url": "https://openai.com/business/learn/codex-security-plugin-demo",
   "verified": false,
   "signal_type": "changelog",

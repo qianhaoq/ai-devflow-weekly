@@ -1,0 +1,13 @@
+{
+  "id": "windsurf-66f0acf4fc",
+  "date": "2026-11-21",
+  "vendor": "Windsurf",
+  "category": "code",
+  "source_id": "windsurf-changelog",
+  "title": "Windsurf 页面更新（2026-11-21）",
+  "summary_zh": "Windsurf 于 2026-11-21 更新页面，列出 Devin Desktop（Windsurf）各稳定版本发布说明，涵盖 v3.14.30833（2026-11-20）、v3.14.30825（2026-11-18）与 v3.14.30819（2026-11-17）等版本。v3.14.30819 新增 Devin Bots，并为企业管理员提供语言服务器代理自动检测；v3.14.30833 与 v3.14.30825 主要修复侧边栏、远程 SSH 会话、内存占用等问题。",
+  "source_url": "https://docs.devin.ai/desktop/changelog#2026-11-21",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-21T03:58:23+00:00"
+}

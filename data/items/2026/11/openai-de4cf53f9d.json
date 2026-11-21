@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Scaling Git at OpenAI",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 工程团队发布文章，介绍其为支撑 Codex 带来的并发开发规模而构建的 Git 仓库新后端 Pando，该后端在不改变团队使用 Git 方式、不中断工程工作的前提下，现已支撑 OpenAI 单体仓库的全部开发。Pando 旨在实现写入的水平扩展以优化多分支并发推送，并最大化读取吞吐，同时保持与 Git 协议和客户端的兼容。原文称生产环境中 Pando 将推送延迟中位数降低近 5 倍，目前每天交付近 1 PB 的 Git 数据。",
   "source_url": "https://openai.com/index/scaling-git-at-openai",
   "verified": false,
   "signal_type": "changelog",

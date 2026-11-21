@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Inside the Codex sandbox",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 18 日发布工程文章，介绍 Codex 沙箱如何让 Codex 在用户可控的文件系统与网络限制内于本机运行命令。用户通过权限配置文件设定会话的读写与网络权限，内置 :workspace 配置允许在工作区内写入、对 .git 和 .codex 等目录只读、允许广泛文件读取并默认禁用网络访问。文章还涵盖沙箱设计、配置分层与限制执行，以及在 macOS、Linux、Windows 上的实现方式。",
   "source_url": "https://openai.com/index/inside-the-codex-sandbox",
   "verified": false,
   "signal_type": "changelog",

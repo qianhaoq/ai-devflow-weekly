@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Gondola doubles revenue as its team builds more with Codex",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 官方客户案例显示，初创公司 Gondola 借助 Codex 与 ChatGPT 支持小团队开发与日常运营：团队月度工程产出提升 25%，首席工程师提升 50%，公司营收同比增长超过一倍，且未增加人力成本。业务团队可用 Codex Cloud 探索代码库、制作原型，产品经理与合作伙伴经理均已将个人首个代码贡献合并进主代码库。Gondola 的 Programs 工具先用 GPT‑5.4 起步、主要使用 GPT‑5.5 完成，后续功能与优化则使用 GPT‑6.1。",
   "source_url": "https://openai.com/business/customer-stories/gondola",
   "verified": false,
   "signal_type": "changelog",
