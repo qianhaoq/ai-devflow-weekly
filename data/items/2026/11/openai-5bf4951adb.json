@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Introducing ChatGPT Wallet",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 13 日推出 ChatGPT Wallet，这是首个让智能体在无法访问用户实际卡号的情况下完成支付、且每笔购买都需安全验证的钱包，同时保留现有卡片的奖励与符合条件的争议保护。该钱包与 American Express、Chase、Mastercard 和 Visa 合作构建，初期通过 dots 面向美国 ChatGPT Pro 订阅用户开放。用户添加一次卡片后，每次购买前需查看商品、金额和所选卡片，并通过 Face ID 或指纹扫描等安全验证批准，支付网络随后提供替代实际卡号的支付令牌。",
   "source_url": "https://openai.com/index/introducing-chatgpt-wallet",
   "verified": false,
   "signal_type": "changelog",

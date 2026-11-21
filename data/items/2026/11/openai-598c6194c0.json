@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Qodo builds context into AI code review with Codex",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 2 日发布文章，介绍初创公司 Qodo 在 Codex 市场中构建插件，将组织上下文与代码库规范引入 Codex，帮助开发者在跨仓库场景中发现 P0 问题。该插件通过 Qodo 的 Agentic Toolbox 让 Codex 获取代码库知识、组织规则和独立审查，在开发者提交拉取请求前将审查结果返回同一会话。Qodo 使用包括 GPT‑6 Astra 在内的 OpenAI 模型进行代码审查与质量监控。",
   "source_url": "https://openai.com/index/qodo-codex-plugin",
   "verified": false,
   "signal_type": "changelog",

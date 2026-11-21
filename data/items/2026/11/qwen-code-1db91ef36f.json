@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-1db91ef36f",
+  "date": "2026-11-21",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.28.1-preview.1",
+  "summary_zh": "阿里 Qwen Code 发布 v0.28.1-preview.1（预览版），主要包含 web-shell 的多项功能更新，如通过 /send 向其他会话发送消息、统一聊天界面契约与能力守卫、由 composer 芯片解释后台任务，以及新增 GitHub 作为第三个托管渠道适配器并支持通用出站 webhook 投递。此外还修复了 serve、core、managed-agent 与 channels 等模块的多处问题，并补充了相关设计文档。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.1-preview.1",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-21T03:58:28+00:00"
+}

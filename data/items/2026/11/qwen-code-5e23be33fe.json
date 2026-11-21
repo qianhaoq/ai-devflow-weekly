@@ -1,0 +1,13 @@
+{
+  "id": "qwen-code-5e23be33fe",
+  "date": "2026-11-21",
+  "vendor": "阿里 Qwen Code",
+  "category": "code",
+  "source_id": "qwen-code-releases",
+  "title": "Release v0.28.3",
+  "summary_zh": "阿里 Qwen Code 发布 v0.28.3，官方说明无已知破坏性变更。本次更新包含多项功能：Web Shell 支持从输入区芯片解释后台任务、通过 /send 向其他会话发送内容，并新增繁体中文界面语言；频道方面新增 GitHub 作为第三个托管频道适配器，以及仅发送的通用 Webhook 频道，支持可选 Bearer 认证。此外还加入实验性企业微信托管频道适配器，以及可选的容量错误模型跳过设置等。",
+  "source_url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.28.3",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-21T03:58:28+00:00"
+}

@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Merge builds product and business tools with OpenAI technology",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 5 日发布案例，介绍集成平台公司 Merge 使用 GPT‑6 Astra、ChatGPT 和 Codex 支持产品评审、营销和业务拓展规划。Merge 首席执行官 Shensi Ding 用 Codex 审查产品代码，团队则用 GPT‑6 Astra 进行产品测试与营销，并将 AI 用于销售更新准备、客户晚宴策划等公司运营工作。原文还提到，Merge 通过其连接器发起的工具调用成功率为 99.9%，而公开 MCP 服务器约为 60%。",
   "source_url": "https://openai.com/index/merge-builds-with-openai",
   "verified": false,
   "signal_type": "changelog",

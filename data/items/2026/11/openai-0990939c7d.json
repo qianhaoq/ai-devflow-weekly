@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Holiday Extras is rethinking what it can build with Codex",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 发布客户案例，介绍 Holiday Extras 借助 Codex 重建主应用：团队两周内完成原本需六个月以上的重建工作，应用开放预订转化率提升 32.5%，错误率从 19% 降至 9%。重建后主应用从每年一次大版本发布转为每周发布，内部工具 Countdown 也从约每半年新增一项功能变为每周多次更新。",
   "source_url": "https://openai.com/business/customer-stories/holidays-extras-codex",
   "verified": false,
   "signal_type": "changelog",

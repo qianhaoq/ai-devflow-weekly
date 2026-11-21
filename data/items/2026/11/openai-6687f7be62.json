@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 介绍其基于 Codex 构建的 Performance Factory 系统，该系统在云端自动调查并修复性能问题，工程师为 Codex 代理定义工作流和指令。其首个 Regression Workflow 在性能告警触发后由代理调查减速原因、记录发现并提出修复方案，部署后由另一代理验证性能是否恢复基线。原文称该工作流在三个多月内跟踪了 1700 多次调查，并对 600 多个案例完成根因定位。",
   "source_url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
   "verified": false,
   "signal_type": "changelog",

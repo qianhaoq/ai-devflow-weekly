@@ -1,0 +1,13 @@
+{
+  "id": "cognition-devin-260d90746f",
+  "date": "2026-11-21",
+  "vendor": "Cognition Devin",
+  "category": "agent-platform",
+  "source_id": "devin-release-notes",
+  "title": "Cognition Devin 页面更新（2026-11-21）",
+  "summary_zh": "Cognition Devin 发布 2026 年 11 月 20 日更新，推出访问与共享功能，包括 SCM 访问差异检查、可共享环境、用户组共享以及按会话粒度的共享设置。Slack 会话共享规则调整，插件、playbook、技能、MCP 服务器和知识库均可按用户组共享。上述访问变更正逐步推出且默认关闭，企业需联系 Cognition 代表启用。",
+  "source_url": "https://docs.devin.ai/release-notes/overview#2026-11-21",
+  "verified": false,
+  "signal_type": "changelog",
+  "fetched_at": "2026-11-21T03:58:23+00:00"
+}

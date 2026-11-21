@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-claude-code-7ce40af713",
+  "date": "2026-11-21",
+  "vendor": "Anthropic Claude Code",
+  "category": "code",
+  "source_id": "claude-code-releases",
+  "title": "v2.1.330",
+  "summary_zh": "Claude Code 发布 v2.1.330，新增对 Anthropic Enterprise Admin Console 管理组织的登录支持，登录后自动应用组织设置并使用其云服务商或网关。该版本还加入内置图表模块 easel（适用于 Pro、Max 及部分 Team、Enterprise 的 macOS 和 Linux），并为自托管运行器新增 `--start-dir` 参数及两项启动耗时指标。此外修复了长对话压缩后卡顿、WebFetch 冻结、worktree 被误删及多进程同时保存用户设置丢失等问题。",
+  "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+  "verified": false,
+  "signal_type": "release",
+  "fetched_at": "2026-11-21T03:58:20+00:00"
+}

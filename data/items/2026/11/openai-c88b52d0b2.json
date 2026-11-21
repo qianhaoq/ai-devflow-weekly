@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Cult.fit builds operational muscle with Codex",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 官方博客介绍了印度健身公司 Cult.fit 使用 Codex 的案例：Cult.fit 将工程开发标准化在 Codex 上，并扩展到工程之外，让非工程团队在近几个月内构建了 20 多个内部应用。原文还称，通过用 Codex 重建一项内部能力，公司每年节省软件费用超过 10 万美元，客户支持成本降低 50% 以上。",
   "source_url": "https://openai.com/index/cultfit-builds-with-codex",
   "verified": false,
   "signal_type": "changelog",

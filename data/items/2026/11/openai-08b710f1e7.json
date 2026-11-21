@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Heimstaden is changing residential real estate management with AI",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 3 日发布 Heimstaden 案例，介绍这家欧洲住宅房地产运营商使用 ChatGPT、Codex 等产品改进房屋管理。Heimstaden 将 AI 用于定价、广告图片与房源描述生成、房源审核及市场反馈等环节，员工负责审核和批准决策。原文称其在荷兰的虚拟布置房源图片制作成本从约 50 欧元降至不足 0.10 欧元，降幅超过 99%，并估计该市场每年可节省约 13 万欧元。",
   "source_url": "https://openai.com/index/heimstaden",
   "verified": false,
   "signal_type": "changelog",

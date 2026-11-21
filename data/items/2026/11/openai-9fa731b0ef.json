@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Research acceleration: The jagged frontier",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 18 日发布研究进展报告，基于内部测量说明编码智能体如何加速并改变 AI 研发周期。报告指出，对于预估需 2 至 4 小时人工完成的研究任务，智能体自主成功率从 3 月的 23% 升至 10 月的 46%，4 至 8 小时任务从 13% 升至 35%，但不同类型任务差异明显，人类仍是 AI 研发闭环的核心。报告还提到研究人员对智能体的使用快速增长，并称安全与对齐方向的有记录研究工作量在 1 月至 9 月间增长 77%。",
   "source_url": "https://openai.com/index/research-acceleration-jagged-frontier",
   "verified": false,
   "signal_type": "changelog",

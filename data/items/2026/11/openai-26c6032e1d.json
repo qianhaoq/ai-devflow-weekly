@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "Accelerating engineering for the physical world",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 于 2026 年 11 月 3 日发布研究进展，介绍其模型如何帮助工程师设计、仿真和构建物理产品，能力覆盖机械与电气工程及端到端系统设计。文中以 Astra 为例，使用 GPT‑6 定义功能需求并设计外壳、PCB 与软件集成，两名团队成员在不到一周内完成测试设备设计，但设备量产仍需多轮评审与迭代，Astra 未能始终考虑制造商的生产限制与公差。OpenAI 硬件团队自 2 月以来模型使用量（以 token 计）增长 23 倍，并正与行业合作方探索安全部署。",
   "source_url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
   "verified": false,
   "signal_type": "changelog",

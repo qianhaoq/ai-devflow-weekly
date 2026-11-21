@@ -5,7 +5,7 @@
   "category": "agent-platform",
   "source_id": "openai-news",
   "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-  "summary_zh": "",
+  "summary_zh": "OpenAI 发布 Amplitude 客户案例：Amplitude 的产品智能体 Wave 约 80% 由 OpenAI 模型驱动，包括 GPT‑6.1 Sol、GPT‑6 Luna 和 GPT‑Image‑2.5 Flare，分别用于深度调查、低成本代码扫描与评估、以及基于会话回放截图生成产品原型。Wave 将产品洞察转化为可交给 Codex 等编码智能体的实施计划，Amplitude 估计可将产品改进的交付时间从约一个月缩短至 1–2 天。在 Amplitude 官网测试中，Wave 帮助个性化建议卡片，使卡片驱动的发送量提升 160%。",
   "source_url": "https://openai.com/business/customer-stories/amplitude",
   "verified": false,
   "signal_type": "changelog",
